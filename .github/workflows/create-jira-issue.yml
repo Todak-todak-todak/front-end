@@ -74,8 +74,13 @@ jobs:
         id: md2jira
         with:
           input-text: |
-            ### Github Issue Link
+            ### 👤 작성자 (GitHub)
+            - @${{ github.event.issue.user.login }}
+
+            ### 🔗 Github Issue Link
             - ${{ github.event.issue.html_url }}
+
+            ---
 
             ${{ github.event.issue.body }}
           mode: md2jira

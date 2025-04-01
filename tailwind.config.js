@@ -1,6 +1,6 @@
 / @type {import('tailwindcss').Config} */;
 module.exports = {
-  content: ['./index.html', './src//*.{js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       screens: {
@@ -8,11 +8,7 @@ module.exports = {
         xl: '1300px',
       },
       fontFamily: {
-        sans: ['Noto Sans KR'],
-        title: ['Parkinsans'],
-        //Ubuntu
-        //Righteous
-        // Parkinsans
+        sans: ['Pretendard', 'sans-serif'],
       },
       colors: {
         mainBlue: '#275AEC', // 메인 블루

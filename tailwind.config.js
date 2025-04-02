@@ -13,6 +13,9 @@ module.exports = {
       colors: {
         mainBlue: '#275AEC', // 메인 블루
       },
+      boxShadow: {
+        footer: '0 -2px 6px 1px rgba(0, 0, 0, 0.08)',
+      },
     },
   },
   plugins: [],

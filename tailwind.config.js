@@ -15,6 +15,7 @@ module.exports = {
       },
       boxShadow: {
         footer: '0 -2px 6px 1px rgba(0, 0, 0, 0.08)',
+        commonBox: '2px 2px 10px 0px rgba(0, 0, 0, 0.08)',
       },
     },
   },

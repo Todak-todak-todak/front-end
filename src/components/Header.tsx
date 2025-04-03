@@ -1,4 +1,4 @@
-import Allow from '@assets/images/Header/Allow-left.svg?react';
+import Allow from '@assets/images/Header/Allow.svg?react';
 
 type HeaderProps = {
   title?: string;

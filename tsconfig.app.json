@@ -20,21 +20,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
-
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"],
-      "@assets/*": ["src/assets/*"],
-      "@components/*": ["src/components/*"],
-      "@hooks/*": ["src/hooks/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@pages/*": ["src/pages/*"],
-      "@store/*": ["src/store/*"],
-      "@typings/*": ["src/typings/*"],
-      "@utils/*": ["src/utils/*"]
-    },
-    "types": ["vite-plugin-svgr/client"]
+    "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "svg.d.ts"]
+  "include": ["src"]
 }

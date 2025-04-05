@@ -4,20 +4,13 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from 'tailwindcss';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import svgr from 'vite-plugin-svgr';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    svgr({
-      // A minimatch pattern, or array of patterns, which specifies the files in the build the plugin should include.
-      include: '**/*.svg?react',
-    }),
-  ],
+  plugins: [react()],
   css: {
     postcss: {
       plugins: [tailwindcss()],

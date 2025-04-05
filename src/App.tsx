@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Language from './pages/language/Language';
 import Add from './pages/add/Add';
 import Splash from './pages/splash/Splash';
+import Result from './pages/result/Result';
 
 function App() {
   const isSplash = window.location.pathname === '/';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/add" element={<Add />} />
           <Route path="/" element={<Splash />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/result" element={<Result />} />
         </Routes>
         {!isSplash && !isAdd && <Footer />}
       </Router>

@@ -1,5 +1,6 @@
 import StatisticsIcon from '@assets/images/Home/Statistics.svg?react';
 import Box from '@/components/Box';
+import Pie from './Pie';
 
 const Statistics = () => {
   return (
@@ -8,9 +9,15 @@ const Statistics = () => {
         <StatisticsIcon />
         <p className="font-bold">제조업 위험 통계</p>
       </div>
-      <div className="flex flex-row ">
-        <Box className="w-40">사고유발</Box>
-        <Box className="w-40">부상 TOP3</Box>
+      <div className="flex flex-row gap-4 h-48 ">
+        <Box className="flex flex-col flex-[5] p-3 gap-3 ">
+          <p className="font-bold text-mainBlue text-sm">사고유발 TOP3</p>
+          <Pie />
+        </Box>
+        <Box className="flex flex-col flex-[5] p-3 gap-3 ">
+          <p className="font-bold text-mainBlue text-sm">부상 TOP3</p>
+          <Pie />
+        </Box>
       </div>
     </div>
   );

@@ -40,7 +40,7 @@ const InfoList = ({ isClicked, setIsClicked }: InfoListProps) => {
           className="flex flex-col gap-2"
         >
           <Box
-            className="flex w-16 h-16 bg-white rounded-xl justify-center items-center"
+            className="flex w-14 h-14 bg-white rounded-xl justify-center items-center"
             style={{
               border: isClicked === label ? '1.5px solid #0158FE' : 'none',
             }}
@@ -48,7 +48,7 @@ const InfoList = ({ isClicked, setIsClicked }: InfoListProps) => {
             <Icon width={width} height={height} />
           </Box>
           <p
-            className={`font-bold ${
+            className={`font-bold text-sm ${
               isClicked === label ? 'text-mainBlue' : 'text-mainGray'
             }`}
           >

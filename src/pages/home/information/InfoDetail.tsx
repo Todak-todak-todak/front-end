@@ -22,7 +22,7 @@ const InfoDetail = ({ isClicked }: { isClicked: keyof typeof iconMap }) => {
           key={index}
           className="flex flex-col w-36 h-40 px-4 py-6 justify-between flex-shrink-0"
         >
-          <p className="flex items-start font-bold text-mg leading-[1.2] whitespace-normal">
+          <p className="flex items-start font-semibold leading-[1.2]  whitespace-normal">
             사다리를 이용한 작업 또는 통행
           </p>
 

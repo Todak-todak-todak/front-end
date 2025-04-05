@@ -8,3 +8,8 @@
     @apply text-blue-500 bg-mainBlue; /* 원하는 Tailwind 유틸리티 조합 */
   }
 }
+@layer base {
+  body {
+    color: #333333;
+  }
+}

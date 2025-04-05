@@ -9,7 +9,6 @@ import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
   const navigate = useNavigate();
-
   const [isClicked, setIsClicked] = useState('home');
 
   const handleCLick = (menu: string) => {
@@ -38,13 +37,13 @@ const Footer = () => {
           className="w-8 h-8"
           style={{ fill: isClicked === 'home' ? '#275AEC' : '#B2B3B5' }}
         />
-        <div
+        <p
           className={`${
             isClicked === 'home' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
           } font-bold text-sm`}
         >
           홈
-        </div>
+        </p>
       </button>
       <button
         className="flex flex-col gap-1 items-center"
@@ -55,13 +54,13 @@ const Footer = () => {
         ) : (
           <ChatBotIcon className="w-8 h-8" />
         )}
-        <div
+        <p
           className={`${
             isClicked === 'chat' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
           } font-bold text-sm`}
         >
           산재챗봇
-        </div>
+        </p>
       </button>
       <button
         className="flex flex-col gap-1  items-center"
@@ -69,13 +68,13 @@ const Footer = () => {
       >
         {isClicked === 'book' ? <BlueBookIcon /> : <BookIcon />}
 
-        <div
+        <p
           className={`${
             isClicked === 'book' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
-          } font-bold text-sm `}
+          } font-bold text-sm pt-[1.5px]`}
         >
           산재처리
-        </div>
+        </p>
       </button>
       <button
         className="flex flex-col gap-1 items-center"
@@ -85,13 +84,13 @@ const Footer = () => {
           className="w-8 h-8"
           style={{ fill: isClicked === 'account' ? '#275AEC' : '#B2B3B5' }} // 여기서 색상 변경
         />
-        <div
+        <p
           className={`${
             isClicked === 'account' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
           } font-bold text-sm`}
         >
           내정보
-        </div>
+        </p>
       </button>
     </div>
   );

@@ -5,6 +5,7 @@ import { GlobalStyle } from './styles/globalStyle';
 import './index.css';
 import Footer from './components/Footer';
 import Language from './pages/Language';
+import Information from './pages/Information';
 import Splash from './pages/Splash';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/language" element={<Language />} />
+          <Route path="/information" element={<Information />} />
           <Route path="/" element={<Splash />} />
           <Route path="/home" element={<Home />} />
         </Routes>

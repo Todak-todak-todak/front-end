@@ -5,7 +5,14 @@ import ConsultationIcon from '@assets/images/Home/Consultation.svg?react';
 import ReportIcon from '@assets/images/Home/Report.svg?react';
 import Box from '@/components/Box';
 
-const icons = [
+type Category = '주의사항' | '안전교육' | '의료기관' | '상담' | '신고';
+
+const icons: {
+  Icon: React.FC<React.SVGProps<SVGSVGElement>>;
+  label: Category;
+  width: number;
+  height: number;
+}[] = [
   { Icon: SirenIcon, label: '주의사항', width: 40, height: 40 },
   { Icon: EducationIcon, label: '안전교육', width: 38, height: 40 },
   { Icon: HospitalIcon, label: '의료기관', width: 36, height: 38 },
@@ -14,12 +21,12 @@ const icons = [
 ];
 
 interface InfoListProps {
-  isClicked: string;
-  setIsClicked: (label: string) => void;
+  isClicked: Category;
+  setIsClicked: (label: Category) => void;
 }
 
 const InfoList = ({ isClicked, setIsClicked }: InfoListProps) => {
-  const handleCLick = (label: string) => {
+  const handleClick = (label: Category) => {
     setIsClicked(label);
     console.log(isClicked);
   };
@@ -28,14 +35,14 @@ const InfoList = ({ isClicked, setIsClicked }: InfoListProps) => {
     <div className="flex flex-row justify-between">
       {icons.map(({ Icon, label, width, height }, index) => (
         <button
-          onClick={() => handleCLick(label)}
+          onClick={() => handleClick(label)}
           key={index}
           className="flex flex-col gap-2"
         >
           <Box
             className="flex w-16 h-16 bg-white rounded-xl justify-center items-center"
             style={{
-              border: isClicked === label ? '1.5px solid #0158FE' : 'none', // 클릭된 버튼에만 테두리 추가
+              border: isClicked === label ? '1.5px solid #0158FE' : 'none',
             }}
           >
             <Icon width={width} height={height} />

@@ -9,7 +9,7 @@ import Splash from './pages/Splash';
 
 function App() {
   return (
-    <div className="w-[470px] min-h-screen flex flex-col bg-[#FAFAF8] relative mx-auto">
+    <div className="w-[470px] min-h-screen flex flex-col bg-[#FDFDFD] relative mx-auto">
       <GlobalStyle />
       <Router>
         {/* <Header /> */}

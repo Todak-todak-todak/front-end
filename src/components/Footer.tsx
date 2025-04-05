@@ -15,8 +15,8 @@ const Footer = () => {
     setIsClicked(menu);
     if (menu === 'home') {
       navigate('/');
-    } else if (menu === 'chat') {
-      navigate('/chat');
+    } else if (menu === 'chatlist') {
+      navigate('/chatlist');
     } else if (menu === 'book') {
       navigate('/book');
     } else if (menu === 'account') {
@@ -47,16 +47,16 @@ const Footer = () => {
       </button>
       <button
         className="flex flex-col gap-1 items-center"
-        onClick={() => handleCLick('chat')}
+        onClick={() => handleCLick('chatlist')}
       >
-        {isClicked === 'chat' ? (
+        {isClicked === 'chatlist' ? (
           <BlueChatBotIcon className="w-8 h-8" />
         ) : (
           <ChatBotIcon className="w-8 h-8" />
         )}
         <p
           className={`${
-            isClicked === 'chat' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
+            isClicked === 'chatlist' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
           } font-bold text-sm`}
         >
           산재챗봇

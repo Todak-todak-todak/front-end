@@ -40,7 +40,8 @@ const InfoList = ({ isClicked, setIsClicked }: InfoListProps) => {
           className="flex flex-col gap-2"
         >
           <Box
-            className="flex w-14 h-14 bg-white rounded-xl justify-center items-center"
+            className="flex w-14 h-14 bg-white rounded-xl justify-center items-center
+            transition-transform duration-200 hover:scale-[1.2]"
             style={{
               border: isClicked === label ? '1.5px solid #0158FE' : 'none',
             }}

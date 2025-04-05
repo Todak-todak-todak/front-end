@@ -20,13 +20,13 @@ const Language = () => {
   return (
     <>
       <Header />
-      <div className="px-[30px] pt-[50px] pb-[43px]">
+      <div className="px-[30px] pb-[43px]">
         <div className="text-[#111111] text-[28px] leading-[34px] tracking-[-0.6px] text-left">
           <p>사용할 언어를 선택하세요</p>
           <p>Select your language</p>
         </div>
 
-        <div className="flex flex-wrap gap-x-12 gap-y-8 justify-center pb-[120px] pt-[93px]">
+        <div className="flex flex-wrap gap-x-12 gap-y-8 justify-center pb-[160px] pt-[93px]">
           {languages.map(({ label, Icon, value }) => {
             const isSelected = language === value;
 

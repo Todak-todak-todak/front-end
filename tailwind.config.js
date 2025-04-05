@@ -13,6 +13,8 @@ module.exports = {
       colors: {
         mainBlue: '#275AEC', // 메인 블루
         softBlue: 'rgba(30, 111, 255, 0.15)',
+        inputBlue: 'rgba(1, 88, 254, 0.70)',
+        skyBlue: '#BAE6FD',
       },
       boxShadow: {
         footer: '0 -2px 6px 1px rgba(0, 0, 0, 0.08)',

@@ -94,11 +94,10 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
-  input, button {
+  /* input, button {
     outline: none; 
-    border: none;
     background-color: transparent;
-  }
+  } */
   button {
     cursor: pointer;
     padding: 0;
@@ -111,7 +110,6 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
   select{
-    border: none;
     &:focus {
       outline: none;
     }

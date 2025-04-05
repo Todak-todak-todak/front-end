@@ -1,6 +1,6 @@
 / @type {import('tailwindcss').Config} */;
 module.exports = {
-  content: ['./index.html', './src//*.{js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       screens: {
@@ -8,14 +8,15 @@ module.exports = {
         xl: '1300px',
       },
       fontFamily: {
-        sans: ['Noto Sans KR'],
-        title: ['Parkinsans'],
-        //Ubuntu
-        //Righteous
-        // Parkinsans
+        sans: ['Pretendard', 'sans-serif'],
       },
       colors: {
         mainBlue: '#275AEC', // 메인 블루
+        mainGray: '#B2B3B5',
+      },
+      boxShadow: {
+        footer: '0 -2px 6px 1px rgba(0, 0, 0, 0.08)',
+        commonBox: '2px 2px 10px 0px rgba(0, 0, 0, 0.08)',
       },
     },
   },

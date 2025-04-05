@@ -1,21 +1,25 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-// import Home from './pages/Home';
+import Home from './pages/home/Home';
 import { GlobalStyle } from './styles/globalStyle';
 import './index.css';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 import Language from './pages/Language';
+import Splash from './pages/Splash';
 
 function App() {
+  const isSplash = window.location.pathname === '/';
+
   return (
-    <div className="w-[470px] min-h-screen flex flex-col bg-[#FAFAF8] relative mx-auto">
+    <div className="w-[470px] min-h-screen flex flex-col bg-[#FDFDFD] relative mx-auto">
       <GlobalStyle />
       <Router>
         <Routes>
-          {/* <Route path="/" element={<Home />} /> */}
           <Route path="/language" element={<Language />} />
+          <Route path="/" element={<Splash />} />
+          <Route path="/home" element={<Home />} />
         </Routes>
-        {/* <Footer /> */}
+        {!isSplash && <Footer />}
       </Router>
     </div>
   );

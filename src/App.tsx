@@ -8,6 +8,8 @@ import Header from './components/Header';
 import Splash from './pages/Splash';
 
 function App() {
+  const isSplash = window.location.pathname === '/';
+
   return (
     <div className="w-[470px] min-h-screen flex flex-col bg-[#FDFDFD] relative mx-auto">
       <GlobalStyle />
@@ -17,7 +19,7 @@ function App() {
           <Route path="/" element={<Splash />} />
           <Route path="/home" element={<Home />} />
         </Routes>
-        <Footer />
+        {!isSplash && <Footer />}
       </Router>
     </div>
   );

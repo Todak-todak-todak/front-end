@@ -6,6 +6,7 @@ import './index.css';
 import Footer from './components/Footer';
 import Language from './pages/Language';
 import Splash from './pages/Splash';
+import ChatList from './pages/chatList/ChatList';
 
 function App() {
   const isSplash = window.location.pathname === '/';
@@ -18,6 +19,7 @@ function App() {
           <Route path="/language" element={<Language />} />
           <Route path="/" element={<Splash />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/chatlist" element={<ChatList />} />
         </Routes>
         {!isSplash && <Footer />}
       </Router>

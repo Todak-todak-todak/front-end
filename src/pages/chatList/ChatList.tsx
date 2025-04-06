@@ -1,9 +1,11 @@
 import ListBox from './ListBox';
 import AddIcon from '@assets/images/Chat/Add.svg?react';
+import { useNavigate } from 'react-router-dom';
 
 const ChatList = () => {
+  const navigate = useNavigate();
   const handleClick = () => {
-    console.log('채팅페이지 이동');
+    navigate('/chat');
   };
   return (
     <div className="flex flex-col h-screen gap-4">

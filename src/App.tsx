@@ -12,6 +12,7 @@ import Result from './pages/result/Result';
 function App() {
   const isSplash = window.location.pathname === '/';
   const isAdd = window.location.pathname === '/add';
+  const isResult = window.location.pathname === '/result';
 
   return (
     <div className="w-[470px] min-h-screen flex flex-col bg-[#FDFDFD] relative mx-auto">
@@ -24,7 +25,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/result" element={<Result />} />
         </Routes>
-        {!isSplash && !isAdd && <Footer />}
+        {!isSplash && !isAdd && !isResult && <Footer />}
       </Router>
     </div>
   );

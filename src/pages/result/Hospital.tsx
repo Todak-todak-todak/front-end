@@ -3,7 +3,6 @@ import KakaoMap from './KakaoMap';
 const Hospital = () => {
   return (
     <>
-      <div className="w-full h-[13px] bg-[#F6F7F9]"></div>
       <div className="flex flex-col pt-[15px] pr-[25px] pb-[20px] pl-[25px]">
         <div className="flex justify-between items-center">
           <p
@@ -22,7 +21,6 @@ const Hospital = () => {
           <KakaoMap />
         </div>
       </div>
-      <div className="w-full h-[13px] bg-[#F6F7F9]"></div>
     </>
   );
 };

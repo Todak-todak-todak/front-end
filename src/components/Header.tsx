@@ -14,7 +14,9 @@ const Header = ({ title }: HeaderProps) => {
           <Allow className="w-6 h-5" />
         </button>
         {title && (
-          <p className="text-black text-[18px] font-semibold">{title}</p>
+          <span className="flex-1 text-center font-normal text-black text-[24px] leading-[120%] -ml-6">
+            {title}
+          </span>
         )}
       </div>
     </>

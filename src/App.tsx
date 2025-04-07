@@ -15,6 +15,7 @@ import Add from './pages/add/Add';
 import Splash from './pages/splash/Splash';
 import Chat from './pages/chat/Chat';
 import DocList from './pages/docList/DocList';
+import Result from './pages/result/Result';
 
 function FooterCondition() {
   const location = useLocation();
@@ -22,6 +23,7 @@ function FooterCondition() {
   const showFooter = !hideFooterPaths.includes(location.pathname);
   return showFooter ? <Footer /> : null;
 }
+
 
 function App() {
   return (
@@ -33,6 +35,7 @@ function App() {
           <Route path="/add" element={<Add />} />
           <Route path="/" element={<Splash />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/result" element={<Result />} />
           <Route path="/chatlist" element={<ChatList />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/doclist" element={<DocList />} />

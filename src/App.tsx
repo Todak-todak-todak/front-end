@@ -16,6 +16,7 @@ import Splash from './pages/splash/Splash';
 import Chat from './pages/chat/Chat';
 import DocList from './pages/docList/DocList';
 import Result from './pages/result/Result';
+import HosList from './pages/result/KakaoMap/HosList';
 
 function FooterCondition() {
   const location = useLocation();
@@ -23,7 +24,6 @@ function FooterCondition() {
   const showFooter = !hideFooterPaths.includes(location.pathname);
   return showFooter ? <Footer /> : null;
 }
-
 
 function App() {
   return (
@@ -39,6 +39,7 @@ function App() {
           <Route path="/chatlist" element={<ChatList />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/doclist" element={<DocList />} />
+          <Route path="/Hoslist" element={<HosList />} />
         </Routes>
         <FooterCondition />
       </div>

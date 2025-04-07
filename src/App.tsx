@@ -25,7 +25,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/result" element={<Result />} />
         </Routes>
-        {!isSplash && !isAdd && !isResult && <Footer />}
+        {!isSplash && !isAdd && <Footer />}
       </Router>
     </div>
   );

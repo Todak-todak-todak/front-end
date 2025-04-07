@@ -1,5 +1,6 @@
 import Header from '../../components/Header';
 import Calculate from './Calculate';
+import Example from './Example';
 import Hospital from './Hospital';
 import Percent from './Percent';
 
@@ -15,6 +16,7 @@ const Result = () => {
         <Calculate />
         <div className="w-full h-[13px] bg-[#F6F7F9]"></div>
       </main>
+      <Example />
     </>
   );
 };

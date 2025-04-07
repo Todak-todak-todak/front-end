@@ -17,8 +17,8 @@ const Footer = () => {
       navigate('/');
     } else if (menu === 'chatlist') {
       navigate('/chatlist');
-    } else if (menu === 'book') {
-      navigate('/book');
+    } else if (menu === 'doclist') {
+      navigate('/doclist');
     } else if (menu === 'account') {
       navigate('/account');
     }
@@ -64,13 +64,13 @@ const Footer = () => {
       </button>
       <button
         className="flex flex-col gap-1  items-center"
-        onClick={() => handleCLick('book')}
+        onClick={() => handleCLick('doclist')}
       >
-        {isClicked === 'book' ? <BlueBookIcon /> : <BookIcon />}
+        {isClicked === 'doclist' ? <BlueBookIcon /> : <BookIcon />}
 
         <p
           className={`${
-            isClicked === 'book' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
+            isClicked === 'doclist' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
           } font-bold text-sm pt-[1.5px]`}
         >
           산재처리

@@ -15,10 +15,10 @@ const Footer = () => {
     setIsClicked(menu);
     if (menu === 'home') {
       navigate('/');
-    } else if (menu === 'chat') {
-      navigate('/chat');
-    } else if (menu === 'book') {
-      navigate('/book');
+    } else if (menu === 'chatlist') {
+      navigate('/chatlist');
+    } else if (menu === 'doclist') {
+      navigate('/doclist');
     } else if (menu === 'account') {
       navigate('/account');
     }
@@ -47,16 +47,16 @@ const Footer = () => {
       </button>
       <button
         className="flex flex-col gap-1 items-center"
-        onClick={() => handleCLick('chat')}
+        onClick={() => handleCLick('chatlist')}
       >
-        {isClicked === 'chat' ? (
+        {isClicked === 'chatlist' ? (
           <BlueChatBotIcon className="w-8 h-8" />
         ) : (
           <ChatBotIcon className="w-8 h-8" />
         )}
         <p
           className={`${
-            isClicked === 'chat' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
+            isClicked === 'chatlist' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
           } font-bold text-sm`}
         >
           산재챗봇
@@ -64,13 +64,13 @@ const Footer = () => {
       </button>
       <button
         className="flex flex-col gap-1  items-center"
-        onClick={() => handleCLick('book')}
+        onClick={() => handleCLick('doclist')}
       >
-        {isClicked === 'book' ? <BlueBookIcon /> : <BookIcon />}
+        {isClicked === 'doclist' ? <BlueBookIcon /> : <BookIcon />}
 
         <p
           className={`${
-            isClicked === 'book' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
+            isClicked === 'doclist' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
           } font-bold text-sm pt-[1.5px]`}
         >
           산재처리

@@ -14,6 +14,7 @@ import Language from './pages/language/Language';
 import Add from './pages/add/Add';
 import Splash from './pages/splash/Splash';
 import Chat from './pages/chat/Chat';
+import DocList from './pages/docList/DocList';
 
 function FooterCondition() {
   const location = useLocation();
@@ -34,6 +35,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/chatlist" element={<ChatList />} />
           <Route path="/chat" element={<Chat />} />
+          <Route path="/doclist" element={<DocList />} />
         </Routes>
         <FooterCondition />
       </div>

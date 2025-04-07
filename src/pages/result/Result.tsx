@@ -1,4 +1,5 @@
 import Header from '../../components/Header';
+import Hospital from './Hospital';
 import Percent from './Percent';
 
 const Result = () => {
@@ -6,6 +7,7 @@ const Result = () => {
     <>
       <Header title="분석 결과" />
       <Percent />
+      <Hospital />
     </>
   );
 };

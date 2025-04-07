@@ -1,7 +1,7 @@
 import Header from '../../components/Header';
-import Calculate from './Calculate';
+import Calculate from './Calculate/Calculate';
 import Example from './Example';
-import Hospital from './Hospital';
+import Hospital from './KakaoMap/Hospital';
 import Percent from './Percent';
 
 const Result = () => {

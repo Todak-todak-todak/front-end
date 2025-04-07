@@ -23,7 +23,6 @@ const KakaoMap = () => {
       console.log('✅ 지도와 마커 생성 완료');
     };
 
-    // 이미 스크립트가 있으면 바로 로드
     if (document.getElementById('kakao-map-script')) {
       if (window.kakao?.maps?.load) {
         window.kakao.maps.load(() => {
@@ -36,7 +35,6 @@ const KakaoMap = () => {
       return;
     }
 
-    // 새로 스크립트 추가
     const script = document.createElement('script');
     script.id = 'kakao-map-script';
     script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${

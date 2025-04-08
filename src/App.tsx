@@ -17,6 +17,7 @@ import Chat from './pages/chat/Chat';
 import DocList from './pages/docList/DocList';
 import Result from './pages/result/Result';
 import HosList from './pages/result/KakaoMap/HosList';
+import DocDetail from './pages/docList/DocDetail';
 
 function FooterCondition() {
   const location = useLocation();
@@ -40,6 +41,7 @@ function App() {
           <Route path="/chat" element={<Chat />} />
           <Route path="/doclist" element={<DocList />} />
           <Route path="/Hoslist" element={<HosList />} />
+          <Route path="/Docdetail" element={<DocDetail />} />
         </Routes>
         <FooterCondition />
       </div>

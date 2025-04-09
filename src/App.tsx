@@ -18,6 +18,7 @@ import DocList from './pages/docList/DocList';
 import Result from './pages/result/Result';
 import HosList from './pages/result/KakaoMap/HosList';
 import DocDetail from './pages/docList/DocDetail';
+import MyPage from './pages/mypage/MyPage';
 
 function FooterCondition() {
   const location = useLocation();
@@ -42,6 +43,7 @@ function App() {
           <Route path="/doclist" element={<DocList />} />
           <Route path="/Hoslist" element={<HosList />} />
           <Route path="/Docdetail" element={<DocDetail />} />
+          <Route path="/Mypage" element={<MyPage />} />
         </Routes>
         <FooterCondition />
       </div>

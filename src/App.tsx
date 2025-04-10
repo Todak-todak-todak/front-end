@@ -43,9 +43,9 @@ function App() {
           <Route path="/chat" element={<Chat />} />
           <Route path="/doclist" element={<DocList />} />
           <Route path="/doc" element={<FormStepper />} />
-          <Route path="/Hoslist" element={<HosList />} />
-          <Route path="/Docdetail" element={<DocDetail />} />
-          <Route path="/Mypage" element={<MyPage />} />
+          <Route path="/hoslist" element={<HosList />} />
+          <Route path="/docdetail" element={<DocDetail />} />
+          <Route path="/mypage" element={<MyPage />} />
         </Routes>
         <FooterCondition />
       </div>

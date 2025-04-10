@@ -28,7 +28,7 @@ const Language = () => {
     <>
       <Header />
       <div className="px-[30px] pb-[43px]">
-        <div className="text-[#111111] text-[28px] leading-[34px] tracking-[-0.6px] text-left">
+        <div className="text-[#111111] text-[28px] leading-[34px] tracking-[-0.6px] text-left pt-[20px]">
           <p>사용할 언어를 선택하세요</p>
           <p>Select your language</p>
         </div>

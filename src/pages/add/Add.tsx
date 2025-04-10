@@ -49,7 +49,7 @@ const Add = () => {
           className="px-[30px] pb-[43px] flex flex-col justify-between"
         >
           <div>
-            <div className="text-[#111111] text-[28px] leading-[34px] tracking-[-0.6px] text-left pb-[30px]">
+            <div className="text-[#111111] text-[28px] leading-[34px] tracking-[-0.6px] text-left pb-[30px] pt-[20px]">
               <p>정보를 입력해주세요</p>
               <p>Please provide your information</p>
             </div>

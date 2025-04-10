@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Logo from '@assets/images/Splash/MainLogo.svg?react';
 import { motion } from 'framer-motion';
-import GoogleLoginButton from '@/components/GoogleLogin';
+import GoogleLoginButton from '@/pages/splash/GoogleLogin';
 
 const MotionLogo = motion(Logo);
 

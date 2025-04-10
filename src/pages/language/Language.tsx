@@ -6,6 +6,7 @@ import China from '@assets/images/Language/China.svg?react';
 import Vietnam from '@assets/images/Language/Vietnam.svg?react';
 import Button from '@/components/Button';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const languages = [
   { label: '한국어', Icon: Korea, value: 'KOREA' },
@@ -16,6 +17,12 @@ const languages = [
 
 const Language = () => {
   const [language, setLanguage] = useState<string | null>(null);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (!language) return;
+    navigate('/add');
+  };
 
   return (
     <>
@@ -26,7 +33,7 @@ const Language = () => {
           <p>Select your language</p>
         </div>
 
-        <div className="flex flex-wrap gap-x-12 gap-y-8 justify-center pb-[160px] pt-[93px]">
+        <div className="flex flex-wrap gap-x-12 gap-y-8 justify-center pb-[180px] pt-[93px]">
           {languages.map(({ label, Icon, value }) => {
             const isSelected = language === value;
 
@@ -48,7 +55,7 @@ const Language = () => {
         </div>
 
         <div className="flex justify-center">
-          <Button text="다음" disabled={!language} />
+          <Button text="다음" disabled={!language} onClick={handleClick} />
         </div>
       </div>
     </>

@@ -1,72 +1,116 @@
-import { useState } from 'react';
+import { useForm, Controller } from 'react-hook-form';
 import Header from '@/components/Header';
 import Button from '@/components/Button';
-import InputSection from './InputSection';
-import GenderSelector from './GenderSelector';
-import IndustryDropdown from './IndustryDropdown';
+import Input from '@/components/Input';
+import GenderSelector from '@/pages/add/GenderSelector';
+import IndustryDropdown from '@/pages/add/IndustryDropdown';
+
+type FormValues = {
+  name: string;
+  registerNumber: string;
+  phone: string;
+  address: string;
+  gender: 'FEMALE' | 'MALE' | null;
+  industry: string | null;
+};
 
 const Add = () => {
-  const [name, setName] = useState('');
-  const [registerNumber, setRegisterNumber] = useState('');
-  const [phone, setPhone] = useState('');
-  const [address, setAddress] = useState('');
-  const [gender, setGender] = useState<'FEMALE' | 'MALE' | null>(null);
-  const [industry, setIndustry] = useState<string | null>(null);
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { isValid },
+  } = useForm<FormValues>({
+    mode: 'onChange',
+    defaultValues: {
+      name: '',
+      registerNumber: '',
+      phone: '',
+      address: '',
+      gender: null,
+      industry: null,
+    },
+  });
 
-  const isFormValid =
-    name.trim() &&
-    registerNumber.trim() &&
-    phone.trim() &&
-    address.trim() &&
-    gender &&
-    industry;
+  const onSubmit = (data: FormValues) => {
+    console.log('Form submitted:', data);
+  };
 
   const inputFields = [
     {
+      name: 'name',
       label: '이름',
-      value: name,
-      onChange: setName,
       placeholder: '이름을 입력해주세요.',
     },
     {
+      name: 'registerNumber',
       label: '외국인 등록번호',
-      value: registerNumber,
-      onChange: setRegisterNumber,
       placeholder: '외국인 등록번호를 입력해주세요.',
     },
     {
+      name: 'phone',
       label: '전화번호',
-      value: phone,
-      onChange: setPhone,
       placeholder: '전화번호를 입력해주세요. (- 없이 숫자만 입력)',
     },
     {
+      name: 'address',
       label: '주소',
-      value: address,
-      onChange: setAddress,
       placeholder: '주소를 입력해주세요.',
     },
-  ];
+  ] as const;
 
   return (
     <>
       <Header />
-      <div className="px-[30px] pb-[43px]">
-        <div className="text-[#111111] text-[28px] leading-[34px] tracking-[-0.6px] text-left pb-[30px]">
-          <p>정보를 입력해주세요</p>
-          <p>Please provide your information</p>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="px-[30px] pb-[43px] flex flex-col justify-between"
+      >
+        <div>
+          <div className="text-[#111111] text-[28px] leading-[34px] tracking-[-0.6px] text-left pb-[30px]">
+            <p>정보를 입력해주세요</p>
+            <p>Please provide your information</p>
+          </div>
+
+          <div className="flex flex-col gap-4 text-left">
+            {inputFields.map(({ name, label, placeholder }) => (
+              <div key={name} className="flex flex-col gap-3">
+                <p className="text-[#111] text-[18px]">{label}</p>
+                <Input
+                  type="text"
+                  {...register(name, { required: true })}
+                  placeholder={placeholder}
+                />
+              </div>
+            ))}
+
+            <Controller
+              control={control}
+              name="gender"
+              rules={{ required: true }}
+              render={({ field }) => (
+                <GenderSelector value={field.value} onChange={field.onChange} />
+              )}
+            />
+
+            <Controller
+              control={control}
+              name="industry"
+              rules={{ required: true }}
+              render={({ field }) => (
+                <IndustryDropdown
+                  value={field.value}
+                  onChange={field.onChange}
+                />
+              )}
+            />
+          </div>
         </div>
 
-        <div className="flex flex-col gap-4 text-left">
-          <InputSection fields={inputFields} />
-          <GenderSelector gender={gender} onChange={setGender} />
-          <IndustryDropdown industry={industry} onChange={setIndustry} />
+        <div className="flex justify-center mt-[93px]">
+          <Button text="다음" disabled={!isValid} type="submit" />
         </div>
-
-        <div className="flex justify-center mt-[78px]">
-          <Button text="다음" disabled={!isFormValid} />
-        </div>
-      </div>
+      </form>
     </>
   );
 };

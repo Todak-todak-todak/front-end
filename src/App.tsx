@@ -23,7 +23,7 @@ import MyPage from './pages/mypage/MyPage';
 
 function FooterCondition() {
   const location = useLocation();
-  const hideFooterPaths = ['/', '/add', '/chat'];
+  const hideFooterPaths = ['/', '/add', '/chat', '/language'];
   const showFooter = !hideFooterPaths.includes(location.pathname);
   return showFooter ? <Footer /> : null;
 }

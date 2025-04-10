@@ -15,6 +15,7 @@ import Add from './pages/add/Add';
 import Splash from './pages/splash/Splash';
 import Chat from './pages/chat/Chat';
 import DocList from './pages/docList/DocList';
+import FormStepper from './pages/docRegister/FormStepper';
 
 function FooterCondition() {
   const location = useLocation();
@@ -36,6 +37,7 @@ function App() {
           <Route path="/chatlist" element={<ChatList />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/doclist" element={<DocList />} />
+          <Route path="/doc" element={<FormStepper />} />
         </Routes>
         <FooterCondition />
       </div>

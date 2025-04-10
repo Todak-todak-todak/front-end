@@ -32,7 +32,7 @@ export interface TreatmentInfo {
   category: '입원' | '통원';
 }
 
-export interface FormData {
+export interface CustomFormData {
   consent: ConsentInfo;
   workerInfo: WorkerInfo;
   businessInfo: BusinessInfo;

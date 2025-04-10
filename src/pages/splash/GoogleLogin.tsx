@@ -1,19 +1,7 @@
-type GoogleLoginButtonProps = {
-  redirectUri?: string;
-};
-
-const GoogleLoginButton = ({ redirectUri }: GoogleLoginButtonProps) => {
+const GoogleLoginButton = () => {
   const handleGoogleLogin = () => {
-    const clientId = 'YOUR_GOOGLE_CLIENT_ID';
-    const redirect = encodeURIComponent(
-      redirectUri || 'http://localhost:3000/oauth/callback'
-    );
-    const scope = encodeURIComponent('email profile');
-    const state = encodeURIComponent('randomState');
-
-    const oauthUrl = `https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=${clientId}&redirect_uri=${redirect}&scope=${scope}&state=${state}&access_type=offline&prompt=consent`;
-
-    window.location.href = oauthUrl;
+    window.location.href =
+      'https://todak-back-end.store/oauth2/authorization/google';
   };
 
   return (

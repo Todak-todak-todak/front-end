@@ -6,7 +6,7 @@ interface DocItem {
   value: string | ReactNode;
 }
 
-const rehaejaInfo: DocItem[] = [
+const jehaejaInfo: DocItem[] = [
   { label: '이름', value: '김성헌' },
   { label: '외국인등록번호', value: '111111-111111' },
   { label: '연락처', value: '010-1111-1111' },
@@ -64,8 +64,8 @@ const SectionCard = ({
   title: string;
   children: React.ReactNode;
 }) => (
-  <div className="bg-white rounded-[16px] shadow-md px-[20px] py-[24px] w-full border border-[#E6E9F0]">
-    <p className="text-[20px] font-semibold text-[#005BFF] mb-[16px]">
+  <div className="bg-white rounded-[16px] px-[20px] py-[24px] w-full border-2 border-[#005BFF] shadow-[0_0_0_4px_rgba(0,91,255,0.1)]">
+    <p className="text-[20px] font-semibold text-[#191b1c] mb-[16px]">
       {title}
     </p>
     {children}
@@ -81,7 +81,7 @@ const DocDetail = () => {
 
       <div className="flex flex-col gap-[20px] px-[20px] pb-[100px]">
         <SectionCard title="재해자 정보">
-          <InfoList items={rehaejaInfo} />
+          <InfoList items={jehaejaInfo} />
         </SectionCard>
 
         <SectionCard title="사업장 정보">
@@ -92,20 +92,22 @@ const DocDetail = () => {
           <InfoList items={injuryInfo} />
         </SectionCard>
 
-        <Button text="이전으로" width="w-full" />
+        <Button text="이전으로" />
       </div>
     </>
   );
 };
 
 const InfoList = ({ items }: { items: DocItem[] }) => (
-  <div className="flex flex-col gap-[16px] text-[17px] leading-[22px]">
+  <div className="flex flex-col gap-[20px] text-[17px] leading-[22px]">
     {items.map((item, idx) => (
       <div key={idx} className="flex justify-between items-start">
         <span className="text-[#005BFF] font-medium whitespace-nowrap">
           {item.label}
         </span>
-        <span className="text-[#191B1C] text-right">{item.value}</span>
+        <span className="text-[#191B1C] text-right max-w-[70%] break-words">
+          {item.value}
+        </span>
       </div>
     ))}
   </div>

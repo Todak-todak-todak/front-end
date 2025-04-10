@@ -3,9 +3,10 @@ import { useNavigate } from 'react-router-dom';
 
 type HeaderProps = {
   title?: string;
+  img?: React.ReactNode;
 };
 
-const Header = ({ title }: HeaderProps) => {
+const Header = ({ title, img }: HeaderProps) => {
   const navigate = useNavigate();
   return (
     <>
@@ -14,8 +15,11 @@ const Header = ({ title }: HeaderProps) => {
           <Allow className="w-6 h-5" />
         </button>
         {title && (
-          <p className="text-black text-[18px] font-semibold">{title}</p>
+          <span className="text-center font-normal text-black text-[24px] leading-[120%]">
+            {title}
+          </span>
         )}
+        {img && <div className="absolute right-[29px]">{img}</div>}
       </div>
     </>
   );

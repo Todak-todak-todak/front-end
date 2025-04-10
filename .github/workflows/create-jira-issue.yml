@@ -14,29 +14,12 @@ jobs:
     name: Create Jira issue
     runs-on: ubuntu-latest
     steps:
-      # GitHub ID → Jira 이메일 매핑
-      - name: Set Jira user email from GitHub ID
-        id: set-jira-email
-        run: |
-          AUTHOR="${{ github.event.issue.user.login }}"
-          echo "이슈 작성자: $AUTHOR"
-
-          case "$AUTHOR" in
-            "lee-nakyung") EMAIL="lnk5324@hansung.ac.kr" ;;
-            "bbzjun") EMAIL="wowns564@gmail.com" ;;
-            "sungheonkim") EMAIL="tjdgjswkd@gmail.com" ;;
-            "ahcgnoej") EMAIL="jinchajung123456@gmail.com" ;;
-            *) EMAIL="wowns564@gmail.com" ;;
-          esac
-
-          echo "JIRA_USER_EMAIL=$EMAIL" >> $GITHUB_ENV
-
       - name: Login
         uses: atlassian/gajira-login@v3
         env:
           JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
           JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
-          JIRA_USER_EMAIL: ${{ env.JIRA_USER_EMAIL }}
+          JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
 
       - name: Checkout main code
         uses: actions/checkout@v4
@@ -60,7 +43,10 @@ jobs:
         id: md2jira
         with:
           input-text: |
-            ### Github Issue Link
+            ### 👤 작성자 (GitHub)
+              @${{ github.event.issue.user.login }}
+
+            ### 🔗 Github Issue Link
             - ${{ github.event.issue.html_url }}
 
             ${{ github.event.issue.body }}

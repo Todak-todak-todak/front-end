@@ -30,9 +30,15 @@ const MyPage = () => {
         title="내정보"
         img={
           isEdit ? (
-            <Check className="w-[25px] h-[25px]" onClick={handleToggleEdit} />
+            <Check
+              className="w-[25px] h-[25px] cursor-pointer"
+              onClick={handleToggleEdit}
+            />
           ) : (
-            <Edit className="w-[20px] h-[20px]" onClick={handleToggleEdit} />
+            <Edit
+              className="w-[20px] h-[20px] cursor-pointer"
+              onClick={handleToggleEdit}
+            />
           )
         }
       />

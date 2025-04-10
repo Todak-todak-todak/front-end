@@ -2,8 +2,11 @@ import Button from '@/components/Button';
 import SectionCard from './SectionCard';
 import InfoList from './InfoList';
 import { companyInfo, injuryInfo, jehaejaInfo } from './DocItem';
+import { useNavigate } from 'react-router-dom';
 
 const DocDetail = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="w-full h-[180px] bg-[#005BFF] text-white text-[28px] font-bold flex items-center justify-center rounded-b-[20px] leading-[32px] tracking-[-0.75px] mb-[24px]">
@@ -23,7 +26,7 @@ const DocDetail = () => {
           <InfoList items={injuryInfo} />
         </SectionCard>
 
-        <Button text="이전으로" />
+        <Button text="이전으로" onClick={() => navigate('/doclist')} />
       </div>
     </>
   );

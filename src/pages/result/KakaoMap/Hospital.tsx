@@ -1,6 +1,13 @@
 import KakaoMap from './KakaoMap';
+import { useNavigate } from 'react-router-dom';
 
 const Hospital = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/hoslist');
+  };
+
   return (
     <>
       <div className="flex flex-col pt-[15px] pr-[25px] pb-[20px] pl-[25px]">
@@ -14,7 +21,12 @@ const Hospital = () => {
           >
             인근 산재 지정 병원 안내
           </p>
-          <span className="text-[#999] text-[14px]">더보기 &gt;</span>
+          <span
+            className="text-[#999] text-[14px] cursor-pointer"
+            onClick={handleClick}
+          >
+            더보기 &gt;
+          </span>
         </div>
 
         <div className="mt-[14px]">

@@ -19,8 +19,8 @@ const Footer = () => {
       navigate('/chatlist');
     } else if (menu === 'doclist') {
       navigate('/doclist');
-    } else if (menu === 'account') {
-      navigate('/account');
+    } else if (menu === 'mypage') {
+      navigate('/mypage');
     }
   };
 
@@ -78,7 +78,7 @@ const Footer = () => {
       </button>
       <button
         className="flex flex-col gap-1 items-center"
-        onClick={() => handleCLick('account')}
+        onClick={() => handleCLick('mypage')}
       >
         <AccountIcon
           className="w-8 h-8"

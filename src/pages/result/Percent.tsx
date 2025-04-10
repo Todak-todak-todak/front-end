@@ -1,8 +1,15 @@
 import Circle from '@/assets/images/Result/Circle.svg?react';
 import MiniCircle from '@/assets/images/Result/MiniCircle.svg?react';
 import Allow from '@assets/images/Result/Allow-right.svg?react';
+import { useNavigate } from 'react-router-dom';
 
 const Percent = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/doclist');
+  };
+
   return (
     <div className="flex flex-col p-0 pr-[25px] pb-[21px] pl-[25px]">
       <p
@@ -25,7 +32,10 @@ const Percent = () => {
           80%
         </span>
 
-        <button className="w-full h-[45px] rounded-[10px] bg-[#fff]">
+        <button
+          className="w-full h-[45px] rounded-[10px] bg-[#fff] cursor-pointer"
+          onClick={handleClick}
+        >
           <div className="flex items-center justify-center gap-2">
             <p className="text-[18px] text-[#0158FE] font-normal">
               산재 신청 서류 작성하러 가기

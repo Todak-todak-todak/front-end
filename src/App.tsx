@@ -15,6 +15,7 @@ import Add from './pages/add/Add';
 import Splash from './pages/splash/Splash';
 import Chat from './pages/chat/Chat';
 import DocList from './pages/docList/DocList';
+import FormStepper from './pages/docRegister/FormStepper';
 import Result from './pages/result/Result';
 import HosList from './pages/result/KakaoMap/HosList';
 import DocDetail from './pages/docList/DocDetail';
@@ -41,6 +42,7 @@ function App() {
           <Route path="/chatlist" element={<ChatList />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/doclist" element={<DocList />} />
+          <Route path="/doc" element={<FormStepper />} />
           <Route path="/Hoslist" element={<HosList />} />
           <Route path="/Docdetail" element={<DocDetail />} />
           <Route path="/Mypage" element={<MyPage />} />

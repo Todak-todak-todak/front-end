@@ -4,6 +4,7 @@ import Button from '@/components/Button';
 import InputSection from './InputSection';
 import GenderSelector from '@/pages/add/GenderSelector';
 import IndustryDropdown from '@/pages/add/IndustryDropdown';
+import { useNavigate } from 'react-router-dom';
 
 export type FormValues = {
   name: string;
@@ -15,6 +16,8 @@ export type FormValues = {
 };
 
 const Add = () => {
+  const navigate = useNavigate();
+
   const methods = useForm<FormValues>({
     mode: 'onChange',
     defaultValues: {
@@ -34,6 +37,7 @@ const Add = () => {
 
   const onSubmit = (data: FormValues) => {
     console.log('Form submitted:', data);
+    navigate('/home');
   };
 
   return (

@@ -82,11 +82,11 @@ const Footer = () => {
       >
         <AccountIcon
           className="w-8 h-8"
-          style={{ fill: isClicked === 'account' ? '#275AEC' : '#B2B3B5' }} // 여기서 색상 변경
+          style={{ fill: isClicked === 'mypage' ? '#275AEC' : '#B2B3B5' }}
         />
         <p
           className={`${
-            isClicked === 'account' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
+            isClicked === 'mypage' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
           } font-bold text-sm`}
         >
           내정보

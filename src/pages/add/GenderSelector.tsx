@@ -1,12 +1,14 @@
 import { useFormContext, Controller } from 'react-hook-form';
 import { FormValues } from './Add';
+import { useTranslation } from 'react-i18next';
 
 const GenderSelector = () => {
   const { control } = useFormContext<FormValues>();
+  const { t } = useTranslation();
 
   const options: { label: string; value: 'FEMALE' | 'MALE' }[] = [
-    { label: '여자', value: 'FEMALE' },
-    { label: '남자', value: 'MALE' },
+    { label: t('gender.female'), value: 'FEMALE' },
+    { label: t('gender.male'), value: 'MALE' },
   ];
 
   return (
@@ -16,7 +18,7 @@ const GenderSelector = () => {
       rules={{ required: true }}
       render={({ field }) => (
         <div className="flex flex-col gap-3">
-          <p className="text-[#111] text-[18px]">성별</p>
+          <p className="text-[#111] text-[18px]">{t('gender.label')}</p>
           <div className="flex gap-4">
             {options.map(({ label, value: genderValue }) => (
               <button

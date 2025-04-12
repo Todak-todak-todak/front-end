@@ -5,6 +5,8 @@ import InputSection from './InputSection';
 import GenderSelector from '@/pages/add/GenderSelector';
 import IndustryDropdown from '@/pages/add/IndustryDropdown';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export type FormValues = {
   name: string;
@@ -17,6 +19,14 @@ export type FormValues = {
 
 const Add = () => {
   const navigate = useNavigate();
+  const { i18n, t } = useTranslation();
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem('lang');
+    if (savedLang) {
+      i18n.changeLanguage(savedLang);
+    }
+  }, [i18n]);
 
   const methods = useForm<FormValues>({
     mode: 'onChange',
@@ -50,7 +60,6 @@ const Add = () => {
         >
           <div>
             <div className="text-[#111111] text-[28px] leading-[34px] tracking-[-0.6px] text-left pb-[30px] pt-[20px]">
-              <p>정보를 입력해주세요</p>
               <p>Please provide your information</p>
             </div>
 
@@ -62,7 +71,7 @@ const Add = () => {
           </div>
 
           <div className="flex justify-center mt-[93px]">
-            <Button text="다음" disabled={!isValid} type="submit" />
+            <Button text={t('form.next')} disabled={!isValid} type="submit" />
           </div>
         </form>
       </FormProvider>

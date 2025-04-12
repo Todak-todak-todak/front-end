@@ -26,7 +26,7 @@ const Footer = () => {
 
   return (
     <div
-      className="w-[470px] h-20 flex justify-around items-center px-8
+      className="w-full max-w-[470px] h-20 flex justify-around items-center px-8
       fixed bottom-0 bg-white rounded-t-3xl shadow-footer"
     >
       <button

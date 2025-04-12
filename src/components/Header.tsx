@@ -10,8 +10,8 @@ const Header = ({ title, img }: HeaderProps) => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="flex items-center justify-center py-[30px] ">
-        <button onClick={() => navigate(-1)} className="absolute left-4">
+      <div className="w-full max-w-[470px] flex items-center justify-between py-[30px] ">
+        <button onClick={() => navigate(-1)} className="">
           <Allow className="w-6 h-5" />
         </button>
         {title && (
@@ -19,7 +19,9 @@ const Header = ({ title, img }: HeaderProps) => {
             {title}
           </span>
         )}
-        {img && <div className="absolute right-[29px]">{img}</div>}
+        <div className="w-[24px] h-[20px] flex items-center justify-center">
+          {img ?? null}
+        </div>
       </div>
     </>
   );

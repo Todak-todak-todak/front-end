@@ -14,7 +14,7 @@ const Splash = () => {
   }, []);
 
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center bg-white overflow-hidden relative">
+    <div className="w-full h-screen bg-[#fdfdfd] flex flex-col items-center justify-center bg-white overflow-hidden relative">
       {/* 로고 애니메이션 */}
       <MotionLogo
         width={230}
@@ -38,11 +38,11 @@ const Splash = () => {
           className="mt-4 w-full px-6 flex flex-col items-center"
         >
           <div className="flex items-center justify-center gap-4 mb-5">
-            <div className="w-[137px] h-px bg-mainBlue shrink-0" />
-            <span className="text-[#828282] text-[14px] font-bold font-['Noto_Sans'] text-center">
+            <div className="w-[7rem] h-px bg-mainBlue shrink-0" />
+            <span className="text-[#828282] text-[0.8rem] font-bold font-['Noto_Sans'] text-center">
               간편 로그인
             </span>
-            <div className="w-[137px] h-px bg-mainBlue shrink-0" />
+            <div className="w-[7rem] h-px bg-mainBlue shrink-0" />
           </div>
 
           {/* 구글 로그인 버튼 컴포넌트 */}

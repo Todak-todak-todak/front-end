@@ -7,7 +7,7 @@ const GoogleLoginButton = () => {
   return (
     <button
       onClick={handleGoogleLogin}
-      className="w-[370px] h-[60px] bg-white border border-solid border-[1px] border-[#ABB5B2] rounded-[10px] relative"
+      className="w-[95%] h-[60px] bg-white border border-solid border-[1px] border-[#ABB5B2] rounded-[10px] relative"
     >
       <img
         src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"

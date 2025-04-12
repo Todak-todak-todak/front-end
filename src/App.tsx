@@ -15,12 +15,12 @@ import Add from './pages/add/Add';
 import Splash from './pages/splash/Splash';
 import Chat from './pages/chat/Chat';
 import DocList from './pages/docList/DocList';
-import FormStepper from './pages/docRegister/FormStepper';
+import FormStepper from './pages/\bdocRegister/FormStepper';
 import Result from './pages/result/Result';
 import HosList from './pages/result/KakaoMap/HosList';
 import DocDetail from './pages/docList/DocDetail';
 import MyPage from './pages/mypage/MyPage';
-
+import './i18n';
 function FooterCondition() {
   const location = useLocation();
   const hideFooterPaths = ['/', '/add', '/chat', '/language'];

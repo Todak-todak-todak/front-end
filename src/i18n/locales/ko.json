@@ -1,0 +1,12 @@
+{
+  "information": {
+    "title": "{{name}}님을 위한 정보"
+  },
+  "category": {
+    "caution": "주의사항",
+    "safety": "안전교육",
+    "hospital": "의료기관",
+    "consult": "상담",
+    "report": "신고"
+  }
+}

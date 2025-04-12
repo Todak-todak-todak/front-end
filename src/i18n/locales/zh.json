@@ -1,0 +1,12 @@
+{
+  "information": {
+    "title": "{{name}}的信息"
+  },
+  "category": {
+    "caution": "注意事项",
+    "safety": "安全教育",
+    "hospital": "医疗机构",
+    "consult": "咨询",
+    "report": "举报"
+  }
+}

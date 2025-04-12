@@ -1,0 +1,12 @@
+{
+  "information": {
+    "title": "Information for {{name}}"
+  },
+  "category": {
+    "caution": "Caution",
+    "safety": "Safety Education",
+    "hospital": "Hospital",
+    "consult": "Consultation",
+    "report": "Report"
+  }
+}

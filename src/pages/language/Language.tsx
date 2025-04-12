@@ -7,20 +7,26 @@ import Vietnam from '@assets/images/Language/Vietnam.svg?react';
 import Button from '@/components/Button';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'; // i18next 훅 추가
 
 const languages = [
-  { label: '한국어', Icon: Korea, value: 'KOREA' },
-  { label: 'English', Icon: America, value: 'ENGLISH' },
-  { label: 'Tiếng Việt', Icon: Vietnam, value: 'VIETNAM' },
-  { label: '中文', Icon: China, value: 'CHINA' },
+  { label: '한국어', Icon: Korea, value: 'ko' }, // 'KOREA' -> 'ko'
+  { label: 'English', Icon: America, value: 'en' }, // 'ENGLISH' -> 'en'
+  { label: 'Tiếng Việt', Icon: Vietnam, value: 'vi' }, // 'VIETNAM' -> 'vi'
+  { label: '中文', Icon: China, value: 'zh' }, // 'CHINA' -> 'zh'
 ];
 
 const Language = () => {
   const [language, setLanguage] = useState<string | null>(null);
+  const { i18n } = useTranslation(); // i18n 객체 가져오기
   const navigate = useNavigate();
 
   const handleClick = () => {
     if (!language) return;
+
+    // 언어 변경
+    i18n.changeLanguage(language); // 언어 변경
+
     navigate('/add');
   };
 

@@ -8,5 +8,41 @@
     "hospital": "Hospital",
     "consult": "Consultation",
     "report": "Report"
+  },
+
+  "input": {
+    "name": {
+      "label": "Name",
+      "placeholder": "Enter your name"
+    },
+    "registerNumber": {
+      "label": "Foreigner Registration Number",
+      "placeholder": "Enter your registration number"
+    },
+    "phone": {
+      "label": "Phone Number",
+      "placeholder": "Enter your phone number"
+    },
+    "address": {
+      "label": "Address",
+      "placeholder": "Enter your address"
+    }
+  },
+  "gender": {
+    "label": "Gender",
+    "female": "Female",
+    "male": "Male"
+  },
+  "industry": {
+    "label": "Industry",
+    "placeholder": "Please select an industry.",
+    "options": {
+      "manufacturing": "Manufacturing",
+      "construction": "Construction",
+      "fishery": "Fishery"
+    }
+  },
+  "form": {
+    "next": "next"
   }
 }

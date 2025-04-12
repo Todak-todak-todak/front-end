@@ -24,6 +24,8 @@ const Language = () => {
   const handleClick = () => {
     if (!language) return;
 
+    localStorage.setItem('lang', language); //선택한 언어 localstorage 저장
+
     // 언어 변경
     i18n.changeLanguage(language); // 언어 변경
 

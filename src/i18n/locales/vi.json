@@ -1,0 +1,12 @@
+{
+  "information": {
+    "title": "Thông tin dành cho {{name}}"
+  },
+  "category": {
+    "caution": "Lưu ý",
+    "safety": "Giáo dục an toàn",
+    "hospital": "Bệnh viện",
+    "consult": "Tư vấn",
+    "report": "Báo cáo"
+  }
+}

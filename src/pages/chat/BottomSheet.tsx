@@ -28,7 +28,7 @@ export default function BottomSheet({
           />
 
           <motion.div
-            className="absolute bottom-[4rem] w-[470px] 
+            className="absolute bottom-[4rem] w-full max-w-[470px]
             bg-white rounded-t-2xl p-4 z-50 max-h-[80vh] 
             overflow-y-auto shadow-footer"
             drag="y"

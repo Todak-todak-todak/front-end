@@ -26,7 +26,7 @@ const Footer = () => {
 
   return (
     <div
-      className="w-[470px] h-20 flex justify-around items-center px-8
+      className="w-full max-w-[470px] h-20 flex justify-around items-center px-8
       fixed bottom-0 bg-white rounded-t-3xl shadow-footer"
     >
       <button
@@ -82,11 +82,11 @@ const Footer = () => {
       >
         <AccountIcon
           className="w-8 h-8"
-          style={{ fill: isClicked === 'account' ? '#275AEC' : '#B2B3B5' }} // 여기서 색상 변경
+          style={{ fill: isClicked === 'mypage' ? '#275AEC' : '#B2B3B5' }}
         />
         <p
           className={`${
-            isClicked === 'account' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
+            isClicked === 'mypage' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
           } font-bold text-sm`}
         >
           내정보

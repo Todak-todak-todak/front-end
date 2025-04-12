@@ -112,7 +112,7 @@ const StepNavigation = ({
 
   if (step === 0) {
     return (
-      <div className="flex justify-between gap-4">
+      <div className="flex justify-between gap-[0.8]">
         <Button text="취소하기" onClick={handleCancel!} />
         {renderNextButton('다음으로', handleValidateAndNext)}
       </div>
@@ -121,7 +121,7 @@ const StepNavigation = ({
 
   if (step >= 1 && step <= 3) {
     return (
-      <div className="mt-6 flex justify-between">
+      <div className="flex justify-between">
         <Button text="이전으로" onClick={handleBack} />
         {renderNextButton('다음으로', handleValidateAndNext)}
       </div>
@@ -130,7 +130,7 @@ const StepNavigation = ({
 
   if (step === 4) {
     return (
-      <div className="mt-6 flex justify-between">
+      <div className="flex justify-between">
         <Button text="이전으로" onClick={handleBack} />
         {renderNextButton('제출', handleFinalSubmit)}
       </div>

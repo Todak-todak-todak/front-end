@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import Home from './pages/home/Home';
-import { GlobalStyle } from './styles/globalStyle';
+// import { GlobalStyle } from './styles/globalStyle';
 import './index.css';
 import Footer from './components/Footer';
 import ChatList from './pages/chatList/ChatList';
@@ -27,27 +27,30 @@ function FooterCondition() {
   const showFooter = !hideFooterPaths.includes(location.pathname);
   return showFooter ? <Footer /> : null;
 }
-
 function App() {
   return (
     <Router>
-      <div className="w-[470px] min-h-screen flex flex-col bg-[#FDFDFD] relative ">
-        <GlobalStyle />
-        <Routes>
-          <Route path="/language" element={<Language />} />
-          <Route path="/add" element={<Add />} />
-          <Route path="/" element={<Splash />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/result" element={<Result />} />
-          <Route path="/chatlist" element={<ChatList />} />
-          <Route path="/chat" element={<Chat />} />
-          <Route path="/doclist" element={<DocList />} />
-          <Route path="/doc" element={<FormStepper />} />
-          <Route path="/hoslist" element={<HosList />} />
-          <Route path="/docdetail" element={<DocDetail />} />
-          <Route path="/mypage" element={<MyPage />} />
-        </Routes>
-        <FooterCondition />
+      <div className="flex flex-col min-h-screen bg-[#FDFDFD] w-full max-w-[470px] mx-auto">
+        {/* <GlobalStyle /> */}
+        <div className="flex-1">
+          <Routes>
+            <Route path="/language" element={<Language />} />
+            <Route path="/add" element={<Add />} />
+            <Route path="/" element={<Splash />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/result" element={<Result />} />
+            <Route path="/chatlist" element={<ChatList />} />
+            <Route path="/chat" element={<Chat />} />
+            <Route path="/doclist" element={<DocList />} />
+            <Route path="/doc" element={<FormStepper />} />
+            <Route path="/hoslist" element={<HosList />} />
+            <Route path="/docdetail" element={<DocDetail />} />
+            <Route path="/mypage" element={<MyPage />} />
+          </Routes>
+        </div>
+        <div className="mt-auto">
+          <FooterCondition />
+        </div>
       </div>
     </Router>
   );

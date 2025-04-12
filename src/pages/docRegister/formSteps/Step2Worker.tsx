@@ -7,7 +7,7 @@ const Step2Worker = () => {
   const { control } = useFormContext();
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 pb-20">
       <p className="flex font-semibold text-[20px] px-8">재해자 정보</p>
       <div className="flex flex-col w-full gap-8  py-4">
         <TextInputField

@@ -5,10 +5,10 @@ import Statistics from './statistics/Statistics';
 const Home = () => {
   return (
     <div className="flex flex-col h-screen w-full">
-      <div className="flex-[2.5] w-full">
+      <div className="flex-[2] w-full">
         <Header />
       </div>
-      <div className="flex-[4] ">
+      <div className="flex-[4]">
         <Information />
       </div>
       <div className="flex-[4] ">

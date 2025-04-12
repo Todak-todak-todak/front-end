@@ -9,10 +9,10 @@ const Information = () => {
   const [isClicked, setIsClicked] = useState<Category>('주의사항');
 
   return (
-    <div className="flex flex-col px-8 gap-4 ">
+    <div className="flex flex-col px-8 gap-5 pt-8">
       <div className="flex gap-2 items-center">
         <MegaphoneIcon />
-        <p className="font-bold">hfidf님을 위한 정보</p>
+        <p className="font-bold ">hfidf님을 위한 정보</p>
       </div>
       <div>
         <InfoList isClicked={isClicked} setIsClicked={setIsClicked} />

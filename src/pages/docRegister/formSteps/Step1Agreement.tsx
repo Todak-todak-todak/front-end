@@ -10,7 +10,7 @@ const Step1Agreement = () => {
   } = useFormContext<CustomFormData>();
 
   return (
-    <div className="px-8 pt-2 space-y-8 bg-white">
+    <div className="px-8 pt-2  space-y-8 bg-white">
       <FormControl
         component="fieldset"
         error={!!errors.consent?.personalAgreement}

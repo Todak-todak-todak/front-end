@@ -36,5 +36,41 @@
     "title": "Thống kê nguy cơ",
     "accidentTop3": "TOP 3 nguyên nhân",
     "injuryTop3": "TOP 3 loại chấn thương"
+  },
+  "form": {
+    "informationTitle": "Vui lòng nhập thông tin của bạn",
+    "next": "Tiếp theo"
+  },
+  "input": {
+    "name": {
+      "label": "Họ và tên",
+      "placeholder": "Vui lòng nhập họ và tên"
+    },
+    "registerNumber": {
+      "label": "Số đăng ký người nước ngoài",
+      "placeholder": "Vui lòng nhập số đăng ký người nước ngoài"
+    },
+    "phone": {
+      "label": "Số điện thoại",
+      "placeholder": "Nhập số điện thoại (không dấu -)"
+    },
+    "address": {
+      "label": "Địa chỉ",
+      "placeholder": "Vui lòng nhập địa chỉ"
+    }
+  },
+  "gender": {
+    "label": "Giới tính",
+    "female": "Nữ",
+    "male": "Nam"
+  },
+  "industry": {
+    "label": "Ngành nghề",
+    "placeholder": "Vui lòng chọn ngành nghề",
+    "options": {
+      "manufacturing": "Sản xuất",
+      "construction": "Xây dựng",
+      "fishery": "Ngư nghiệp"
+    }
   }
 }

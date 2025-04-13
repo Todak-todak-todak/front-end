@@ -1,28 +1,32 @@
 import { useFormContext, Controller } from 'react-hook-form';
 import TextInputField from '../component/TextInputField';
 import CircleCheckbox from '../component/CheckBox';
+import { useTranslation } from 'react-i18next';
 
 const Step5Treatment = () => {
   const { control } = useFormContext();
+  const { t } = useTranslation();
 
   return (
     <div className="flex flex-col gap-4">
-      <p className="flex font-semibold text-[20px] px-8">치료 내용</p>
+      <p className="flex font-semibold text-[20px] px-8">
+        {t('treatment.title')}
+      </p>
       <div className="flex flex-col w-full gap-8 py-4">
         <TextInputField
           name="treatmentInfo.bodyPart"
-          label="다친 부위를 알려주세요"
-          placeholder="예) 팔, 다리, 머리 등"
+          label={t('treatment.bodyPartLabel')}
+          placeholder={t('treatment.bodyPartPlaceholder')}
         />
 
         <TextInputField
           name="treatmentInfo.hospital"
-          label="의료기관을 알려주세요"
-          placeholder="의료기관명을 입력해주세요"
+          label={t('treatment.hospitalLabel')}
+          placeholder={t('treatment.hospitalPlaceholder')}
         />
 
         <div className="flex flex-col px-8 gap-4 items-start">
-          <p className="font-semibold">치료를 구분해주세요</p>
+          <p className="font-semibold">{t('treatment.categoryLabel')}</p>
           <Controller
             name="treatmentInfo.category"
             control={control}
@@ -33,14 +37,18 @@ const Step5Treatment = () => {
                     checked={field.value === '입원'}
                     onChange={() => field.onChange('입원')}
                   />
-                  <span className="text-sm text-gray-800">입원</span>
+                  <span className="text-sm text-gray-800">
+                    {t('treatment.categoryOptions.admission')}
+                  </span>
                 </label>
                 <label className="flex items-center">
                   <CircleCheckbox
                     checked={field.value === '통원'}
                     onChange={() => field.onChange('통원')}
                   />
-                  <span className="text-sm text-gray-800">통원</span>
+                  <span className="text-sm text-gray-800">
+                    {t('treatment.categoryOptions.outpatient')}
+                  </span>
                 </label>
               </div>
             )}

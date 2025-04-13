@@ -36,5 +36,98 @@
     "title": "위험 통계",
     "accidentTop3": "사고유발 TOP3",
     "injuryTop3": "부상 TOP3"
+  },
+  "docBox": {
+    "title": "최근 신청한 산재 목록",
+    "progress": "처리중",
+    "done": "처리완료"
+  },
+  "docList": {
+    "title": "토닥과 쉽게 산재를 신청해보세요"
+  },
+  "docForm": {
+    "title": "산재신청"
+  },
+  "docButton": {
+    "cancel": "취소하기",
+    "next": "다음으로",
+    "previous": "이전으로",
+    "submit": "제출",
+    "confirm": "확인"
+  },
+  "complete": "산재가 신청되었습니다",
+  "agreement": {
+    "personalTitle": "[필수] 의료기관 대행신청을 위한 개인정보 수집, 제공 동의",
+    "personalDescription": "요양급여 신청서 대행 및 제출을 위해 개인정보 수집·이용에 동의합니다.",
+    "agencyTitle": "[필수] 대리인 제공 동의",
+    "agencyDescription": "본인은 선택한 의료기관이 요양급여신청서를 대행하여 \n근로복지공단에 제출하는 것을 위임 동의합니다.",
+    "agree": "동의함",
+    "disagree": "동의하지 않음"
+  },
+  "worker": {
+    "title": "재해자 정보",
+    "name": "이름",
+    "namePlaceholder": "이름을 입력해주세요.",
+    "ssn": "외국인등록번호",
+    "ssnPlaceholder": "외국인등록번호를 입력해주세요.",
+    "address": "주소",
+    "addressPlaceholder": "거주지를 입력해주세요",
+    "phone": "전화번호",
+    "phonePlaceholder": "전화번호를 입력해주세요",
+    "gender": "성별",
+    "male": "남자",
+    "female": "여자",
+    "employmentType": "근로자유형",
+    "employmentTypePlaceholder": "근로자유형",
+    "worker": "근로자",
+    "serviceProvider": "노무제공자",
+    "smeOwner": "중소기업사업주",
+    "smeFamilyWorker": "중소기업사업주 가족종사자",
+    "studentResearcher": "학생연구자",
+    "childWithHealthIssues": "건강손상자녀",
+    "specialWorker": "특수형태근로종사자",
+    "intern": "현장실습생"
+  },
+  "workplace": {
+    "title": "사업장 정보",
+    "businessNumber": "사업장관리번호",
+    "businessNumberPlaceholder": "사업장관리번호를 입력해주세요.",
+    "address": "사업장 주소",
+    "addressPlaceholder": "사업장 주소를 입력해주세요",
+    "phone": "사업장 연락처",
+    "phonePlaceholder": "사업장 연락처를 입력해주세요",
+    "ownerName": "사업주명",
+    "ownerNamePlaceholder": "사업주명을 입력해주세요",
+    "businessName": "사업장명",
+    "businessNamePlaceholder": "사업장명을 입력해주세요"
+  },
+  "accident": {
+    "title": "재해 정보",
+    "typeLabel": "유형을 선택해주세요",
+    "typeOptions": [
+      { "value": "", "label": "유형" },
+      { "value": "넘어짐", "label": "넘어짐" },
+      { "value": "베임", "label": "베임" },
+      { "value": "찔림", "label": "찔림" },
+      { "value": "부딪힘", "label": "부딪힘" },
+      { "value": "기타", "label": "기타" }
+    ],
+    "dateLabel": "재해발생일시를 알려주세요",
+    "datePlaceholder": "YYYY년 MM월 DD일 00시 00분",
+    "detailsLabel": "재해발생 경위를 알려주세요",
+    "detailsPlaceholder": "재해발생경위",
+    "guidance": "어디에서, 무엇을 하기 위해, 무엇을 사용하여, 어떻게 하다가, 어떤 이유 때문에, 어떻게 재해를 당하였는지 작성하여 주시길 바랍니다."
+  },
+  "treatment": {
+    "title": "치료 내용",
+    "bodyPartLabel": "다친 부위를 알려주세요",
+    "bodyPartPlaceholder": "예) 팔, 다리, 머리 등",
+    "hospitalLabel": "의료기관을 알려주세요",
+    "hospitalPlaceholder": "의료기관명을 입력해주세요",
+    "categoryLabel": "치료를 구분해주세요",
+    "categoryOptions": {
+      "admission": "입원",
+      "outpatient": "통원"
+    }
   }
 }

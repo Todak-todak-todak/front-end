@@ -22,7 +22,6 @@
       "question3": "申请工伤赔偿时需要准备哪些文件？"
     }
   },
-
   "information": {
     "title": "{{name}}的信息"
   },
@@ -37,5 +36,98 @@
     "title": "危险统计",
     "accidentTop3": "事故原因TOP3",
     "injuryTop3": "伤害类型TOP3"
+  },
+  "docBox": {
+    "title": "最近申请的工伤列表",
+    "progress": "处理中",
+    "done": "已处理"
+  },
+  "docList": {
+    "title": "和Todak一起轻松申请工伤"
+  },
+  "docForm": {
+    "title": "工伤申请"
+  },
+  "docButton": {
+    "cancel": "取消",
+    "next": "下一步",
+    "previous": "上一步",
+    "submit": "提交",
+    "confirm": "确认"
+  },
+  "complete": "工伤申请已提交",
+  "agreement": {
+    "personalTitle": "[必填] 同意为医疗机构代理申请而收集和提供个人信息",
+    "personalDescription": "我同意收集和使用个人信息，以代为申请提交治疗补助申请书。",
+    "agencyTitle": "[必填] 同意提供代理人",
+    "agencyDescription": "我同意将所选医疗机构委托提交治疗补助申请书至韩国劳动福利公团。",
+    "agree": "同意",
+    "disagree": "不同意"
+  },
+  "worker": {
+    "title": "灾害者信息",
+    "name": "姓名",
+    "namePlaceholder": "请输入姓名。",
+    "ssn": "外国人登录号码",
+    "ssnPlaceholder": "请输入外国人登录号码。",
+    "address": "地址",
+    "addressPlaceholder": "请输入地址。",
+    "phone": "电话号码",
+    "phonePlaceholder": "请输入电话号码。",
+    "gender": "性别",
+    "male": "男",
+    "female": "女",
+    "employmentType": "劳动者类型",
+    "employmentTypePlaceholder": "请选择劳动者类型",
+    "worker": "劳动者",
+    "serviceProvider": "服务提供者",
+    "smeOwner": "中小企业主",
+    "smeFamilyWorker": "中小企业主家庭成员",
+    "studentResearcher": "学生研究人员",
+    "childWithHealthIssues": "健康受损子女",
+    "specialWorker": "特殊类型劳动者",
+    "intern": "实习生"
+  },
+  "workplace": {
+    "title": "工作场所信息",
+    "businessNumber": "企业管理号码",
+    "businessNumberPlaceholder": "请输入企业管理号码。",
+    "address": "企业地址",
+    "addressPlaceholder": "请输入企业地址。",
+    "phone": "企业联系方式",
+    "phonePlaceholder": "请输入企业联系方式。",
+    "ownerName": "企业主名称",
+    "ownerNamePlaceholder": "请输入企业主名称。",
+    "businessName": "企业名称",
+    "businessNamePlaceholder": "请输入企业名称。"
+  },
+  "accident": {
+    "title": "事故信息",
+    "typeLabel": "请选择类型",
+    "typeOptions": [
+      { "value": "", "label": "类型" },
+      { "value": "摔倒", "label": "摔倒" },
+      { "value": "割伤", "label": "割伤" },
+      { "value": "刺伤", "label": "刺伤" },
+      { "value": "碰撞", "label": "碰撞" },
+      { "value": "其他", "label": "其他" }
+    ],
+    "dateLabel": "请提供事故发生时间",
+    "datePlaceholder": "YYYY年 MM月 DD日 00时 00分",
+    "detailsLabel": "请提供事故详情",
+    "detailsPlaceholder": "事故详情",
+    "guidance": "请描述事故发生的地点、目的、使用的工具、操作过程、原因以及事故发生的方式。"
+  },
+  "treatment": {
+    "title": "治疗详情",
+    "bodyPartLabel": "请告诉我们受伤的部位",
+    "bodyPartPlaceholder": "例如：手臂、腿、头等",
+    "hospitalLabel": "请告诉我们医疗机构",
+    "hospitalPlaceholder": "请输入医疗机构名称",
+    "categoryLabel": "请选择治疗分类",
+    "categoryOptions": {
+      "admission": "住院",
+      "outpatient": "门诊"
+    }
   }
 }

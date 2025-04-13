@@ -36,5 +36,98 @@
     "title": "Thống kê nguy cơ",
     "accidentTop3": "TOP 3 nguyên nhân",
     "injuryTop3": "TOP 3 loại chấn thương"
+  },
+  "docBox": {
+    "title": "Danh sách tai nạn đã đăng ký gần đây",
+    "progress": "Đang",
+    "done": "Xong"
+  },
+  "docList": {
+    "title": "Nộp đơn tai nạn lao động với Todak"
+  },
+  "docForm": {
+    "title": "Đăng ký tai nạn lao động"
+  },
+  "docButton": {
+    "cancel": "Hủy",
+    "next": "Tiếp theo",
+    "previous": "Quay lại",
+    "submit": "Gửi",
+    "confirm": "Xác nhận"
+  },
+  "complete": "Đơn tai nạn lao động đã được gửi",
+  "agreement": {
+    "personalTitle": "[Bắt buộc] Đồng ý thu thập và cung cấp thông tin cá nhân để đăng ký qua cơ sở y tế",
+    "personalDescription": "Tôi đồng ý thu thập và sử dụng thông tin cá nhân để thay mặt nộp đơn yêu cầu trợ cấp điều trị.",
+    "agencyTitle": "[Bắt buộc] Đồng ý ủy quyền cho người đại diện",
+    "agencyDescription": "Tôi đồng ý ủy quyền cho cơ sở y tế đã chọn thay mặt nộp đơn yêu cầu trợ cấp điều trị đến Quỹ Phúc lợi Lao động.",
+    "agree": "Đồng ý",
+    "disagree": "Không đồng ý"
+  },
+  "worker": {
+    "title": "Thông tin người lao động",
+    "name": "Tên",
+    "namePlaceholder": "Vui lòng nhập tên của bạn.",
+    "ssn": "Số đăng ký người nước ngoài",
+    "ssnPlaceholder": "Vui lòng nhập số đăng ký người nước ngoài.",
+    "address": "Địa chỉ",
+    "addressPlaceholder": "Vui lòng nhập địa chỉ của bạn.",
+    "phone": "Số điện thoại",
+    "phonePlaceholder": "Vui lòng nhập số điện thoại của bạn.",
+    "gender": "Giới tính",
+    "male": "Nam",
+    "female": "Nữ",
+    "employmentType": "Loại hình lao động",
+    "employmentTypePlaceholder": "Chọn loại hình lao động",
+    "worker": "Người lao động",
+    "serviceProvider": "Người cung cấp dịch vụ",
+    "smeOwner": "Chủ doanh nghiệp nhỏ",
+    "smeFamilyWorker": "Người lao động trong gia đình của chủ doanh nghiệp nhỏ",
+    "studentResearcher": "Sinh viên nghiên cứu",
+    "childWithHealthIssues": "Con cái bị suy giảm sức khỏe",
+    "specialWorker": "Người lao động đặc thù",
+    "intern": "Thực tập sinh"
+  },
+  "workplace": {
+    "title": "Thông tin nơi làm việc",
+    "businessNumber": "Mã số doanh nghiệp",
+    "businessNumberPlaceholder": "Vui lòng nhập mã số doanh nghiệp.",
+    "address": "Địa chỉ doanh nghiệp",
+    "addressPlaceholder": "Vui lòng nhập địa chỉ doanh nghiệp.",
+    "phone": "Liên hệ doanh nghiệp",
+    "phonePlaceholder": "Vui lòng nhập số điện thoại doanh nghiệp.",
+    "ownerName": "Tên chủ doanh nghiệp",
+    "ownerNamePlaceholder": "Vui lòng nhập tên chủ doanh nghiệp.",
+    "businessName": "Tên doanh nghiệp",
+    "businessNamePlaceholder": "Vui lòng nhập tên doanh nghiệp."
+  },
+  "accident": {
+    "title": "Thông tin tai nạn",
+    "typeLabel": "Vui lòng chọn loại tai nạn",
+    "typeOptions": [
+      { "value": "", "label": "Loại" },
+      { "value": "Ngã", "label": "Ngã" },
+      { "value": "Cắt", "label": "Cắt" },
+      { "value": "Đâm", "label": "Đâm" },
+      { "value": "Va chạm", "label": "Va chạm" },
+      { "value": "Khác", "label": "Khác" }
+    ],
+    "dateLabel": "Vui lòng cung cấp thời gian xảy ra tai nạn",
+    "datePlaceholder": "YYYY năm MM tháng DD ngày 00 giờ 00 phút",
+    "detailsLabel": "Vui lòng cung cấp chi tiết về tai nạn",
+    "detailsPlaceholder": "Chi tiết tai nạn",
+    "guidance": "Vui lòng mô tả nơi xảy ra tai nạn, mục đích, phương tiện sử dụng, cách thức và lý do tai nạn xảy ra."
+  },
+  "treatment": {
+    "title": "Chi tiết điều trị",
+    "bodyPartLabel": "Vui lòng cho biết bộ phận cơ thể bị thương",
+    "bodyPartPlaceholder": "ví dụ: cánh tay, chân, đầu, v.v.",
+    "hospitalLabel": "Vui lòng cho biết cơ sở y tế",
+    "hospitalPlaceholder": "Nhập tên cơ sở y tế",
+    "categoryLabel": "Vui lòng phân loại điều trị",
+    "categoryOptions": {
+      "admission": "Nhập viện",
+      "outpatient": "Điều trị ngoại trú"
+    }
   }
 }

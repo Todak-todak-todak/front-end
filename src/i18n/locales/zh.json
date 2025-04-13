@@ -73,5 +73,34 @@
       "construction": "建筑业",
       "fishery": "渔业"
     }
+  },
+  "mypage": {
+    "title": "个人信息",
+    "name": "姓名",
+    "idCard": "外国人登记号码",
+    "phone": "电话号码",
+    "gender": {
+      "label": "性别",
+      "female": "女",
+      "male": "男"
+    },
+    "industry": {
+      "label": "所属行业",
+      "options": {
+        "manufacturing": "制造业",
+        "construction": "建筑业",
+        "fishery": "渔业"
+      }
+    },
+    "language": {
+      "label": "语言",
+      "options": {
+        "ko": "韩语",
+        "en": "英语",
+        "vi": "越南语",
+        "zh": "中文"
+      }
+    },
+    "logout": "退出登录"
   }
 }

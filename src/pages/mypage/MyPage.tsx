@@ -11,9 +11,11 @@ import LanguageIcon from '@assets/images/MyPage/Lang.svg?react';
 import LogoutIcon from '@assets/images/MyPage/Logout.svg?react';
 import InfoItem from './InfoItem';
 import OptionButtons from './OptionButtons';
+import { useTranslation } from 'react-i18next';
 
 const MyPage = () => {
   const { profile, isEdit, toggleEdit, updateProfile } = useProfileStore();
+  const { t } = useTranslation();
 
   const infoFields: {
     icon: React.ReactNode;
@@ -21,33 +23,42 @@ const MyPage = () => {
     key: keyof typeof profile;
     options?: string[];
   }[] = [
-    { icon: <UserIcon />, label: '이름', key: 'name' },
-    { icon: <IdCardIcon />, label: '외국인 등록번호', key: 'idCard' },
-    { icon: <PhoneIcon />, label: '전화번호', key: 'phone' },
+    { icon: <UserIcon />, label: t('mypage.name'), key: 'name' },
+    { icon: <IdCardIcon />, label: t('mypage.idCard'), key: 'idCard' },
+    { icon: <PhoneIcon />, label: t('mypage.phone'), key: 'phone' },
     {
       icon: <GenderIcon />,
-      label: '성별',
+      label: t('mypage.gender.label'),
       key: 'gender',
-      options: ['여자', '남자'],
+      options: [t('mypage.gender.female'), t('mypage.gender.male')],
     },
     {
       icon: <IndustryIcon />,
-      label: '종사하는 산업',
+      label: t('mypage.industry.label'),
       key: 'industry',
-      options: ['제조업', '건설업', '어업'],
+      options: [
+        t('mypage.industry.options.manufacturing'),
+        t('mypage.industry.options.construction'),
+        t('mypage.industry.options.fishery'),
+      ],
     },
     {
       icon: <LanguageIcon />,
-      label: '언어',
+      label: t('mypage.language.label'),
       key: 'language',
-      options: ['한국어', 'English', 'Tiếng Việt', '中文'],
+      options: [
+        t('mypage.language.options.ko'),
+        t('mypage.language.options.en'),
+        t('mypage.language.options.vi'),
+        t('mypage.language.options.zh'),
+      ],
     },
   ];
 
   return (
     <>
       <Header
-        title="내정보"
+        title={t('mypage.title')}
         img={
           isEdit ? (
             <Check
@@ -70,11 +81,7 @@ const MyPage = () => {
             icon={icon}
             label={label}
             value={
-              key === 'language' ? (
-                <div className="flex items-center gap-1">{profile[key]}</div>
-              ) : (
-                profile[key]
-              )
+              <div className="flex items-center gap-1">{profile[key]}</div>
             }
             editOptions={
               isEdit && options ? (
@@ -88,7 +95,12 @@ const MyPage = () => {
           />
         ))}
 
-        <InfoItem icon={<LogoutIcon />} label="로그아웃" value="" isButton />
+        <InfoItem
+          icon={<LogoutIcon />}
+          label={t('mypage.logout')}
+          value=""
+          isButton
+        />
       </div>
     </>
   );

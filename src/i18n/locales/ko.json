@@ -101,5 +101,31 @@
       }
     },
     "logout": "로그아웃"
+  },
+  "docDetail": {
+    "completed": "처리완료",
+    "back": "이전으로",
+    "section": {
+      "victim": "재해자 정보",
+      "company": "사업장 정보",
+      "injury": "재해 및 치료 정보"
+    },
+    "label": {
+      "name": "이름",
+      "id": "외국인등록번호",
+      "phone": "연락처",
+      "gender": "성별",
+      "workerType": "근로자유형",
+      "address": "거주지",
+      "companyId": "사업장관리번호",
+      "ceo": "사업주명",
+      "companyName": "사업장명",
+      "type": "유형",
+      "date": "발생일시",
+      "part": "다친 부위",
+      "hospital": "의료기관",
+      "treatmentType": "치료 구분",
+      "detail": "재해발생 경위"
+    }
   }
 }

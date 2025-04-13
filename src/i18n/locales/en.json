@@ -102,5 +102,31 @@
       }
     },
     "logout": "Logout"
+  },
+  "docDetail": {
+    "completed": "Completed",
+    "back": "Back",
+    "section": {
+      "victim": "Victim Information",
+      "company": "Workplace Information",
+      "injury": "Injury and Treatment Information"
+    },
+    "label": {
+      "name": "Name",
+      "id": "Alien Registration No.",
+      "phone": "Phone Number",
+      "gender": "Gender",
+      "workerType": "Worker Type",
+      "address": "Address",
+      "companyId": "Business ID",
+      "ceo": "Business Owner",
+      "companyName": "Company Name",
+      "type": "Type",
+      "date": "Date and Time",
+      "part": "Injured Part",
+      "hospital": "Hospital",
+      "treatmentType": "Treatment Type",
+      "detail": "Details of the Accident"
+    }
   }
 }

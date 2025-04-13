@@ -102,5 +102,31 @@
       }
     },
     "logout": "退出登录"
+  },
+  "docDetail": {
+    "completed": "处理完成",
+    "back": "返回",
+    "section": {
+      "victim": "受害者信息",
+      "company": "工作场所信息",
+      "injury": "事故与治疗信息"
+    },
+    "label": {
+      "name": "姓名",
+      "id": "外国人登录号",
+      "phone": "联系电话",
+      "gender": "性别",
+      "workerType": "工作类型",
+      "address": "地址",
+      "companyId": "事业场所编号",
+      "ceo": "雇主姓名",
+      "companyName": "事业场所名称",
+      "type": "类型",
+      "date": "事故时间",
+      "part": "受伤部位",
+      "hospital": "医院",
+      "treatmentType": "治疗类型",
+      "detail": "事故经过"
+    }
   }
 }

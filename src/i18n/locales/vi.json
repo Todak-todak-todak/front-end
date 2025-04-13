@@ -101,5 +101,31 @@
       }
     },
     "logout": "Đăng xuất"
+  },
+  "docDetail": {
+    "completed": "Hoàn tất",
+    "back": "Quay lại",
+    "section": {
+      "victim": "Thông tin người bị tai nạn",
+      "company": "Thông tin nơi làm việc",
+      "injury": "Thông tin tai nạn và điều trị"
+    },
+    "label": {
+      "name": "Tên",
+      "id": "Số ĐKNN",
+      "phone": "Số điện thoại",
+      "gender": "Giới tính",
+      "workerType": "Loại lao động",
+      "address": "Địa chỉ",
+      "companyId": "Mã quản lý DN",
+      "ceo": "Chủ doanh nghiệp",
+      "companyName": "Tên công ty",
+      "type": "Loại",
+      "date": "Thời gian xảy ra",
+      "part": "Bộ phận bị thương",
+      "hospital": "Bệnh viện",
+      "treatmentType": "Phương pháp điều trị",
+      "detail": "Chi tiết tai nạn"
+    }
   }
 }

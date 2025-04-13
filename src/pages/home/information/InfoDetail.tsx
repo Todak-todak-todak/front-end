@@ -4,6 +4,7 @@ import ExclamationIcon from '@assets/images/Home/Exclamation.svg?react';
 import MapIcon from '@/assets/images/Home/Map.svg?react';
 import CallIcon from '@/assets/images/Home/Call.svg?react';
 import InstroductionIcon from '@/assets/images/Home/Instroduction.svg?react';
+import { useTranslation } from 'react-i18next';
 
 const iconMap = {
   주의사항: ExclamationIcon,
@@ -12,8 +13,18 @@ const iconMap = {
   상담: InstroductionIcon,
   신고: CallIcon,
 } as const;
+
+const categoryMap = {
+  주의사항: 'category.caution',
+  안전교육: 'category.safety',
+  의료기관: 'category.hospital',
+  상담: 'category.consult',
+  신고: 'category.report',
+} as const;
+
 const InfoDetail = ({ isClicked }: { isClicked: keyof typeof iconMap }) => {
   const IconComponent = iconMap[isClicked];
+  const { t } = useTranslation();
 
   return (
     <div className="flex overflow-x-auto pb-4 custom-scrollbar whitespace-nowrap gap-4">
@@ -22,17 +33,19 @@ const InfoDetail = ({ isClicked }: { isClicked: keyof typeof iconMap }) => {
           key={index}
           className="flex flex-col w-36 h-40 px-4 py-6 justify-between flex-shrink-0"
         >
-          <p className="flex items-start font-semibold leading-[1.2]  whitespace-normal">
+          <p className="flex items-start font-semibold leading-[1.2] whitespace-normal">
             사다리를 이용한 작업 또는 통행
           </p>
 
           <div className="flex flex-col gap-1">
             <div className="flex items-center gap-1">
               <IconComponent />
-              <p className="font-bold text-[11px]">{isClicked}</p>
+              <p className="font-bold text-[11px]">
+                {t(categoryMap[isClicked])}
+              </p>
             </div>
             <div className="bg-mainBlue rounded-xl p-2 ">
-              <p className="text-white text-[12px] line-clamp-2 leading-[1.2] whitespace-normal ">
+              <p className="text-white text-[12px] line-clamp-2 leading-[1.2] whitespace-normal">
                 3.5m 미만 작업 시 A자형 사다리만 사용(2인1조)
               </p>
             </div>

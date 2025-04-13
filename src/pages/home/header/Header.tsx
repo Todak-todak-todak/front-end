@@ -11,7 +11,7 @@ const Information = () => {
       <Box className="w-[90%] flex top-40 h-24 bg-white ">
         <div className="flex w-full flex-col h-full p-4 pt-5">
           <p className="flex w-full items-center font-semibold text-[1.3rem]">
-            hoenofneofinwfneo님
+            hoenofneofinwfneo<p>ㅏ</p>
           </p>
           <div className="flex justify-between">
             <div className="flex">

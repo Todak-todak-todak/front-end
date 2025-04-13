@@ -1,23 +1,24 @@
 import { useEffect, useRef } from 'react';
-import { chatMockData } from '@/mock/chat/chatMockData';
 
-const ChatBox = ({ isOpen }: { isOpen: boolean }) => {
+const ChatBox = ({
+  messages,
+}: {
+  messages: { sender: string; text: string }[];
+}) => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
-  }, [chatMockData, isOpen]);
+  }, [messages]);
 
   return (
     <div
       ref={scrollRef}
-      className={`flex flex-col overflow-y-auto flex-grow gap-2 px-4 ${
-        isOpen ? 'mb-[10rem]' : 'mb-0'
-      }`}
+      className="flex flex-col overflow-y-auto flex-grow gap-2 px-4"
     >
-      {chatMockData.map((msg, index) => (
+      {messages.map((msg, index) => (
         <div
           key={index}
           className={`flex ${

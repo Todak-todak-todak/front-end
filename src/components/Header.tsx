@@ -10,7 +10,7 @@ const Header = ({ title, img }: HeaderProps) => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="w-full max-w-[470px] flex items-center justify-between py-[30px] ">
+      <div className="w-full max-w-[470px] flex items-center justify-between py-[30px] pl-[25px]">
         <button onClick={() => navigate(-1)} className="">
           <Allow className="w-6 h-5" />
         </button>

@@ -71,6 +71,7 @@
     }
   },
   "form": {
-    "next": "next"
+    "next": "next",
+    "informationTitle": "Provide your information"
   }
 }

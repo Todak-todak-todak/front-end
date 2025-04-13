@@ -1,4 +1,40 @@
 {
+  "form": {
+    "informationTitle": "정보를 입력해주세요",
+    "next": "다음"
+  },
+  "input": {
+    "name": {
+      "label": "이름",
+      "placeholder": "이름을 입력해주세요."
+    },
+    "registerNumber": {
+      "label": "외국인 등록번호",
+      "placeholder": "외국인 등록번호를 입력해주세요."
+    },
+    "phone": {
+      "label": "전화번호",
+      "placeholder": "전화번호를 입력해주세요. (- 없이 숫자만 입력)"
+    },
+    "address": {
+      "label": "주소",
+      "placeholder": "주소를 입력해주세요."
+    }
+  },
+  "gender": {
+    "label": "성별",
+    "female": "여자",
+    "male": "남자"
+  },
+  "industry": {
+    "label": "종사하는 산업",
+    "placeholder": "종사하는 산업을 골라주세요.",
+    "options": {
+      "manufacturing": "제조업",
+      "construction": "건설업",
+      "fishery": "어업"
+    }
+  },
   "header": {
     "chatTitle": "AI 챗봇이 바로 답변드려요"
   },
@@ -128,6 +164,60 @@
     "categoryOptions": {
       "admission": "입원",
       "outpatient": "통원"
+  "mypage": {
+    "title": "내정보",
+    "name": "이름",
+    "idCard": "외국인 등록번호",
+    "phone": "전화번호",
+    "gender": {
+      "label": "성별",
+      "female": "여자",
+      "male": "남자"
+    },
+    "industry": {
+      "label": "종사하는 산업",
+      "options": {
+        "manufacturing": "제조업",
+        "construction": "건설업",
+        "fishery": "어업"
+      }
+    },
+    "language": {
+      "label": "언어",
+      "options": {
+        "ko": "한국어",
+        "en": "English",
+        "vi": "Tiếng Việt",
+        "zh": "中文"
+      }
+    },
+    "logout": "로그아웃"
+  },
+  "docDetail": {
+    "completed": "처리완료",
+    "back": "이전으로",
+    "section": {
+      "victim": "재해자 정보",
+      "company": "사업장 정보",
+      "injury": "재해 및 치료 정보"
+    },
+    "label": {
+      "name": "이름",
+      "id": "외국인등록번호",
+      "phone": "연락처",
+      "gender": "성별",
+      "workerType": "근로자유형",
+      "address": "거주지",
+      "companyId": "사업장관리번호",
+      "ceo": "사업주명",
+      "companyName": "사업장명",
+      "type": "유형",
+      "date": "발생일시",
+      "part": "다친 부위",
+      "hospital": "의료기관",
+      "treatmentType": "치료 구분",
+      "detail": "재해발생 경위"
+
     }
   }
 }

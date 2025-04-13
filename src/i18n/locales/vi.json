@@ -128,6 +128,96 @@
     "categoryOptions": {
       "admission": "Nhập viện",
       "outpatient": "Điều trị ngoại trú"
+=======
+  "form": {
+    "informationTitle": "Vui lòng nhập thông tin của bạn",
+    "next": "Tiếp theo"
+  },
+  "input": {
+    "name": {
+      "label": "Họ và tên",
+      "placeholder": "Vui lòng nhập họ và tên"
+    },
+    "registerNumber": {
+      "label": "Số đăng ký người nước ngoài",
+      "placeholder": "Vui lòng nhập số đăng ký người nước ngoài"
+    },
+    "phone": {
+      "label": "Số điện thoại",
+      "placeholder": "Nhập số điện thoại (không dấu -)"
+    },
+    "address": {
+      "label": "Địa chỉ",
+      "placeholder": "Vui lòng nhập địa chỉ"
+    }
+  },
+  "gender": {
+    "label": "Giới tính",
+    "female": "Nữ",
+    "male": "Nam"
+  },
+  "industry": {
+    "label": "Ngành nghề",
+    "placeholder": "Vui lòng chọn ngành nghề",
+    "options": {
+      "manufacturing": "Sản xuất",
+      "construction": "Xây dựng",
+      "fishery": "Ngư nghiệp"
+    }
+  },
+  "mypage": {
+    "title": "Thông tin cá nhân",
+    "name": "Họ và tên",
+    "idCard": "Mã người nước ngoài",
+    "phone": "Số điện thoại",
+    "gender": {
+      "label": "Giới tính",
+      "female": "Nữ",
+      "male": "Nam"
+    },
+    "industry": {
+      "label": "Ngành nghề",
+      "options": {
+        "manufacturing": "Sản xuất",
+        "construction": "Xây dựng",
+        "fishery": "Ngư nghiệp"
+      }
+    },
+    "language": {
+      "label": "Ngôn ngữ",
+      "options": {
+        "ko": "Tiếng Hàn",
+        "en": "Tiếng Anh",
+        "vi": "Tiếng Việt",
+        "zh": "Tiếng Trung"
+      }
+    },
+    "logout": "Đăng xuất"
+  },
+  "docDetail": {
+    "completed": "Hoàn tất",
+    "back": "Quay lại",
+    "section": {
+      "victim": "Thông tin người bị tai nạn",
+      "company": "Thông tin nơi làm việc",
+      "injury": "Thông tin tai nạn và điều trị"
+    },
+    "label": {
+      "name": "Tên",
+      "id": "Số ĐKNN",
+      "phone": "Số điện thoại",
+      "gender": "Giới tính",
+      "workerType": "Loại lao động",
+      "address": "Địa chỉ",
+      "companyId": "Mã quản lý DN",
+      "ceo": "Chủ doanh nghiệp",
+      "companyName": "Tên công ty",
+      "type": "Loại",
+      "date": "Thời gian xảy ra",
+      "part": "Bộ phận bị thương",
+      "hospital": "Bệnh viện",
+      "treatmentType": "Phương pháp điều trị",
+      "detail": "Chi tiết tai nạn"
     }
   }
 }

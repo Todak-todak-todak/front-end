@@ -163,6 +163,62 @@
     }
   },
   "form": {
-    "next": "next"
+    "next": "next",
+    "informationTitle": "Provide your information"
+  },
+  "mypage": {
+    "title": "Mypage",
+    "name": "Name",
+    "idCard": "Foreigner ID Number",
+    "phone": "Phone Number",
+    "gender": {
+      "label": "Gender",
+      "female": "Female",
+      "male": "Male"
+    },
+    "industry": {
+      "label": "Industry",
+      "options": {
+        "manufacturing": "Manufacturing",
+        "construction": "Construction",
+        "fishery": "Fishery"
+      }
+    },
+    "language": {
+      "label": "Language",
+      "options": {
+        "ko": "Korean",
+        "en": "English",
+        "vi": "Vietnamese",
+        "zh": "Chinese"
+      }
+    },
+    "logout": "Logout"
+  },
+  "docDetail": {
+    "completed": "Completed",
+    "back": "Back",
+    "section": {
+      "victim": "Victim Information",
+      "company": "Workplace Information",
+      "injury": "Injury and Treatment Information"
+    },
+    "label": {
+      "name": "Name",
+      "id": "Alien Registration No.",
+      "phone": "Phone Number",
+      "gender": "Gender",
+      "workerType": "Worker Type",
+      "address": "Address",
+      "companyId": "Business ID",
+      "ceo": "Business Owner",
+      "companyName": "Company Name",
+      "type": "Type",
+      "date": "Date and Time",
+      "part": "Injured Part",
+      "hospital": "Hospital",
+      "treatmentType": "Treatment Type",
+      "detail": "Details of the Accident"
+    }
   }
 }

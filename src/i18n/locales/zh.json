@@ -128,6 +128,96 @@
     "categoryOptions": {
       "admission": "住院",
       "outpatient": "门诊"
+=======
+  "form": {
+    "informationTitle": "请输入您的信息",
+    "next": "下一步"
+  },
+  "input": {
+    "name": {
+      "label": "姓名",
+      "placeholder": "请输入姓名"
+    },
+    "registerNumber": {
+      "label": "外国人登记号码",
+      "placeholder": "请输入外国人登记号码"
+    },
+    "phone": {
+      "label": "电话号码",
+      "placeholder": "请输入电话号码（不含 -）"
+    },
+    "address": {
+      "label": "地址",
+      "placeholder": "请输入地址"
+    }
+  },
+  "gender": {
+    "label": "性别",
+    "female": "女",
+    "male": "男"
+  },
+  "industry": {
+    "label": "所属行业",
+    "placeholder": "请选择所属行业",
+    "options": {
+      "manufacturing": "制造业",
+      "construction": "建筑业",
+      "fishery": "渔业"
+    }
+  },
+  "mypage": {
+    "title": "个人信息",
+    "name": "姓名",
+    "idCard": "外国人登记号码",
+    "phone": "电话号码",
+    "gender": {
+      "label": "性别",
+      "female": "女",
+      "male": "男"
+    },
+    "industry": {
+      "label": "所属行业",
+      "options": {
+        "manufacturing": "制造业",
+        "construction": "建筑业",
+        "fishery": "渔业"
+      }
+    },
+    "language": {
+      "label": "语言",
+      "options": {
+        "ko": "韩语",
+        "en": "英语",
+        "vi": "越南语",
+        "zh": "中文"
+      }
+    },
+    "logout": "退出登录"
+  },
+  "docDetail": {
+    "completed": "处理完成",
+    "back": "返回",
+    "section": {
+      "victim": "受害者信息",
+      "company": "工作场所信息",
+      "injury": "事故与治疗信息"
+    },
+    "label": {
+      "name": "姓名",
+      "id": "外国人登录号",
+      "phone": "联系电话",
+      "gender": "性别",
+      "workerType": "工作类型",
+      "address": "地址",
+      "companyId": "事业场所编号",
+      "ceo": "雇主姓名",
+      "companyName": "事业场所名称",
+      "type": "类型",
+      "date": "事故时间",
+      "part": "受伤部位",
+      "hospital": "医院",
+      "treatmentType": "治疗类型",
+      "detail": "事故经过"
     }
   }
 }

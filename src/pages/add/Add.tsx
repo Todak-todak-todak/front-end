@@ -56,11 +56,11 @@ const Add = () => {
       <FormProvider {...methods}>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="px-[30px] pb-[43px] flex flex-col justify-between"
+          className="px-[30px] pb-[23px] flex flex-col justify-between"
         >
           <div>
-            <div className="text-[#111111] text-[28px] leading-[34px] tracking-[-0.6px] text-left pb-[30px] pt-[20px]">
-              <p>Please provide your information</p>
+            <div className="text-[#111111] text-[28px] leading-[34px] tracking-[-0.6px] text-left pb-[30px]">
+              <p>{t('form.informationTitle')}</p>
             </div>
 
             <div className="flex flex-col gap-4 text-left">

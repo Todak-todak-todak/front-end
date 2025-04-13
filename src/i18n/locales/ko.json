@@ -164,6 +164,8 @@
     "categoryOptions": {
       "admission": "입원",
       "outpatient": "통원"
+    }
+  },
   "mypage": {
     "title": "내정보",
     "name": "이름",
@@ -217,7 +219,6 @@
       "hospital": "의료기관",
       "treatmentType": "치료 구분",
       "detail": "재해발생 경위"
-
     }
   }
 }

@@ -128,7 +128,8 @@
     "categoryOptions": {
       "admission": "住院",
       "outpatient": "门诊"
-=======
+    }
+  },
   "form": {
     "informationTitle": "请输入您的信息",
     "next": "下一步"

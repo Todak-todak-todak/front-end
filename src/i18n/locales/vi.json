@@ -128,7 +128,8 @@
     "categoryOptions": {
       "admission": "Nhập viện",
       "outpatient": "Điều trị ngoại trú"
-=======
+    }
+  },
   "form": {
     "informationTitle": "Vui lòng nhập thông tin của bạn",
     "next": "Tiếp theo"

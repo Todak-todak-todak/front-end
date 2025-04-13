@@ -4,6 +4,7 @@ import {
   Routes,
   useLocation,
 } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import './App.css';
 import Home from './pages/home/Home';
 // import { GlobalStyle } from './styles/globalStyle';
@@ -27,32 +28,36 @@ function FooterCondition() {
   const showFooter = !hideFooterPaths.includes(location.pathname);
   return showFooter ? <Footer /> : null;
 }
+const queryClient = new QueryClient();
+
 function App() {
   return (
-    <Router>
-      <div className="flex flex-col min-h-screen bg-[#FDFDFD] w-full max-w-[470px] mx-auto">
-        {/* <GlobalStyle /> */}
-        <div className="flex-1">
-          <Routes>
-            <Route path="/language" element={<Language />} />
-            <Route path="/add" element={<Add />} />
-            <Route path="/" element={<Splash />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/result" element={<Result />} />
-            <Route path="/chatlist" element={<ChatList />} />
-            <Route path="/chat" element={<Chat />} />
-            <Route path="/doclist" element={<DocList />} />
-            <Route path="/doc" element={<FormStepper />} />
-            <Route path="/hoslist" element={<HosList />} />
-            <Route path="/docdetail" element={<DocDetail />} />
-            <Route path="/mypage" element={<MyPage />} />
-          </Routes>
+    <QueryClientProvider client={queryClient}>
+      <Router>
+        <div className="flex flex-col min-h-screen bg-[#FDFDFD] w-full max-w-[470px] mx-auto">
+          {/* <GlobalStyle /> */}
+          <div className="flex-1">
+            <Routes>
+              <Route path="/language" element={<Language />} />
+              <Route path="/add" element={<Add />} />
+              <Route path="/" element={<Splash />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/result" element={<Result />} />
+              <Route path="/chatlist" element={<ChatList />} />
+              <Route path="/chat" element={<Chat />} />
+              <Route path="/doclist" element={<DocList />} />
+              <Route path="/doc" element={<FormStepper />} />
+              <Route path="/hoslist" element={<HosList />} />
+              <Route path="/docdetail" element={<DocDetail />} />
+              <Route path="/mypage" element={<MyPage />} />
+            </Routes>
+          </div>
+          <div className="mt-auto">
+            <FooterCondition />
+          </div>
         </div>
-        <div className="mt-auto">
-          <FooterCondition />
-        </div>
-      </div>
-    </Router>
+      </Router>
+    </QueryClientProvider>
   );
 }
 

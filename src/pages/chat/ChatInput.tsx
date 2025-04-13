@@ -7,9 +7,11 @@ import { useTranslation } from 'react-i18next';
 const ChatInput = ({
   isOpen,
   setIsOpen,
+  onSend,
 }: {
   isOpen: boolean;
   setIsOpen: (value: boolean) => void;
+  onSend: (message: string) => void;
 }) => {
   const { t } = useTranslation();
   const [inputValue, setInputValue] = useState('');
@@ -21,7 +23,7 @@ const ChatInput = ({
 
   const handleSend = () => {
     if (!inputValue.trim()) return;
-    console.log('전송된 메시지:', inputValue);
+    onSend(inputValue);
     setInputValue('');
   };
 

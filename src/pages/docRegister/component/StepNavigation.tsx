@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useFormContext, useWatch } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 import Button from '@/components/Button';
 import type { CustomFormData } from '../types/formTypes';
-import { useNavigate } from 'react-router-dom';
 
 interface StepNavigationProps {
   step: number;
@@ -20,9 +22,9 @@ const StepNavigation = ({
   handleCancel,
   onSubmit,
 }: StepNavigationProps) => {
+  const { t } = useTranslation();
   const { handleSubmit, trigger, control } = useFormContext<CustomFormData>();
   const [canProceed, setCanProceed] = useState(false);
-
   const watchedValues = useWatch({ control });
   const navigate = useNavigate();
 
@@ -113,8 +115,8 @@ const StepNavigation = ({
   if (step === 0) {
     return (
       <div className="flex justify-between gap-[0.8]">
-        <Button text="취소하기" onClick={handleCancel!} />
-        {renderNextButton('다음으로', handleValidateAndNext)}
+        <Button text={t('docButton.cancel')} onClick={handleCancel!} />
+        {renderNextButton(t('docButton.next'), handleValidateAndNext)}
       </div>
     );
   }
@@ -122,8 +124,8 @@ const StepNavigation = ({
   if (step >= 1 && step <= 3) {
     return (
       <div className="flex justify-between">
-        <Button text="이전으로" onClick={handleBack} />
-        {renderNextButton('다음으로', handleValidateAndNext)}
+        <Button text={t('docButton.previous')} onClick={handleBack} />
+        {renderNextButton(t('docButton.next'), handleValidateAndNext)}
       </div>
     );
   }
@@ -131,8 +133,8 @@ const StepNavigation = ({
   if (step === 4) {
     return (
       <div className="flex justify-between">
-        <Button text="이전으로" onClick={handleBack} />
-        {renderNextButton('제출', handleFinalSubmit)}
+        <Button text={t('docButton.previous')} onClick={handleBack} />
+        {renderNextButton(t('docButton.submit'), handleFinalSubmit)}
       </div>
     );
   }
@@ -141,7 +143,7 @@ const StepNavigation = ({
     return (
       <div className="mt-6 flex justify-end">
         <Button
-          text="확인"
+          text={t('docButton.confirm')}
           onClick={() => {
             navigate('/doclist');
           }}

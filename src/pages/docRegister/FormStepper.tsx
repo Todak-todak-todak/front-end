@@ -14,6 +14,7 @@ import Step6Complete from './formSteps/Step6Complete';
 import StepNavigation from './component/StepNavigation';
 import Header from '@/components/Header';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const steps = [
   <Step1Agreement key="step1" />,
@@ -27,6 +28,7 @@ const steps = [
 const FormStepper = () => {
   const [step, setStep] = useState(0);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const methods = useForm<CustomFormData>({
     resolver: zodResolver(fullFormSchema),
@@ -54,8 +56,8 @@ const FormStepper = () => {
 
   const totalVisibleSteps = 4;
   const getHeaderTitle = () => {
-    if (step === 0) return '산재신청';
-    return `산재신청 (${step}/${totalVisibleSteps})`;
+    if (step === 0) return `${t('docForm.title')}`;
+    return `${t('docForm.title')} (${step}/${totalVisibleSteps})`;
   };
 
   return (

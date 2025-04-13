@@ -2,6 +2,7 @@ import { useFormContext, Controller } from 'react-hook-form';
 import { FormControl, FormHelperText } from '@mui/material';
 import { CustomFormData } from '../types/formTypes';
 import CircleCheckbox from '../component/CheckBox';
+import { useTranslation } from 'react-i18next';
 
 const Step1Agreement = () => {
   const {
@@ -9,8 +10,11 @@ const Step1Agreement = () => {
     formState: { errors },
   } = useFormContext<CustomFormData>();
 
+  const { t } = useTranslation();
+
   return (
-    <div className="px-8 pt-2  space-y-8 bg-white">
+    <div className="px-8 pt-2 space-y-8 bg-white">
+      {/* 개인정보 동의 */}
       <FormControl
         component="fieldset"
         error={!!errors.consent?.personalAgreement}
@@ -18,12 +22,10 @@ const Step1Agreement = () => {
       >
         <div className="bg-blue-50 border-l-4 border-blue-300 p-3">
           <p className="font-semibold text-sm text-gray-900">
-            [필수] 의료기관 대행신청을 위한 개인정보 수집, 제공 동의
+            {t('agreement.personalTitle')}
           </p>
         </div>
-        <p className="mt-2 text-sm ">
-          요양급여 신청서 대행 및 제출을 위해 개인정보 수집·이용에 동의합니다.
-        </p>
+        <p className="mt-2 text-sm ">{t('agreement.personalDescription')}</p>
 
         <div className="flex gap-6 mt-4">
           <Controller
@@ -36,14 +38,18 @@ const Step1Agreement = () => {
                     checked={field.value === false}
                     onChange={() => field.onChange(false)}
                   />
-                  <span className="text-sm text-gray-800">동의하지 않음</span>
+                  <span className="text-sm text-gray-800">
+                    {t('agreement.disagree')}
+                  </span>
                 </label>
                 <label className="flex items-center space-x-2">
                   <CircleCheckbox
                     checked={field.value === true}
                     onChange={() => field.onChange(true)}
                   />
-                  <span className="text-sm text-gray-800">동의함</span>
+                  <span className="text-sm text-gray-800">
+                    {t('agreement.agree')}
+                  </span>
                 </label>
               </div>
             )}
@@ -56,6 +62,7 @@ const Step1Agreement = () => {
         )}
       </FormControl>
 
+      {/* 대리인 동의 */}
       <FormControl
         component="fieldset"
         error={!!errors.consent?.agencyAgreement}
@@ -63,12 +70,11 @@ const Step1Agreement = () => {
       >
         <div className="bg-blue-50 border-l-4 border-blue-300 p-3">
           <p className="font-semibold text-sm text-gray-900">
-            [필수] 대리인 제공 동의
+            {t('agreement.agencyTitle')}
           </p>
         </div>
         <p className="mt-2 text-sm text-gray-700">
-          본인은 선택한 의료기관이 요양급여신청서를 대행하여 <br />
-          근로복지공단에 제출하는 것을 위임 동의합니다.{' '}
+          {t('agreement.agencyDescription')}
         </p>
 
         <div className="flex gap-6 mt-4">
@@ -82,14 +88,18 @@ const Step1Agreement = () => {
                     checked={field.value === false}
                     onChange={() => field.onChange(false)}
                   />
-                  <span className="text-sm text-gray-800">동의하지 않음</span>
+                  <span className="text-sm text-gray-800">
+                    {t('agreement.disagree')}
+                  </span>
                 </label>
                 <label className="flex items-center space-x-2">
                   <CircleCheckbox
                     checked={field.value === true}
                     onChange={() => field.onChange(true)}
                   />
-                  <span className="text-sm text-gray-800">동의함</span>
+                  <span className="text-sm text-gray-800">
+                    {t('agreement.agree')}
+                  </span>
                 </label>
               </div>
             )}

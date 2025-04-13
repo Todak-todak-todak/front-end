@@ -22,7 +22,18 @@
       "question3": "What documents are needed for an accident claim?"
     }
   },
-
+  "treatment": {
+    "title": "Treatment Details",
+    "bodyPartLabel": "Please tell us the injured body part",
+    "bodyPartPlaceholder": "e.g. arm, leg, head, etc.",
+    "hospitalLabel": "Please tell us the medical institution",
+    "hospitalPlaceholder": "Enter the name of the medical institution",
+    "categoryLabel": "Please categorize the treatment",
+    "categoryOptions": {
+      "admission": "Admission",
+      "outpatient": "Outpatient"
+    }
+  },
   "information": {
     "title": "Information for {{name}}"
   },
@@ -37,6 +48,87 @@
     "title": "Risk Statistics",
     "accidentTop3": "Top 3 Accident Causes",
     "injuryTop3": "Top 3 Injuries"
+  },
+  "docBox": {
+    "title": "Recently Submitted Work Accidents",
+    "progress": "Progress",
+    "done": "Completed"
+  },
+  "docList": {
+    "title": "Easily apply for accident with Todak"
+  },
+  "docForm": {
+    "title": "Accident Report"
+  },
+  "docButton": {
+    "cancel": "Cancel",
+    "next": "Next",
+    "previous": "Back",
+    "submit": "Submit",
+    "confirm": "Confirm"
+  },
+  "complete": "Your industrial accident claim has been submitted",
+  "agreement": {
+    "personalTitle": "[Required] Consent to collect and provide personal information for medical institution proxy application",
+    "personalDescription": "I consent to the collection and use of personal information for the purpose of proxy submission of the medical care benefit application.",
+    "agencyTitle": "[Required] Consent to provide a proxy",
+    "agencyDescription": "I agree to delegate the selected medical institution to submit the application for medical care benefits to the Korea Workers' Compensation and Welfare Service.",
+    "agree": "Agree",
+    "disagree": "Disagree"
+  },
+  "worker": {
+    "title": "Worker Information",
+    "name": "Name",
+    "namePlaceholder": "Please enter your name.",
+    "ssn": "Alien Registration Number",
+    "ssnPlaceholder": "Please enter your alien registration number.",
+    "address": "Address",
+    "addressPlaceholder": "Please enter your address.",
+    "phone": "Phone Number",
+    "phonePlaceholder": "Please enter your phone number.",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "employmentType": "Employment Type",
+    "employmentTypePlaceholder": "Select employment type",
+    "worker": "Worker",
+    "serviceProvider": "Service Provider",
+    "smeOwner": "SME Owner",
+    "smeFamilyWorker": "SME Family Worker",
+    "studentResearcher": "Student Researcher",
+    "childWithHealthIssues": "Child with Health Issues",
+    "specialWorker": "Special Type Worker",
+    "intern": "Intern"
+  },
+  "workplace": {
+    "title": "Workplace Information",
+    "businessNumber": "Business Registration Number",
+    "businessNumberPlaceholder": "Please enter the business registration number.",
+    "address": "Business Address",
+    "addressPlaceholder": "Please enter the business address.",
+    "phone": "Business Phone Number",
+    "phonePlaceholder": "Please enter the business phone number.",
+    "ownerName": "Business Owner Name",
+    "ownerNamePlaceholder": "Please enter the business owner's name.",
+    "businessName": "Business Name",
+    "businessNamePlaceholder": "Please enter the business name."
+  },
+  "accident": {
+    "title": "Accident Information",
+    "typeLabel": "Please select a type",
+    "typeOptions": [
+      { "value": "", "label": "Type" },
+      { "value": "Fall", "label": "Fall" },
+      { "value": "Cut", "label": "Cut" },
+      { "value": "Puncture", "label": "Puncture" },
+      { "value": "Collision", "label": "Collision" },
+      { "value": "Other", "label": "Other" }
+    ],
+    "dateLabel": "Please provide the accident date and time",
+    "datePlaceholder": "YYYY-MM-DD HH:MM",
+    "detailsLabel": "Please provide the accident details",
+    "detailsPlaceholder": "Accident details",
+    "guidance": "Please describe where, what was being done, what was used, how it happened, and the reason for the accident."
   },
   "input": {
     "name": {

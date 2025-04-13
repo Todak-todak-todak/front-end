@@ -1,15 +1,17 @@
 import Box from '@/components/Box';
+import { useTranslation } from 'react-i18next';
 
 const DocBox = () => {
   const handleClick = () => {
     console.log('전자문서 상세페이지로 이동');
   };
   const isSuccess = false;
+  const { t } = useTranslation();
 
   return (
     <div className="flex flex-col gap-4 px-4 h-screen">
       <p className="flex items-start text-xl font-bold px-4">
-        최근 신청한 산재 목록
+        {t('docBox.title')}
       </p>
       <div className="flex flex-col gap-4 px-4 h-[30rem] overflow-y-auto pb-4 pt-1">
         <Box className="flex gap-4 ">
@@ -25,9 +27,15 @@ const DocBox = () => {
               } py-2 px-5 rounded-xl`}
             >
               {isSuccess ? (
-                <p className="text-white font-semibold text-sm">처리완료</p>
+                <p className="text-white font-semibold text-sm">
+                  {' '}
+                  {t('docBox.done')}
+                </p>
               ) : (
-                <p className="text-white font-semibold text-sm">처리중</p>
+                <p className="text-white font-semibold text-sm">
+                  {' '}
+                  {t('docBox.progress')}
+                </p>
               )}
             </button>
           </div>

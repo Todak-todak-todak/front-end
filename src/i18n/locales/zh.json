@@ -1,4 +1,28 @@
 {
+  "header": {
+    "chatTitle": "我们的 AI 聊天机器人马上回答"
+  },
+  "footer": {
+    "home": "首页",
+    "chatbot": "聊天机器人",
+    "doc": "处理",
+    "mypage": "我的信息"
+  },
+  "chatList": {
+    "analysisPrompt": "与AI聊天机器人对话，分析事故情况。"
+  },
+  "listBox": {
+    "recentAnalysisResults": "最近分析结果列表"
+  },
+  "chatInput": {
+    "placeholder": "请向我们的 AI 聊天机器人提问。",
+    "bottomSheet": {
+      "question1": "通勤途中发生的事故是否被认定为工伤？",
+      "question2": "如果经过诊断后辞职，能获得工伤赔偿吗？",
+      "question3": "申请工伤赔偿时需要准备哪些文件？"
+    }
+  },
+
   "information": {
     "title": "{{name}}的信息"
   },

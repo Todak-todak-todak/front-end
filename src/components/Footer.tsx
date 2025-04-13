@@ -6,10 +6,12 @@ import BlueBookIcon from '@assets/images/Footer/BlueBook.svg?react';
 import ChatBotIcon from '@assets/images/Footer/ChatBot.svg?react';
 import BlueChatBotIcon from '@assets/images/Footer/BlueChatBot.svg?react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
   const navigate = useNavigate();
   const [isClicked, setIsClicked] = useState('home');
+  const { t } = useTranslation();
 
   const handleCLick = (menu: string) => {
     setIsClicked(menu);
@@ -42,7 +44,7 @@ const Footer = () => {
             isClicked === 'home' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
           } font-bold text-sm`}
         >
-          홈
+          {t('footer.home')}
         </p>
       </button>
       <button
@@ -59,7 +61,7 @@ const Footer = () => {
             isClicked === 'chatlist' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
           } font-bold text-sm`}
         >
-          산재챗봇
+          {t('footer.chatbot')}
         </p>
       </button>
       <button
@@ -73,7 +75,7 @@ const Footer = () => {
             isClicked === 'doclist' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
           } font-bold text-sm pt-[1.5px]`}
         >
-          산재처리
+          {t('footer.doc')}
         </p>
       </button>
       <button
@@ -89,7 +91,7 @@ const Footer = () => {
             isClicked === 'mypage' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
           } font-bold text-sm`}
         >
-          내정보
+          {t('footer.mypage')}
         </p>
       </button>
     </div>

@@ -1,4 +1,28 @@
 {
+  "header": {
+    "chatTitle": "Our AI Chatbot Provides Instant Answers"
+  },
+  "footer": {
+    "home": "Home",
+    "chatbot": "Chatbot",
+    "doc": "Processing",
+    "mypage": "My Info"
+  },
+  "chatList": {
+    "analysisPrompt": "Analyze your accident by chatting with our AI chatbot."
+  },
+  "listBox": {
+    "recentAnalysisResults": "Recent Analysis Results"
+  },
+  "chatInput": {
+    "placeholder": "Ask our AI Chatbot a question.",
+    "bottomSheet": {
+      "question1": "Are accidents during commute recognized as work-related?",
+      "question2": "Can I get compensation if I quit after diagnosis?",
+      "question3": "What documents are needed for an accident claim?"
+    }
+  },
+
   "information": {
     "title": "Information for {{name}}"
   },

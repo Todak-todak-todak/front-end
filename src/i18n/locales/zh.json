@@ -32,5 +32,10 @@
     "hospital": "医疗机构",
     "consult": "咨询",
     "report": "举报"
+  },
+  "statistics": {
+    "title": "危险统计",
+    "accidentTop3": "事故原因TOP3",
+    "injuryTop3": "伤害类型TOP3"
   }
 }

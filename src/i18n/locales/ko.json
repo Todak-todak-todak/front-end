@@ -22,7 +22,6 @@
       "question3": "산재 신청할 때 필요한 서류는 무엇인가요?"
     }
   },
-
   "information": {
     "title": "{{name}}님을 위한 정보"
   },
@@ -32,5 +31,10 @@
     "hospital": "의료기관",
     "consult": "상담",
     "report": "신고"
+  },
+  "statistics": {
+    "title": "위험 통계",
+    "accidentTop3": "사고유발 TOP3",
+    "injuryTop3": "부상 TOP3"
   }
 }

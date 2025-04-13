@@ -4,9 +4,16 @@ import HospitalIcon from '@assets/images/Home/Hospital.svg?react';
 import ConsultationIcon from '@assets/images/Home/Consultation.svg?react';
 import ReportIcon from '@assets/images/Home/Report.svg?react';
 import Box from '@/components/Box';
+import { useTranslation } from 'react-i18next';
 
 type Category = '주의사항' | '안전교육' | '의료기관' | '상담' | '신고';
-
+const categoryMap = {
+  주의사항: 'category.caution',
+  안전교육: 'category.safety',
+  의료기관: 'category.hospital',
+  상담: 'category.consult',
+  신고: 'category.report',
+} as const;
 const icons: {
   Icon: React.FC<React.SVGProps<SVGSVGElement>>;
   label: Category;
@@ -26,6 +33,8 @@ interface InfoListProps {
 }
 
 const InfoList = ({ isClicked, setIsClicked }: InfoListProps) => {
+  const { t } = useTranslation();
+
   const handleClick = (label: Category) => {
     setIsClicked(label);
     console.log(isClicked);
@@ -53,7 +62,7 @@ const InfoList = ({ isClicked, setIsClicked }: InfoListProps) => {
               isClicked === label ? 'text-mainBlue' : 'text-mainGray'
             }`}
           >
-            {label}
+            {t(categoryMap[label])}
           </p>
         </button>
       ))}

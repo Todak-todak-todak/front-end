@@ -28,12 +28,16 @@
   },
   "category": {
     "caution": "Caution",
-    "safety": "Safety Education",
+    "safety": "Safety",
     "hospital": "Hospital",
-    "consult": "Consultation",
+    "consult": "Consult",
     "report": "Report"
   },
-
+  "statistics": {
+    "title": "Risk Statistics",
+    "accidentTop3": "Top 3 Accident Causes",
+    "injuryTop3": "Top 3 Injuries"
+  },
   "input": {
     "name": {
       "label": "Name",

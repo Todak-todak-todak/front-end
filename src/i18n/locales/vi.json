@@ -1,6 +1,6 @@
 {
   "header": {
-    "chatTitle": "Chatbot AI của chúng tôi trả lời ngay lập tức"
+    "chatTitle": "Chatbot AI trả lời ngay lập tức"
   },
   "footer": {
     "home": "Trang chủ",
@@ -17,9 +17,9 @@
   "chatInput": {
     "placeholder": "Hãy hỏi chatbot AI của chúng tôi một câu hỏi.",
     "bottomSheet": {
-      "question1": "Tai nạn trên đường đi làm có được công nhận là tai nạn lao động không?",
-      "question2": "Nếu tôi nghỉ việc sau khi được chẩn đoán, có thể được bồi thường không?",
-      "question3": "Những giấy tờ cần thiết để yêu cầu bồi thường là gì?"
+      "question1": "Tai nạn khi đi làm có tính là tai nạn lao động?",
+      "question2": "Nghỉ việc sau chẩn đoán có được bồi thường?",
+      "question3": "Cần giấy tờ gì để yêu cầu bồi thường?"
     }
   },
   "information": {
@@ -27,9 +27,14 @@
   },
   "category": {
     "caution": "Lưu ý",
-    "safety": "Giáo dục an toàn",
-    "hospital": "Bệnh viện",
+    "safety": "An toàn",
+    "hospital": "Y tế",
     "consult": "Tư vấn",
     "report": "Báo cáo"
+  },
+  "statistics": {
+    "title": "Thống kê nguy cơ",
+    "accidentTop3": "TOP 3 nguyên nhân",
+    "injuryTop3": "TOP 3 loại chấn thương"
   }
 }

@@ -72,5 +72,33 @@
     "title": "위험 통계",
     "accidentTop3": "사고유발 TOP3",
     "injuryTop3": "부상 TOP3"
+  },
+  "mypage": {
+    "name": "이름",
+    "idCard": "외국인 등록번호",
+    "phone": "전화번호",
+    "gender": {
+      "label": "성별",
+      "female": "여자",
+      "male": "남자"
+    },
+    "industry": {
+      "label": "종사하는 산업",
+      "options": {
+        "manufacturing": "제조업",
+        "construction": "건설업",
+        "fishery": "어업"
+      }
+    },
+    "language": {
+      "label": "언어",
+      "options": {
+        "ko": "한국어",
+        "en": "English",
+        "vi": "Tiếng Việt",
+        "zh": "中文"
+      }
+    },
+    "logout": "로그아웃"
   }
 }

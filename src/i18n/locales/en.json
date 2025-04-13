@@ -73,5 +73,34 @@
   "form": {
     "next": "next",
     "informationTitle": "Provide your information"
+  },
+  "mypage": {
+    "title": "Mypage",
+    "name": "Name",
+    "idCard": "Foreigner ID Number",
+    "phone": "Phone Number",
+    "gender": {
+      "label": "Gender",
+      "female": "Female",
+      "male": "Male"
+    },
+    "industry": {
+      "label": "Industry",
+      "options": {
+        "manufacturing": "Manufacturing",
+        "construction": "Construction",
+        "fishery": "Fishery"
+      }
+    },
+    "language": {
+      "label": "Language",
+      "options": {
+        "ko": "Korean",
+        "en": "English",
+        "vi": "Vietnamese",
+        "zh": "Chinese"
+      }
+    },
+    "logout": "Logout"
   }
 }

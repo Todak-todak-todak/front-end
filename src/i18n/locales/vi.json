@@ -72,5 +72,33 @@
       "construction": "Xây dựng",
       "fishery": "Ngư nghiệp"
     }
+  },
+  "mypage": {
+    "name": "Họ và tên",
+    "idCard": "Số đăng ký người nước ngoài",
+    "phone": "Số điện thoại",
+    "gender": {
+      "label": "Giới tính",
+      "female": "Nữ",
+      "male": "Nam"
+    },
+    "industry": {
+      "label": "Ngành nghề",
+      "options": {
+        "manufacturing": "Sản xuất",
+        "construction": "Xây dựng",
+        "fishery": "Ngư nghiệp"
+      }
+    },
+    "language": {
+      "label": "Ngôn ngữ",
+      "options": {
+        "ko": "Tiếng Hàn",
+        "en": "Tiếng Anh",
+        "vi": "Tiếng Việt",
+        "zh": "Tiếng Trung"
+      }
+    },
+    "logout": "Đăng xuất"
   }
 }

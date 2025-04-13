@@ -74,8 +74,9 @@
     }
   },
   "mypage": {
+    "title": "Thông tin cá nhân",
     "name": "Họ và tên",
-    "idCard": "Số đăng ký người nước ngoài",
+    "idCard": "Mã người nước ngoài",
     "phone": "Số điện thoại",
     "gender": {
       "label": "Giới tính",

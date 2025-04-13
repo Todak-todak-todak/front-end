@@ -1,4 +1,27 @@
 {
+  "header": {
+    "chatTitle": "Chatbot AI của chúng tôi trả lời ngay lập tức"
+  },
+  "footer": {
+    "home": "Trang chủ",
+    "chatbot": "Chatbot",
+    "doc": "Xử lý",
+    "mypage": "Cá nhân"
+  },
+  "chatList": {
+    "analysisPrompt": "Phân tích tai nạn bằng cách trò chuyện với chatbot AI."
+  },
+  "listBox": {
+    "recentAnalysisResults": "Danh sách kết quả phân tích gần đây"
+  },
+  "chatInput": {
+    "placeholder": "Hãy hỏi chatbot AI của chúng tôi một câu hỏi.",
+    "bottomSheet": {
+      "question1": "Tai nạn trên đường đi làm có được công nhận là tai nạn lao động không?",
+      "question2": "Nếu tôi nghỉ việc sau khi được chẩn đoán, có thể được bồi thường không?",
+      "question3": "Những giấy tờ cần thiết để yêu cầu bồi thường là gì?"
+    }
+  },
   "information": {
     "title": "Thông tin dành cho {{name}}"
   },

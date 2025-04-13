@@ -1,4 +1,28 @@
 {
+  "header": {
+    "chatTitle": "AI 챗봇이 바로 답변드려요"
+  },
+  "footer": {
+    "home": "홈",
+    "chatbot": "산재챗봇",
+    "doc": "산재처리",
+    "mypage": "내정보"
+  },
+  "chatList": {
+    "analysisPrompt": "AI 챗봇과 대화하며 산재를 분석해보세요."
+  },
+  "listBox": {
+    "recentAnalysisResults": "최근 분석 결과 목록"
+  },
+  "chatInput": {
+    "placeholder": "AI 챗봇에게 질문해주세요.",
+    "bottomSheet": {
+      "question1": "출퇴근길 사고도 산재로 인정되나요?",
+      "question2": "진단받고 퇴사하면 산재 보상 받을 수 있나요?",
+      "question3": "산재 신청할 때 필요한 서류는 무엇인가요?"
+    }
+  },
+
   "information": {
     "title": "{{name}}님을 위한 정보"
   },

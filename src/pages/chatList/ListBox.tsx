@@ -1,7 +1,9 @@
 import Box from '@/components/Box';
 import NextIcon from '@assets/images/Chat/Next.svg?react';
+import { useTranslation } from 'react-i18next';
 
 const ListBox = () => {
+  const { t } = useTranslation();
   const handleClick = () => {
     console.log('채팅분석페이지 이동');
   };
@@ -9,7 +11,7 @@ const ListBox = () => {
   return (
     <div className="flex flex-col gap-4 px-4 h-screen">
       <p className="flex items-start text-xl font-bold px-4">
-        최근 분석 결과 목록
+        {t('listBox.recentAnalysisResults')}
       </p>
       <div className="flex flex-col gap-4 px-4 h-[30rem] overflow-y-auto pb-4 pt-1">
         <Box className="flex gap-4 ">

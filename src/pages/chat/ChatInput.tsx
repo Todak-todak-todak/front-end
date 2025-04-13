@@ -2,6 +2,7 @@ import BottomSheet from './BottomSheet';
 import { useState } from 'react';
 import SendIcon from '@assets/images/Chat/Send.svg?react';
 import ListIcon from '@assets/images/Chat/List.svg?react';
+import { useTranslation } from 'react-i18next';
 
 const ChatInput = ({
   isOpen,
@@ -10,6 +11,7 @@ const ChatInput = ({
   isOpen: boolean;
   setIsOpen: (value: boolean) => void;
 }) => {
+  const { t } = useTranslation();
   const [inputValue, setInputValue] = useState('');
 
   const handleBottomSheetTextClick = (text: string) => {
@@ -24,7 +26,7 @@ const ChatInput = ({
   };
 
   return (
-    <div className="flex flex-col bottom-0 ">
+    <div className="flex flex-col bottom-0">
       {isOpen && (
         <div className="flex justify-center">
           <BottomSheet isOpen={isOpen} onClose={() => setIsOpen(false)}>
@@ -33,31 +35,31 @@ const ChatInput = ({
                 className="text-sm"
                 onClick={() =>
                   handleBottomSheetTextClick(
-                    '출퇴근길 사고도 산재로 인정되나요?'
+                    t('chatInput.bottomSheet.question1')
                   )
                 }
               >
-                출퇴근길 사고도 산재로 인정되나요?
+                {t('chatInput.bottomSheet.question1')}
               </button>
               <button
                 className="text-sm"
                 onClick={() =>
                   handleBottomSheetTextClick(
-                    '산재 신청할 때 필요한 서류는 무엇인가요?'
+                    t('chatInput.bottomSheet.question2')
                   )
                 }
               >
-                진단받고 퇴사하면 산재 보상 받을 수 있나요?
+                {t('chatInput.bottomSheet.question2')}
               </button>
               <button
                 className="text-sm"
                 onClick={() =>
                   handleBottomSheetTextClick(
-                    '진단받고 퇴사하면 산재 보상 받을 수 있나요?'
+                    t('chatInput.bottomSheet.question3')
                   )
                 }
               >
-                출퇴근길 사고도 산재로 인정되나요?
+                {t('chatInput.bottomSheet.question3')}
               </button>
             </div>
           </BottomSheet>
@@ -69,14 +71,13 @@ const ChatInput = ({
           <ListIcon width={20} height={28} />
         </button>
         <textarea
-          className="bg-[#F6F7F9] py-3 px-3 w-[80%] rounded-3xl placeholder-mainGray  font-normal resize-none overflow-hidden focus:outline-none"
-          placeholder="AI 챗봇에게 질문해주세요."
+          className="bg-[#F6F7F9] py-3 px-3 w-[80%] rounded-3xl placeholder-mainGray font-normal resize-none overflow-hidden focus:outline-none"
+          placeholder={t('chatInput.placeholder')}
           rows={1}
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
-
-        <button onClick={() => handleSend()}>
+        <button onClick={handleSend}>
           <SendIcon width={32} height={32} />
         </button>
       </div>

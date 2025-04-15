@@ -2,9 +2,11 @@ import Circle from '@/assets/images/Result/Circle.svg?react';
 import MiniCircle from '@/assets/images/Result/MiniCircle.svg?react';
 import Allow from '@assets/images/Result/Allow-right.svg?react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Percent = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleClick = () => {
     navigate('/doclist');
@@ -19,7 +21,7 @@ const Percent = () => {
           WebkitTextStrokeColor: '#000',
         }}
       >
-        산재 처리 가능성
+        {t('result.possibility')}
       </p>
 
       <div className="relative w-full h-[233px] flex flex-col justify-center items-center flex-shrink-0 rounded-[16px] bg-[#EBEEFD] shadow-[4px_4px_10px_rgba(0,0,0,0.08)] pt-[17px] pr-[28px] pl-[28px] pb-[14px]">
@@ -38,7 +40,7 @@ const Percent = () => {
         >
           <div className="flex items-center justify-center gap-2">
             <p className="text-[18px] text-[#0158FE] font-normal">
-              산재 신청 서류 작성하러 가기
+              {t('result.goToDoc')}
             </p>
             <Allow />
           </div>

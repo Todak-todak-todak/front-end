@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 const cases = [
   {
     title: '제조업',
@@ -12,6 +14,9 @@ const cases = [
 ];
 
 const Example = () => {
+  const { t } = useTranslation();
+  const name = '강재준';
+
   return (
     <div className="flex flex-col px-[25px] py-[20px] pb-[100px]">
       <p
@@ -21,7 +26,7 @@ const Example = () => {
           WebkitTextStrokeColor: '#000',
         }}
       >
-        강재준님과 비슷한 사례
+        {t('result.similarCase', { name })}
       </p>
 
       <div className="flex justify-between gap-[10px] w-full ">
@@ -34,7 +39,7 @@ const Example = () => {
               borderRadius: '0px 10px 10px 10px',
             }}
           >
-            <div className="absolute top-[-30px] left-[-1px]">
+            <div className="absolute top-[-40px] left-[-1px]">
               <div
                 className="bg-[#0076FF] text-white text-[14px] font-semibold px-[12px] py-[8px] 
             rounded-t-[10px] rounded-b-none 

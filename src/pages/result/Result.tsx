@@ -4,12 +4,15 @@ import Example from './Example';
 import Hospital from './KakaoMap/Hospital';
 import Percent from './Percent';
 import Save from '@assets/images/Result/Save.svg?react';
+import { useTranslation } from 'react-i18next';
 
 const Result = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Header
-        title="분석 결과"
+        title={t('result.title')}
         img={<Save className="w-[28px] h-[28px] cursor-pointer" />}
       />
       <main className="flex-1 overflow-y-auto">

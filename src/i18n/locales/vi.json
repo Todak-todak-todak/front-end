@@ -220,5 +220,32 @@
       "treatmentType": "Phương pháp điều trị",
       "detail": "Chi tiết tai nạn"
     }
+  },
+  "result": {
+    "title": "Kết quả phân tích",
+    "possibility": "Khả năng được xử lý tai nạn lao động",
+    "goToDoc": "Chuyển đến điền hồ sơ tai nạn",
+    "similarCase": "Trường hợp tương tự với {{name}}",
+    "hospitalTitle": "Hướng dẫn bệnh viện chỉ định gần nhất",
+    "more": "Thêm>",
+    "calculator": {
+      "title": "Công cụ ước tính tiền bồi thường tai nạn lao động",
+      "sub": "*Tiền bồi thường được ước tính dựa trên lương trung bình.",
+      "recentSalary": {
+        "label": "Lương 3 tháng gần nhất",
+        "sub": "*(Lương cơ bản + Phụ cấp)"
+      },
+      "annualBonus": {
+        "label": "Thưởng hàng năm"
+      },
+      "unusedVacationPay": {
+        "label": "Nghỉ phép còn lại"
+      },
+      "dailyWage": {
+        "label": "Lương 1 ngày"
+      },
+      "button": "Ước tính tiền bồi thường",
+      "alert": "Tính năng ước tính sẽ được cập nhật sau."
+    }
   }
 }

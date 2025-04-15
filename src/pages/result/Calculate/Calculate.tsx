@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import CalculateCard from './CalculateCard';
+import { useTranslation } from 'react-i18next';
 
 const Calculate = () => {
   const [inputs, setInputs] = useState({
@@ -8,6 +9,8 @@ const Calculate = () => {
     unusedVacationPay: '',
     dailyWage: '',
   });
+
+  const { t } = useTranslation();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -25,10 +28,10 @@ const Calculate = () => {
             WebkitTextStrokeColor: '#000',
           }}
         >
-          산재보상 금액 예측기
+          {t('result.calculator.title')}
         </p>
         <p className="text-[12px] leading-[120%] text-[#000] text-left mt-[5px]">
-          *평균임금을 계산하여 산재보상 금액이 예측됩니다.
+          {t('result.calculator.sub')}
         </p>
       </div>
 

@@ -231,6 +231,7 @@
     "calculator": {
       "title": "산재보상 금액 예측기",
       "sub": "*평균임금을 계산하여 산재보상 금액이 예측됩니다.",
+      "currency": "원",
       "recentSalary": {
         "label": "최근 3개월 급여",
         "sub": "*(기본급+기타수당)"

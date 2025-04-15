@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 interface SalaryInputItemProps {
   label: string;
   name: string;
@@ -13,6 +15,7 @@ const SalaryInputItem = ({
   subText,
   onChange,
 }: SalaryInputItemProps) => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col gap-[6px]">
       <div className="flex items-center justify-between">
@@ -35,7 +38,9 @@ const SalaryInputItem = ({
             className="text-right text-[#666] text-[16px] outline-none bg-transparent border border-[#0076FF] rounded-[10px] px-[16px] py-[10px] w-[180px] h-[35px]"
             placeholder="0"
           />
-          <span className="text-[#191B1C] text-[16px] font-semibold">원</span>
+          <span className="text-[#191B1C] text-[16px] font-semibold">
+            {t('result.calculator.currency')}
+          </span>
         </div>
       </div>
     </div>

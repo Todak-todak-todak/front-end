@@ -231,6 +231,7 @@
     "calculator": {
       "title": "Industrial Accident Compensation Estimator",
       "sub": "*The compensation is estimated based on the average wage.",
+      "currency": "KRW",
       "recentSalary": {
         "label": "Salary for Last 3 Months",
         "sub": "*(Base salary + Allowance)"

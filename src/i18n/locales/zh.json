@@ -231,6 +231,7 @@
     "calculator": {
       "title": "工伤赔偿金额预估器",
       "sub": "*根据平均工资预估赔偿金额。",
+      "currency": "韩元",
       "recentSalary": {
         "label": "最近3个月工资",
         "sub": "*(基本工资 + 津贴)"

@@ -230,6 +230,7 @@
     "more": "Thêm>",
     "calculator": {
       "title": "Công cụ ước tính tiền bồi thường tai nạn lao động",
+      "currency": "Won",
       "sub": "*Tiền bồi thường được ước tính dựa trên lương trung bình.",
       "recentSalary": {
         "label": "Lương 3 tháng gần nhất",

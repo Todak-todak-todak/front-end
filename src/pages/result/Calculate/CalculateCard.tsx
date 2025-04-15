@@ -1,4 +1,5 @@
 import SalaryInputItem from './SalaryInputItem';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
   inputs: Record<string, string>;
@@ -6,15 +7,26 @@ interface Props {
 }
 
 const CalculateCard = ({ inputs, onChange }: Props) => {
+  const { t } = useTranslation();
+
   const fields = [
     {
-      label: '최근 3개월 급여',
+      label: t('result.calculator.recentSalary.label'),
       name: 'recentSalary',
-      sub: '*(기본급+기타수당)',
+      sub: t('result.calculator.recentSalary.sub'),
     },
-    { label: '연간 상여금', name: 'annualBonus' },
-    { label: '최종 연차 수당', name: 'unusedVacationPay' },
-    { label: '1일 통상임금', name: 'dailyWage' },
+    {
+      label: t('result.calculator.annualBonus.label'),
+      name: 'annualBonus',
+    },
+    {
+      label: t('result.calculator.unusedVacationPay.label'),
+      name: 'unusedVacationPay',
+    },
+    {
+      label: t('result.calculator.dailyWage.label'),
+      name: 'dailyWage',
+    },
   ];
 
   return (
@@ -41,9 +53,9 @@ const CalculateCard = ({ inputs, onChange }: Props) => {
 
       <button
         className="mt-[10px] py-[14px] text-[#0076FF] text-[16px] font-semibold border border-[#0076FF] rounded-[14px]"
-        onClick={() => alert('예측 기능은 추후 연결 예정입니다.')}
+        onClick={() => alert(t('result.calculator.alert'))}
       >
-        산재보상 금액 예측하기
+        {t('result.calculator.button')}
       </button>
     </div>
   );

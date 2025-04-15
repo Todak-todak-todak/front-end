@@ -220,5 +220,34 @@
       "treatmentType": "治疗类型",
       "detail": "事故经过"
     }
+  },
+  "result": {
+    "title": "分析结果",
+    "possibility": "工伤处理可能性",
+    "goToDoc": "前往填写工伤申请表",
+    "similarCase": "{{name}} 的类似案例",
+    "hospitalTitle": "附近的工伤指定医院指南",
+    "hoslistTitle": "认可的工伤医院",
+    "more": "查看更多 >",
+    "calculator": {
+      "title": "工伤赔偿金额预估器",
+      "sub": "*根据平均工资预估赔偿金额。",
+      "currency": "韩元",
+      "recentSalary": {
+        "label": "最近3个月工资",
+        "sub": "*(基本工资 + 津贴)"
+      },
+      "annualBonus": {
+        "label": "年终奖金"
+      },
+      "unusedVacationPay": {
+        "label": "未休假工资"
+      },
+      "dailyWage": {
+        "label": "日常工资"
+      },
+      "button": "预估赔偿金额",
+      "alert": "预估功能将在后续提供。"
+    }
   }
 }

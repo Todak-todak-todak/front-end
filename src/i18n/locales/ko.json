@@ -220,5 +220,34 @@
       "treatmentType": "치료 구분",
       "detail": "재해발생 경위"
     }
+  },
+  "result": {
+    "title": "분석 결과",
+    "possibility": "산재 처리 가능성",
+    "goToDoc": "산재 신청 서류 작성하러 가기",
+    "similarCase": "{{name}}님과 비슷한 사례",
+    "hospitalTitle": "인근 산재 지정 병원 안내",
+    "hoslistTitle": "산재 인정 병원",
+    "more": "더보기 >",
+    "calculator": {
+      "title": "산재보상 금액 예측기",
+      "sub": "*평균임금을 계산하여 산재보상 금액이 예측됩니다.",
+      "currency": "원",
+      "recentSalary": {
+        "label": "최근 3개월 급여",
+        "sub": "*(기본급+기타수당)"
+      },
+      "annualBonus": {
+        "label": "연간 상여금"
+      },
+      "unusedVacationPay": {
+        "label": "최종 연차 수당"
+      },
+      "dailyWage": {
+        "label": "1일 통상임금"
+      },
+      "button": "산재보상 금액 예측하기",
+      "alert": "예측 기능은 추후 연결 예정입니다."
+    }
   }
 }

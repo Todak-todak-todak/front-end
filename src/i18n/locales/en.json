@@ -220,5 +220,35 @@
       "treatmentType": "Treatment Type",
       "detail": "Details of the Accident"
     }
+  },
+  "result": {
+    "title": "Analysis Result",
+    "possibility": "Industrial Accident Possibility",
+    "goToDoc": "Go to fill out accident form",
+    "similarCase": "Cases similar to {{name}}",
+    "hospitalTitle": "Nearby Designated Hospitals for Industrial Accidents",
+    "more": "more>",
+    "hoslistTitle": "Approved Hospitals",
+
+    "calculator": {
+      "title": "Industrial Accident Compensation Estimator",
+      "sub": "*The compensation is estimated based on the average wage.",
+      "currency": "KRW",
+      "recentSalary": {
+        "label": "Salary for Last 3 Months",
+        "sub": "*(Base salary + Allowance)"
+      },
+      "annualBonus": {
+        "label": "Annual Bonus"
+      },
+      "unusedVacationPay": {
+        "label": "Unused Vacation Pay"
+      },
+      "dailyWage": {
+        "label": "Daily Ordinary Wage"
+      },
+      "button": "Estimate Compensation",
+      "alert": "Estimation feature will be available soon."
+    }
   }
 }

@@ -15,9 +15,11 @@ const Button = ({
   disabled = false,
   onClick,
   className = '',
+  type = 'button',
 }: ButtonProps) => {
   return (
     <button
+      type={type}
       onClick={onClick}
       disabled={disabled}
       className={`flex items-center justify-center rounded-[10px] m-2 px-4 ${height} ${width} 

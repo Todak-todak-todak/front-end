@@ -7,6 +7,7 @@ import IndustryDropdown from '@/pages/add/IndustryDropdown';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { completeUserProfile } from '@/apis/user';
 
 export type FormValues = {
   name: string;
@@ -23,6 +24,7 @@ const Add = () => {
 
   useEffect(() => {
     const savedLang = localStorage.getItem('lang');
+    console.log('선택된 언어', savedLang);
     if (savedLang) {
       i18n.changeLanguage(savedLang);
     }
@@ -45,9 +47,26 @@ const Add = () => {
     formState: { isValid },
   } = methods;
 
-  const onSubmit = (data: FormValues) => {
-    console.log('Form submitted:', data);
-    navigate('/home');
+  const onSubmit = async (data: FormValues) => {
+    const userLanguege = localStorage.getItem('lang') || 'ko';
+    console.log('🟢 onSubmit 실행됨');
+    const payload = {
+      userName: data.name,
+      userRegisterNm: data.registerNumber,
+      userPhoneNm: data.phone,
+      userGender: data.gender!,
+      userLanguege,
+      userAddress: data.address,
+      industryName: data.industry!,
+    };
+
+    try {
+      const res = await completeUserProfile(payload);
+      console.log('제출 성공:', res);
+      navigate('/home');
+    } catch (err) {
+      console.error('제출 실패:', err);
+    }
   };
 
   return (

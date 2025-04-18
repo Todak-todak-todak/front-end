@@ -6,9 +6,9 @@ const GenderSelector = () => {
   const { control } = useFormContext<FormValues>();
   const { t } = useTranslation();
 
-  const options: { label: string; value: 'FEMALE' | 'MALE' }[] = [
-    { label: t('gender.female'), value: 'FEMALE' },
-    { label: t('gender.male'), value: 'MALE' },
+  const options: { label: string; value: string }[] = [
+    { label: t('gender.female'), value: '여자' },
+    { label: t('gender.male'), value: '남자' },
   ];
 
   return (

@@ -60,6 +60,11 @@ const Add = () => {
       industryName: data.industry!,
     };
 
+    console.log('📦 전송할 payload:');
+    Object.entries(payload).forEach(([key, value]) =>
+      console.log(`  ${key}: ${value}`)
+    );
+
     try {
       const res = await completeUserProfile(payload);
       console.log('제출 성공:', res);

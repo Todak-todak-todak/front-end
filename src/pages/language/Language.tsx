@@ -24,6 +24,7 @@ const Language = () => {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const token = params.get('accessToken');
+    console.log('📦 저장된 accessToken:', token);
 
     if (token) {
       localStorage.setItem('accessToken', token);

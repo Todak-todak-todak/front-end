@@ -48,14 +48,14 @@ const Add = () => {
   } = methods;
 
   const onSubmit = async (data: FormValues) => {
-    const userLanguege = localStorage.getItem('lang') || 'ko';
+    const userLanguage = localStorage.getItem('lang') || 'ko';
     console.log('🟢 onSubmit 실행됨');
     const payload = {
       userName: data.name,
       userRegisterNm: data.registerNumber,
       userPhoneNm: data.phone,
       userGender: data.gender!,
-      userLanguege,
+      userLanguage,
       userAddress: data.address,
       industryName: data.industry!,
     };

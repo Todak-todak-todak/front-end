@@ -1,3 +1,6 @@
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Header from '@/components/Header';
 import Box from '@/components/Box';
 import Korea from '@assets/images/Language/Korea.svg?react';
@@ -5,30 +8,33 @@ import America from '@assets/images/Language/America.svg?react';
 import China from '@assets/images/Language/China.svg?react';
 import Vietnam from '@assets/images/Language/Vietnam.svg?react';
 import Button from '@/components/Button';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next'; // i18next 훅 추가
 
 const languages = [
-  { label: '한국어', Icon: Korea, value: 'ko' }, // 'KOREA' -> 'ko'
-  { label: 'English', Icon: America, value: 'en' }, // 'ENGLISH' -> 'en'
-  { label: 'Tiếng Việt', Icon: Vietnam, value: 'vi' }, // 'VIETNAM' -> 'vi'
-  { label: '中文', Icon: China, value: 'zh' }, // 'CHINA' -> 'zh'
+  { label: '한국어', Icon: Korea, value: 'ko' },
+  { label: 'English', Icon: America, value: 'en' },
+  { label: 'Tiếng Việt', Icon: Vietnam, value: 'vi' },
+  { label: '中文', Icon: China, value: 'zh' },
 ];
 
 const Language = () => {
   const [language, setLanguage] = useState<string | null>(null);
-  const { i18n } = useTranslation(); // i18n 객체 가져오기
+  const { i18n } = useTranslation();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get('accessToken');
+
+    if (token) {
+      localStorage.setItem('accessToken', token);
+    }
+  }, []);
 
   const handleClick = () => {
     if (!language) return;
 
-    localStorage.setItem('lang', language); //선택한 언어 localstorage 저장
-
-    // 언어 변경
-    i18n.changeLanguage(language); // 언어 변경
-
+    localStorage.setItem('lang', language);
+    i18n.changeLanguage(language);
     navigate('/add');
   };
 

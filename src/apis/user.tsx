@@ -5,7 +5,7 @@ interface CompleteUserProfilePayload {
   userRegisterNm: string;
   userPhoneNm: string;
   userGender: string;
-  userLanguege: string;
+  userLanguage: string;
   userAddress: string;
   industryName: string;
 }

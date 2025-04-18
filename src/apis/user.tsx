@@ -13,6 +13,6 @@ interface CompleteUserProfilePayload {
 export const completeUserProfile = async (
   payload: CompleteUserProfilePayload
 ) => {
-  const response = await api.post('/user/resister', payload);
+  const response = await api.post('/user/register', payload);
   return response.data;
 };

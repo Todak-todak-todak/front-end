@@ -12,6 +12,14 @@ import LogoutIcon from '@assets/images/MyPage/Logout.svg?react';
 import InfoItem from './InfoItem';
 import OptionButtons from './OptionButtons';
 import { useTranslation } from 'react-i18next';
+import { getUserProfile } from '@/apis/user';
+import { useEffect } from 'react';
+
+const industryMap: Record<string, string> = {
+  MANUFACTURE: '제조업',
+  CONSTRUCTION: '건설업',
+  FISHERY: '어업',
+};
 
 const MyPage = () => {
   const { profile, isEdit, toggleEdit, updateProfile } = useProfileStore();
@@ -55,6 +63,26 @@ const MyPage = () => {
     },
   ];
 
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const data = await getUserProfile();
+        useProfileStore.getState().updateProfile({
+          name: data.data.userName,
+          idCard: data.data.userRegisterNm,
+          phone: data.data.userPhoneNm,
+          gender: data.data.userGender,
+          industry: data.data.industryName,
+          language: data.data.userLanguage,
+        });
+        console.log('마이페이지 data', data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchProfile();
+  }, []);
+
   return (
     <>
       <Header
@@ -81,7 +109,9 @@ const MyPage = () => {
             icon={icon}
             label={label}
             value={
-              <div className="flex items-center gap-1">{profile[key]}</div>
+              <div className="flex items-center gap-1">
+                {key === 'industry' ? industryMap[profile[key]] : profile[key]}
+              </div>
             }
             editOptions={
               isEdit && options ? (

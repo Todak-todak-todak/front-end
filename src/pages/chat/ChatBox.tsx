@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 const ChatBox = ({
   messages,
 }: {
-  messages: { sender: string; text: string }[];
+  messages: { sender: string; text: React.ReactNode }[];
 }) => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
@@ -26,7 +26,7 @@ const ChatBox = ({
           } mb-2`}
         >
           <p
-            className={`max-w-[70%] text-left px-3 py-2 rounded-xl text-sm ${
+            className={`max-w-[75%] text-left px-3 py-2 rounded-xl text-sm ${
               msg.sender === 'user'
                 ? 'bg-mainBlue text-white'
                 : 'bg-gray-200 text-black'

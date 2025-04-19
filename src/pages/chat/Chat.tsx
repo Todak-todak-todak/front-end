@@ -6,15 +6,23 @@ import { useTranslation } from 'react-i18next';
 import { useMutation } from '@tanstack/react-query';
 import { sendMessage } from './api/chatApi';
 import { getAccessToken } from '@/utils/authUtils';
+import ChatResponse from './ChatResponse';
+import { useNavigate } from 'react-router-dom';
 
 const Chat = () => {
   const [isOpen, setIsOpen] = useState(true);
   const { t } = useTranslation();
-  const [messages, setMessages] = useState<{ sender: string; text: string }[]>(
-    []
-  );
+  const [messages, setMessages] = useState<
+    { sender: string; text: React.ReactNode }[]
+  >([]);
 
   const accessToken = getAccessToken();
+  const navigate = useNavigate();
+
+  const handleDetailClick = (approveValue: number) => {
+    console.log('approve:', approveValue);
+    navigate('/result', { state: { approve: approveValue } });
+  };
 
   const { mutate } = useMutation({
     mutationFn: (data: { question: string; accessToken: string }) =>
@@ -33,19 +41,19 @@ const Chat = () => {
         ]);
       } else {
         const { summary, predict, related_industry_examples } = data;
-        const formattedMessage = `
-  ✅ 요약: ${summary}
-  
-  📊 산재 인정 확률: ${(predict.approve_prob * 100).toFixed(1)}%
-  🏗️ 산업 분야: ${predict.industry}
-  
-  📌 유사 사례:
-  ${related_industry_examples.map((ex: string) => `- ${ex}`).join('\n')}
-        `.trim();
 
+        const botMessage = (
+          <ChatResponse
+            summary={summary}
+            approveProb={predict.approve_prob * 100}
+            industry={predict.industry}
+            examples={related_industry_examples}
+            onClickDetail={() => handleDetailClick(predict.approve_prob * 100)}
+          />
+        );
         setMessages((prevMessages) => [
           ...prevMessages,
-          { sender: 'bot', text: formattedMessage },
+          { sender: 'bot', text: botMessage },
         ]);
       }
     },

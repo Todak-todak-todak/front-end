@@ -22,6 +22,8 @@ import HosList from './pages/result/KakaoMap/HosList';
 import DocDetail from './pages/docList/DocDetail';
 import MyPage from './pages/mypage/MyPage';
 import './i18n';
+import { useEffect } from 'react';
+
 function FooterCondition() {
   const location = useLocation();
   const hideFooterPaths = ['/', '/add', '/chat', '/language'];
@@ -31,6 +33,20 @@ function FooterCondition() {
 const queryClient = new QueryClient();
 
 function App() {
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const accessToken = params.get('accessToken');
+    const refreshToken = params.get('refreshToken');
+
+    if (accessToken) {
+      localStorage.setItem('accessToken', accessToken);
+      if (refreshToken) localStorage.setItem('refreshToken', refreshToken);
+
+      const cleanUrl = window.location.origin + window.location.pathname;
+      window.history.replaceState({}, document.title, cleanUrl);
+    }
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <Router>

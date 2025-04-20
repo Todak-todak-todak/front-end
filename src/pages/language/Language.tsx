@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Header from '@/components/Header';
@@ -20,16 +20,6 @@ const Language = () => {
   const [language, setLanguage] = useState<string | null>(null);
   const { i18n } = useTranslation();
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const token = params.get('accessToken');
-    console.log('📦 저장된 accessToken:', token);
-
-    if (token) {
-      localStorage.setItem('accessToken', token);
-    }
-  }, []);
 
   const handleClick = () => {
     if (!language) return;

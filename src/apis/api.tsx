@@ -13,35 +13,49 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-// 리프레쉬 토큰
-// api.interceptors.response.use(
-//   (response) => response,
-//   async (error) => {
-//     const originalRequest = error.config;
-//     if (error.response?.status === 401 && !originalRequest._retry) {
-//       originalRequest._retry = true;
+api.interceptors.response.use(
+  (response) => response,
+  async (error) => {
+    const originalRequest = error.config;
+    const errorCode = error.response?.data?.error?.errorCode;
 
-//       try {
-//         const refreshToken = localStorage.getItem('refreshToken');
-//         const res = await axios.post(
-//           'https://todak-back-end.store/api/v1/auth/refresh',
-//           {
-//             refreshToken,
-//           }
-//         );
+    if (
+      error.response?.status === 406 &&
+      errorCode === 'EXPIRED_TOKEN' &&
+      !originalRequest._retry
+    ) {
+      originalRequest._retry = true;
 
-//         const newAccessToken = res.data.accessToken;
-//         localStorage.setItem('accessToken', newAccessToken);
+      try {
+        const refreshToken = localStorage.getItem('refreshToken');
 
-//         originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
-//         return api(originalRequest);
-//       } catch (refreshError) {
-//         console.error('토큰 재발급 실패:', refreshError);
-//         window.location.href = '/login';
-//       }
-//     }
-//     return Promise.reject(error);
-//   }
-// );
+        const res = await axios.post(
+          'https://todak-back-end.store/api/v1/auth/refresh',
+          {},
+          {
+            headers: {
+              'Refresh-Token': refreshToken,
+              'Content-Type': 'application/json',
+            },
+          }
+        );
+
+        const newAccessToken = res.data.data.accessToken;
+        const newRefreshToken = res.data.data.refreshToken;
+
+        localStorage.setItem('accessToken', newAccessToken);
+        localStorage.setItem('refreshToken', newRefreshToken);
+
+        originalRequest.headers['Authorization'] = `Bearer ${newAccessToken}`;
+        return api(originalRequest);
+      } catch (refreshError) {
+        console.error('토큰 갱신 실패:', refreshError);
+        window.location.href = '/';
+      }
+    }
+
+    return Promise.reject(error);
+  }
+);
 
 export default api;

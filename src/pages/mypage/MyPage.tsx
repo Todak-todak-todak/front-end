@@ -9,9 +9,18 @@ import GenderIcon from '@assets/images/MyPage/Gender.svg?react';
 import IndustryIcon from '@assets/images/MyPage/Industry.svg?react';
 import LanguageIcon from '@assets/images/MyPage/Lang.svg?react';
 import LogoutIcon from '@assets/images/MyPage/Logout.svg?react';
+import AddressIcon from '@assets/images/MyPage/Address.svg?react';
 import InfoItem from './InfoItem';
 import OptionButtons from './OptionButtons';
 import { useTranslation } from 'react-i18next';
+import { getUserProfile, editUserProfile } from '@/apis/user';
+import { useEffect } from 'react';
+
+const industryMap: Record<string, string> = {
+  MANUFACTURE: '제조업',
+  CONSTRUCTION: '건설업',
+  FISHERY: '어업',
+};
 
 const MyPage = () => {
   const { profile, isEdit, toggleEdit, updateProfile } = useProfileStore();
@@ -31,6 +40,11 @@ const MyPage = () => {
       label: t('mypage.gender.label'),
       key: 'gender',
       options: [t('mypage.gender.female'), t('mypage.gender.male')],
+    },
+    {
+      icon: <AddressIcon />,
+      label: t('mypage.address.label'),
+      key: 'address',
     },
     {
       icon: <IndustryIcon />,
@@ -55,6 +69,28 @@ const MyPage = () => {
     },
   ];
 
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const data = await getUserProfile();
+        useProfileStore.getState().updateProfile({
+          name: data.data.userName,
+          idCard: data.data.userRegisterNm,
+          phone: data.data.userPhoneNm,
+          gender: data.data.userGender,
+          address: data.data.userAddress,
+          industry:
+            industryMap[data.data.industryName] ?? data.data.industryName,
+          language: data.data.userLanguage,
+        });
+        console.log('마이페이지 data', data);
+      } catch (error) {
+        console.error('프로필 불러오기 실패:', error);
+      }
+    };
+    fetchProfile();
+  }, []);
+
   return (
     <>
       <Header
@@ -63,7 +99,27 @@ const MyPage = () => {
           isEdit ? (
             <Check
               className="w-[25px] h-[25px] cursor-pointer"
-              onClick={toggleEdit}
+              onClick={async () => {
+                try {
+                  console.log('프로필 수정:', profile);
+
+                  await editUserProfile({
+                    userName: profile.name,
+                    userRegisterNm: profile.idCard,
+                    userPhoneNm: profile.phone,
+                    userGender: profile.gender,
+                    industryName: profile.industry,
+                    userLanguage: profile.language,
+                    userAddress: profile.address,
+                  });
+
+                  toggleEdit();
+                  alert('정보가 수정되었습니다!');
+                } catch (error) {
+                  console.error('수정 실패:', error);
+                  alert('오류 발생');
+                }
+              }}
             />
           ) : (
             <Edit
@@ -81,7 +137,11 @@ const MyPage = () => {
             icon={icon}
             label={label}
             value={
-              <div className="flex items-center gap-1">{profile[key]}</div>
+              <div className="flex items-center gap-1">
+                {key === 'industry'
+                  ? industryMap[profile[key]] ?? profile[key]
+                  : profile[key]}
+              </div>
             }
             editOptions={
               isEdit && options ? (

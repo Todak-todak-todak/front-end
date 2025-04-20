@@ -171,6 +171,9 @@
     "name": "이름",
     "idCard": "외국인 등록번호",
     "phone": "전화번호",
+    "address": {
+      "label": "주소"
+    },
     "gender": {
       "label": "성별",
       "female": "여자",
@@ -188,9 +191,9 @@
       "label": "언어",
       "options": {
         "ko": "한국어",
-        "en": "English",
-        "vi": "Tiếng Việt",
-        "zh": "中文"
+        "en": "영어",
+        "vi": "베트남어",
+        "zh": "중국어"
       }
     },
     "logout": "로그아웃"

@@ -23,3 +23,12 @@ export const getUserProfile = async () => {
   const response = await api.get('/user/profile');
   return response.data;
 };
+
+export const editUserProfile = async (
+  updateData: Partial<CompleteUserProfilePayload>
+) => {
+  // 마이페이지 내 정보 수정하기
+  const response = await api.put('/user/profile/update', updateData);
+  console.log(response);
+  return response.data;
+};

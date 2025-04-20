@@ -5,6 +5,7 @@ interface Profile {
   idCard: string;
   phone: string;
   gender: string;
+  address: string;
   industry: string;
   language: string;
 }
@@ -22,6 +23,7 @@ export const useProfileStore = create<ProfileStore>((set) => ({
     idCard: '000402-3000000',
     phone: '010-1234-4321',
     gender: '남자',
+    address: '서울시 강남구',
     industry: '건설업',
     language: 'Tiếng Việt',
   },

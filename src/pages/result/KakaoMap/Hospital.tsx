@@ -1,14 +1,31 @@
 import KakaoMap from './KakaoMap';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { getAddress } from '@/apis/result';
 
 const Hospital = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const [address, setAddress] = useState('');
 
   const handleClick = () => {
     navigate('/hoslist');
   };
+
+  useEffect(() => {
+    const fetchAddress = async () => {
+      try {
+        const res = await getAddress();
+        setAddress(res.data.userAddress);
+        console.log('주소', res.data.userAddress);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchAddress();
+  }, []);
 
   return (
     <div className="flex flex-col pt-[15px] pr-[25px] pb-[20px] pl-[25px]">
@@ -31,7 +48,7 @@ const Hospital = () => {
       </div>
 
       <div className="mt-[14px]">
-        <KakaoMap />
+        {address && <KakaoMap address={address} />}
       </div>
     </div>
   );

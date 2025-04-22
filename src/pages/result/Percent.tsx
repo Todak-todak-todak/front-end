@@ -17,6 +17,7 @@ const Percent = () => {
   };
 
   useEffect(() => {
+    // 산재 처리 가능성 % 불러오기
     const fetchResult = async () => {
       try {
         const data = await getResult();

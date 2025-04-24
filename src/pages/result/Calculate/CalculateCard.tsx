@@ -4,9 +4,10 @@ import { useTranslation } from 'react-i18next';
 interface Props {
   inputs: Record<string, string>;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onSubmit: () => void;
 }
 
-const CalculateCard = ({ inputs, onChange }: Props) => {
+const CalculateCard = ({ inputs, onChange, onSubmit }: Props) => {
   const { t } = useTranslation();
 
   const fields = [
@@ -30,12 +31,7 @@ const CalculateCard = ({ inputs, onChange }: Props) => {
   ];
 
   return (
-    <div
-      className="bg-white mt-[14px] p-[20px] rounded-[20px] shadow-sm flex flex-col gap-[20px]"
-      style={{
-        boxShadow: '2px 2px 10px 0px rgba(0, 0, 0, 0.08)',
-      }}
-    >
+    <div className="bg-white mt-[14px] p-[20px] rounded-[20px] shadow-sm flex flex-col gap-[20px]">
       {fields.map(({ label, name, sub }) => (
         <SalaryInputItem
           key={name}
@@ -53,7 +49,7 @@ const CalculateCard = ({ inputs, onChange }: Props) => {
 
       <button
         className="mt-[10px] py-[14px] text-[#0076FF] text-[16px] font-semibold border border-[#0076FF] rounded-[14px]"
-        onClick={() => alert(t('result.calculator.alert'))}
+        onClick={onSubmit}
       >
         {t('result.calculator.button')}
       </button>

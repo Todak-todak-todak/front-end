@@ -232,9 +232,19 @@
     "hospitalTitle": "인근 산재 지정 병원 안내",
     "hoslistTitle": "산재 인정 병원",
     "more": "더보기 >",
+    "tabs": {
+      "sickLeave": "휴업급여",
+      "disability": "장해급여",
+      "pension": "상병보상연금",
+      "survivorPension": "유족연금",
+      "survivorOneTime": "유족일시금",
+      "funeral": "장례비"
+    },
     "calculator": {
       "title": "산재보상 금액 예측기",
       "sub": "*평균임금을 계산하여 산재보상 금액이 예측됩니다.",
+      "calculate": "예측하기",
+      "retry": "금액 다시 예측하기",
       "currency": "원",
       "recentSalary": {
         "label": "최근 3개월 급여",
@@ -248,6 +258,15 @@
       },
       "dailyWage": {
         "label": "1일 통상임금"
+      },
+      "rule": {
+        "sick": "휴업급여",
+        "sickLeave": "휴업급여 산정 기준",
+        "disability": "장해급여 산정 기준",
+        "pension": "상병보상연금 산정 기준",
+        "survivorPension": "유족연금 산정 기준",
+        "survivorOneTime": "유족일시금 산정 기준",
+        "funeral": "장례비 산정 기준"
       },
       "button": "산재보상 금액 예측하기",
       "alert": "예측 기능은 추후 연결 예정입니다."

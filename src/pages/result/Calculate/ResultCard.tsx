@@ -123,9 +123,9 @@ const ResultCard = ({ inputs, onRetry }: ResultCardProps) => {
               setType(c.key);
               setGrade(gradeMap[c.key][0]);
             }}
-            className={`text-sm font-semibold whitespace-nowrap pb-1 ${
+            className={`relative text-sm font-semibold whitespace-nowrap ${
               type === c.key
-                ? 'text-[#0076FF] border-b-2 border-[#0076FF]'
+                ? 'text-[#0076FF] after:content-[""] after:absolute after:left-0 after:bottom-[-8px] after:w-full after:h-[2px] after:bg-[#0076FF]'
                 : 'text-gray-400'
             }`}
           >

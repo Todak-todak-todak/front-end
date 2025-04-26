@@ -13,6 +13,8 @@ const Calculate = () => {
 
   const [showResult, setShowResult] = useState(false);
   const { t } = useTranslation();
+  // const [calculatorId, setCalculatorId] = useState<number | null>(null);
+  // const [chatResultId, setChatResultId] = useState<number | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;

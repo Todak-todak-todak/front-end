@@ -2,8 +2,14 @@ import { useState } from 'react';
 import CalculateCard from './CalculateCard';
 import { useTranslation } from 'react-i18next';
 import ResultCard from './ResultCard';
+import { Dispatch, SetStateAction } from 'react';
 
-const Calculate = () => {
+interface CalculateProps {
+  setCalculatorId: Dispatch<SetStateAction<number | null>>;
+  setChatResultId: Dispatch<SetStateAction<number | null>>;
+}
+
+const Calculate = ({ setCalculatorId, setChatResultId }: CalculateProps) => {
   const [inputs, setInputs] = useState({
     recentSalary: '',
     annualBonus: '',
@@ -54,7 +60,12 @@ const Calculate = () => {
           />
         </>
       ) : (
-        <ResultCard inputs={inputs} onRetry={() => setShowResult(false)} />
+        <ResultCard
+          inputs={inputs}
+          onRetry={() => setShowResult(false)}
+          setCalculatorId={setCalculatorId}
+          setChatResultId={setChatResultId}
+        />
       )}
     </div>
   );

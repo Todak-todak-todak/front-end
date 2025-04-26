@@ -21,7 +21,7 @@ const Result = () => {
       return;
     }
 
-    const fakeChatResultId = 3; // ✅ 임시 chatResultId 사용 (임시)
+    const fakeChatResultId = 3;
 
     saveResult({ calculatorId, chatResultId: fakeChatResultId })
       .then(() => {

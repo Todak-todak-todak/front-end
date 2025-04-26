@@ -25,42 +25,6 @@ const Example = () => {
     fetchResult();
   }, []);
 
-  const [examples, setExamples] = useState<string[]>([]);
-  const [industry, setIndustry] = useState<string>('');
-
-  useEffect(() => {
-    // 산업 & 예시 불러오기
-    const fetchResult = async () => {
-      try {
-        const res = await getResult();
-        setExamples(res.data.relatedIndustryExamples);
-        setIndustry(res.data.industry);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchResult();
-  }, []);
-
-  const [examples, setExamples] = useState<string[]>([]);
-  const [industry, setIndustry] = useState<string>('');
-
-  useEffect(() => {
-    // 산업 & 예시 불러오기
-    const fetchResult = async () => {
-      try {
-        const res = await getResult();
-        setExamples(res.data.relatedIndustryExamples);
-        setIndustry(res.data.industry);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchResult();
-  }, []);
-
   return (
     <div className="flex flex-col px-[25px] py-[20px] pb-[100px]">
       <p

@@ -4,6 +4,7 @@ import CustomSelect from '@/components/CustomSelect';
 import { calculateAmount } from '@/utils/Calculate/calculateAmount';
 import { postResult } from '@/apis/result';
 import { ResultRequestBody } from '@/apis/result';
+import { Dispatch, SetStateAction } from 'react';
 import {
   compensationTypes,
   disabilityCodeMap,
@@ -16,9 +17,16 @@ import {
 interface ResultCardProps {
   inputs: Record<string, string>;
   onRetry: () => void;
+  setCalculatorId: Dispatch<SetStateAction<number | null>>;
+  setChatResultId: Dispatch<SetStateAction<number | null>>;
 }
 
-const ResultCard = ({ inputs, onRetry }: ResultCardProps) => {
+const ResultCard = ({
+  inputs,
+  onRetry,
+  setCalculatorId,
+  setChatResultId,
+}: ResultCardProps) => {
   const { t } = useTranslation();
   const [type, setType] = useState('sickLeave');
   const [grade, setGrade] = useState(gradeMap['sickLeave'][0]);
@@ -43,7 +51,7 @@ const ResultCard = ({ inputs, onRetry }: ResultCardProps) => {
     } else if (type === 'pension') {
       body.severeType = pensionCodeMap[grade] || grade;
     } else if (type === 'survivorPension') {
-      body.familyNumber = survivorPensionCodeMap[grade] || grade;
+      body.familyType = survivorPensionCodeMap[grade] || grade;
     }
 
     console.log('[POST 전송 바디]', body);
@@ -51,6 +59,10 @@ const ResultCard = ({ inputs, onRetry }: ResultCardProps) => {
     postResult(body)
       .then((res) => {
         console.log('[POST 성공 응답]', res);
+        setCalculatorId(res.data.calculatorId);
+        setChatResultId(res.data.reportId);
+        setCalculatedResult(calculated);
+        setShowResult(true);
       })
       .catch((err) => {
         console.error('[POST 실패]', err);

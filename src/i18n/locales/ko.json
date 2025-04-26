@@ -142,11 +142,9 @@
     "typeLabel": "유형을 선택해주세요",
     "typeOptions": [
       { "value": "", "label": "유형" },
-      { "value": "넘어짐", "label": "넘어짐" },
-      { "value": "베임", "label": "베임" },
-      { "value": "찔림", "label": "찔림" },
-      { "value": "부딪힘", "label": "부딪힘" },
-      { "value": "기타", "label": "기타" }
+      { "value": "업무상 질병", "label": "업무상 질병" },
+      { "value": "업무상 사고", "label": "업무상 사고" },
+      { "value": "출퇴근 재해", "label": "출퇴근 재해" }
     ],
     "dateLabel": "재해발생일시를 알려주세요",
     "datePlaceholder": "YYYY년 MM월 DD일 00시 00분",

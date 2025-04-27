@@ -4,10 +4,10 @@ import { getResult } from '@/apis/result';
 
 const Example = () => {
   const { t } = useTranslation();
-  const name = '강재준';
 
   const [examples, setExamples] = useState<string[]>([]);
   const [industry, setIndustry] = useState<string>('');
+  const [name, setName] = useState('');
 
   useEffect(() => {
     // 산업 & 예시 불러오기
@@ -16,6 +16,7 @@ const Example = () => {
         const res = await getResult();
         setExamples(res.data.relatedIndustryExamples);
         setIndustry(res.data.industry);
+        setName(res.data.userName);
       } catch (error) {
         console.error(error);
       }

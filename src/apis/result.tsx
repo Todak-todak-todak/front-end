@@ -5,7 +5,12 @@ export interface ResultRequestBody {
   averageSalary: number;
   disabilityType?: string;
   severeType?: string;
-  familyNumber?: string;
+  familyType?: string;
+}
+
+export interface SaveResultBody {
+  chatResultId: number;
+  calculatorId: number;
 }
 
 export const getResult = async () => {
@@ -22,5 +27,11 @@ export const getAddress = async () => {
 
 export const postResult = async (body: ResultRequestBody) => {
   const response = await api.post('/calculator/new', body);
+  return response.data;
+};
+
+//분석 결과 저장
+export const saveResult = async (body: SaveResultBody) => {
+  const response = await api.post('/report/save', body);
   return response.data;
 };

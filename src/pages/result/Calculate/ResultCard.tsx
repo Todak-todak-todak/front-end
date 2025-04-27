@@ -4,77 +4,29 @@ import CustomSelect from '@/components/CustomSelect';
 import { calculateAmount } from '@/utils/Calculate/calculateAmount';
 import { postResult } from '@/apis/result';
 import { ResultRequestBody } from '@/apis/result';
+import { Dispatch, SetStateAction } from 'react';
+import {
+  compensationTypes,
+  disabilityCodeMap,
+  pensionCodeMap,
+  survivorPensionCodeMap,
+  gradeMap,
+  ruleMap,
+} from './CompensationMap';
 
 interface ResultCardProps {
   inputs: Record<string, string>;
   onRetry: () => void;
+  setCalculatorId: Dispatch<SetStateAction<number | null>>;
+  setChatResultId: Dispatch<SetStateAction<number | null>>;
 }
 
-const compensationTypes = [
-  { key: 'sickLeave', label: '휴업급여' },
-  { key: 'pension', label: '상병보상연금' },
-  { key: 'survivorPension', label: '유족연금' },
-  { key: 'disability', label: '장해급여' },
-  { key: 'survivorOneTime', label: '유족일시금' },
-  { key: 'funeral', label: '장례비' },
-];
-
-const disabilityCodeMap: Record<string, string> = {
-  '1급': 'A',
-  '2급': 'B',
-  '3급': 'C',
-  '4급': 'D',
-  '5급': 'E',
-  '6급': 'F',
-  '7급': 'G',
-  '8급': 'H',
-  '9급': 'I',
-  '10급': 'J',
-  '11급': 'K',
-  '12급': 'L',
-  '13급': 'M',
-  '14급': 'N',
-};
-
-const pensionCodeMap: Record<string, string> = {
-  제1급: 'A',
-  제2급: 'B',
-  제3급: 'C',
-};
-
-const survivorPensionCodeMap: Record<string, string> = {
-  '배우자 1인': 'A',
-  '배우자 + 자녀 1인': 'B',
-  '배우자 + 자녀 2인 이상': 'C',
-  '자녀만 1인': 'D',
-  '자녀만 2인 이상': 'E',
-};
-
-const gradeMap: Record<string, string[]> = {
-  sickLeave: ['등급 없음'],
-  pension: ['제1급', '제2급', '제3급'],
-  survivorPension: [
-    '배우자 1인',
-    '배우자 + 자녀 1인',
-    '배우자 + 자녀 2인 이상',
-    '자녀만 1인',
-    '자녀만 2인 이상',
-  ],
-  disability: Array.from({ length: 14 }, (_, i) => `${i + 1}급`),
-  survivorOneTime: ['등급 없음'],
-  funeral: ['등급 없음'],
-};
-
-const ruleMap: Record<string, string> = {
-  sickLeave: '평균임금 × 70%',
-  pension: '평균임금 × 중증요양상태 등급별 연금일수',
-  survivorPension: '평균임금 × 365일 × 유족수별 지급비율',
-  survivorOneTime: '평균임금 × 1300일 또는 1억 원 중 큰 금액',
-  funeral: '평균임금 × 120일',
-  disability: '평균임금 × 장해등급별 보상일수',
-};
-
-const ResultCard = ({ inputs, onRetry }: ResultCardProps) => {
+const ResultCard = ({
+  inputs,
+  onRetry,
+  setCalculatorId,
+  setChatResultId,
+}: ResultCardProps) => {
   const { t } = useTranslation();
   const [type, setType] = useState('sickLeave');
   const [grade, setGrade] = useState(gradeMap['sickLeave'][0]);
@@ -99,7 +51,7 @@ const ResultCard = ({ inputs, onRetry }: ResultCardProps) => {
     } else if (type === 'pension') {
       body.severeType = pensionCodeMap[grade] || grade;
     } else if (type === 'survivorPension') {
-      body.familyNumber = survivorPensionCodeMap[grade] || grade;
+      body.familyType = survivorPensionCodeMap[grade] || grade;
     }
 
     console.log('[POST 전송 바디]', body);
@@ -107,6 +59,10 @@ const ResultCard = ({ inputs, onRetry }: ResultCardProps) => {
     postResult(body)
       .then((res) => {
         console.log('[POST 성공 응답]', res);
+        setCalculatorId(res.data.calculatorId);
+        setChatResultId(res.data.reportId);
+        setCalculatedResult(calculated);
+        setShowResult(true);
       })
       .catch((err) => {
         console.error('[POST 실패]', err);
@@ -123,9 +79,9 @@ const ResultCard = ({ inputs, onRetry }: ResultCardProps) => {
               setType(c.key);
               setGrade(gradeMap[c.key][0]);
             }}
-            className={`text-sm font-semibold whitespace-nowrap pb-1 ${
+            className={`relative text-sm font-semibold whitespace-nowrap ${
               type === c.key
-                ? 'text-[#0076FF] border-b-2 border-[#0076FF]'
+                ? 'text-[#0076FF] after:content-[""] after:absolute after:left-0 after:bottom-[-8px] after:w-full after:h-[2px] after:bg-[#0076FF]'
                 : 'text-gray-400'
             }`}
           >
@@ -134,7 +90,6 @@ const ResultCard = ({ inputs, onRetry }: ResultCardProps) => {
         ))}
       </div>
 
-      {/* 내용 */}
       <div>
         <div className="space-y-2">
           <div className="flex items-center space-x-2">

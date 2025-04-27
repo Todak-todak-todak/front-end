@@ -5,7 +5,7 @@ import SelectField from '../component/Select';
 import CircleCheckbox from '../component/CheckBox';
 import { useTranslation } from 'react-i18next';
 import { useQuery } from '@tanstack/react-query';
-import { getUserInfo } from '@/apis/docRegister';
+import { getUserInfo } from '@/apis/doc';
 
 const Step2Worker = () => {
   const { control, setValue } = useFormContext();

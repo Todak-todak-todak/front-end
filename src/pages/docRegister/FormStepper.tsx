@@ -16,7 +16,7 @@ import Header from '@/components/Header';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-import { createDocRegister } from '@/apis/docRegister';
+import { createDocRegister } from '@/apis/doc';
 import { useMutation } from '@tanstack/react-query';
 
 const steps = [

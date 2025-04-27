@@ -46,7 +46,7 @@ export const treatmentInfoSchema = z.object({
 //Step6 제출용
 export const fullFormSchema = z.object({
   // consent: consentSchema,
-  // workerInfo: workerInfoSchema,
+  workerInfo: workerInfoSchema,
   businessInfo: businessInfoSchema,
   accidentInfo: accidentInfoSchema,
   treatmentInfo: treatmentInfoSchema,

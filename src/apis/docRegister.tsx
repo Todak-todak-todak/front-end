@@ -7,6 +7,11 @@ export const getUserInfo = async () => {
 };
 
 export const createDocRegister = async (payload: DocRegisterParams) => {
-  const response = await api.post('/document/new', payload);
-  return response.data;
+  try {
+    const response = await api.post('/document/new', payload);
+    return response.data;
+  } catch (error) {
+    console.error('createDocRegister 에러:', error);
+    throw error;
+  }
 };

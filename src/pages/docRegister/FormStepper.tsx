@@ -37,6 +37,7 @@ const FormStepper = () => {
     mutationFn: createDocRegister,
     onSuccess: (data) => {
       console.log('문서 생성 성공:', data);
+      setStep(5);
     },
     onError: (error) => {
       console.error('문서 생성 실패:', error);
@@ -58,7 +59,7 @@ const FormStepper = () => {
     console.log('원본 data:', data);
 
     const payload = {
-      docType: '산재보험신청서',
+      docType: data.workerInfo.employmentType,
       docCompanyNm: data.businessInfo.name,
       docCompanyAddress: data.businessInfo.address,
       docCompanyPhoneNm: data.businessInfo.phone,
@@ -75,7 +76,6 @@ const FormStepper = () => {
     console.log('payload:', payload);
 
     createDocument(payload);
-    setStep(5);
   };
 
   const handleNext = () => {

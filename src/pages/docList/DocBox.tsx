@@ -42,7 +42,7 @@ const DocBox = () => {
       <p className="flex items-start text-xl font-bold px-4">
         {t('docBox.title')}
       </p>
-      <div className="flex flex-col gap-4 px-4 h-[22rem] overflow-y-auto pt-1">
+      <div className="flex flex-col gap-4 px-4 h-[22rem] overflow-y-auto pt-1 pb-2">
         {docListData &&
           docListData.data.map((doc) => {
             const isSuccess = doc.docWhether;

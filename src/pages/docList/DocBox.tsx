@@ -34,7 +34,6 @@ const DocBox = () => {
 
   const handleClick = async (docPk: number) => {
     const docWhether = !checkDocWhether(docPk);
-    console.log('Mutating with:', { documentId: docPk, docWhether });
     mutation.mutate({ documentId: docPk, docWhether });
   };
 

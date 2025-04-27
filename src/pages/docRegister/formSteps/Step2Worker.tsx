@@ -1,12 +1,29 @@
+import React from 'react';
 import { useFormContext, Controller } from 'react-hook-form';
 import TextInputField from '../component/TextInputField';
 import SelectField from '../component/Select';
 import CircleCheckbox from '../component/CheckBox';
 import { useTranslation } from 'react-i18next';
+import { useQuery } from '@tanstack/react-query';
+import { getUserInfo } from '@/apis/doc';
 
 const Step2Worker = () => {
-  const { control } = useFormContext();
+  const { control, setValue } = useFormContext();
   const { t } = useTranslation();
+
+  const { data: userData } = useQuery({
+    queryKey: ['userInfo'],
+    queryFn: getUserInfo,
+  });
+
+  React.useEffect(() => {
+    if (userData) {
+      setValue('workerInfo.name', userData.data.userName || '');
+      setValue('workerInfo.ssn', userData.data.userRegisterNm || '');
+      setValue('workerInfo.address', userData.data.userAddress || '');
+      setValue('workerInfo.phone', userData.data.userPhoneNm || '');
+    }
+  }, [userData, setValue]);
 
   return (
     <div className="flex flex-col gap-4 pb-20">

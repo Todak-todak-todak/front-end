@@ -1,4 +1,4 @@
-import { useFormContext } from 'react-hook-form';
+import { useFormContext, Controller } from 'react-hook-form';
 
 interface TextInputFieldProps {
   name: string;
@@ -13,16 +13,23 @@ const TextInputField = ({
   placeholder,
   type = 'text',
 }: TextInputFieldProps) => {
-  const { register } = useFormContext();
+  const { control, getValues } = useFormContext();
 
   return (
     <label className="flex flex-col items-start font-semibold gap-4 px-8">
       {label}
-      <input
-        {...register(name)}
-        type={type}
-        placeholder={placeholder}
-        className="border-b w-full font-normal border-mainGray focus:outline-none focus:border-black text-sm"
+      <Controller
+        name={name}
+        control={control}
+        defaultValue={getValues(name) || ''}
+        render={({ field }) => (
+          <input
+            {...field}
+            type={type}
+            placeholder={placeholder}
+            className="border-b w-full font-normal border-mainGray focus:outline-none focus:border-black text-sm"
+          />
+        )}
       />
     </label>
   );

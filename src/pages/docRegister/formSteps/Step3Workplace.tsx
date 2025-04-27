@@ -5,12 +5,12 @@ const Step3Workplace = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 ">
       <p className="flex font-semibold text-[20px] px-8">
         {t('workplace.title')}
       </p>
 
-      <div className="flex flex-col w-full gap-10 py-4">
+      <div className="flex flex-col w-full gap-8 py-4 mb-20">
         <TextInputField
           name="businessInfo.businessNumber"
           label={t('workplace.businessNumber')}

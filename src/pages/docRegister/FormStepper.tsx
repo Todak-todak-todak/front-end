@@ -16,6 +16,9 @@ import Header from '@/components/Header';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
+import { createDocRegister } from '@/apis/doc';
+import { useMutation } from '@tanstack/react-query';
+
 const steps = [
   <Step1Agreement key="step1" />,
   <Step2Worker key="step2" />,
@@ -30,14 +33,49 @@ const FormStepper = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
+  const { mutate: createDocument } = useMutation({
+    mutationFn: createDocRegister,
+    onSuccess: (data) => {
+      console.log('문서 생성 성공:', data);
+      setStep(5);
+    },
+    onError: (error) => {
+      console.error('문서 생성 실패:', error);
+    },
+  });
+
   const methods = useForm<CustomFormData>({
     resolver: zodResolver(fullFormSchema),
     mode: 'onChange',
   });
 
+  // const onSubmit = (data: CustomFormData) => {
+  //   console.log('최종 제출:', data);
+  //   createDocument(data)
+  //   setStep(5);
+  // };
+
   const onSubmit = (data: CustomFormData) => {
-    console.log('최종 제출:', data);
-    setStep(5);
+    console.log('원본 data:', data);
+
+    const payload = {
+      docType: data.workerInfo.employmentType,
+      docCompanyNm: data.businessInfo.name,
+      docCompanyAddress: data.businessInfo.address,
+      docCompanyPhoneNm: data.businessInfo.phone,
+      docOwnerName: data.businessInfo.name,
+      docBusinessName: data.businessInfo.businessName,
+      disaster: data.accidentInfo.type,
+      docDisasterDate: data.accidentInfo.date,
+      docReason: data.accidentInfo.details,
+      docInjury: data.treatmentInfo.bodyPart,
+      docHospital: data.treatmentInfo.hospital,
+      therapy: data.treatmentInfo.category,
+    };
+
+    console.log('payload:', payload);
+
+    createDocument(payload);
   };
 
   const handleNext = () => {

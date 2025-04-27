@@ -33,7 +33,7 @@ export interface TreatmentInfo {
 }
 
 export interface CustomFormData {
-  consent: ConsentInfo;
+  // consent: ConsentInfo;
   workerInfo: WorkerInfo;
   businessInfo: BusinessInfo;
   accidentInfo: AccidentInfo;

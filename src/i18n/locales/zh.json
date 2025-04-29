@@ -163,7 +163,7 @@
     "options": {
       "manufacturing": "制造业",
       "construction": "建筑业",
-      "fishery": "渔业"
+      "etc": "等等"
     }
   },
   "mypage": {
@@ -181,7 +181,7 @@
       "options": {
         "manufacturing": "制造业",
         "construction": "建筑业",
-        "fishery": "渔业"
+        "etc": "等等"
       }
     },
     "language": {

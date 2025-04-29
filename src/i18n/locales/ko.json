@@ -32,7 +32,7 @@
     "options": {
       "manufacturing": "제조업",
       "construction": "건설업",
-      "fishery": "어업"
+      "etc": "기타"
     }
   },
   "header": {
@@ -182,7 +182,7 @@
       "options": {
         "manufacturing": "제조업",
         "construction": "건설업",
-        "fishery": "어업"
+        "etc": "기타"
       }
     },
     "language": {

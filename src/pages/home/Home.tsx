@@ -4,7 +4,7 @@ import Statistics from './statistics/Statistics';
 
 const Home = () => {
   return (
-    <div className="flex flex-col h-screen w-full">
+    <div className="flex flex-col h-screen w-full mb-24">
       <div className="flex-[2] w-full">
         <Header />
       </div>

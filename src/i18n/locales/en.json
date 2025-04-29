@@ -159,7 +159,7 @@
     "options": {
       "manufacturing": "Manufacturing",
       "construction": "Construction",
-      "etc": "Etc"
+      "fishery": "Fishery"
     }
   },
   "form": {
@@ -181,7 +181,7 @@
       "options": {
         "manufacturing": "Manufacturing",
         "construction": "Construction",
-        "etc": "Etc"
+        "fishery": "Fishery"
       }
     },
     "language": {

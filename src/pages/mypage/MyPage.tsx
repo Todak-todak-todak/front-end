@@ -13,20 +13,18 @@ import AddressIcon from '@assets/images/MyPage/Address.svg?react';
 import InfoItem from './InfoItem';
 import OptionButtons from './OptionButtons';
 import { useTranslation } from 'react-i18next';
-import { useGetUserProfile, useEditUserProfile } from '@/apis/user';
+import { getUserProfile, editUserProfile } from '@/apis/user';
 import { useEffect } from 'react';
 
 const industryMap: Record<string, string> = {
   MANUFACTURE: '제조업',
   CONSTRUCTION: '건설업',
-  ETC: '기타',
+  FISHERY: '어업',
 };
 
 const MyPage = () => {
   const { profile, isEdit, toggleEdit, updateProfile } = useProfileStore();
   const { t } = useTranslation();
-  const { data } = useGetUserProfile();
-  const editMutation = useEditUserProfile();
 
   const infoFields: {
     icon: React.ReactNode;
@@ -55,7 +53,7 @@ const MyPage = () => {
       options: [
         t('mypage.industry.options.manufacturing'),
         t('mypage.industry.options.construction'),
-        t('mypage.industry.options.etc'),
+        t('mypage.industry.options.fishery'),
       ],
     },
     {
@@ -72,18 +70,26 @@ const MyPage = () => {
   ];
 
   useEffect(() => {
-    if (data) {
-      useProfileStore.getState().updateProfile({
-        name: data.data.userName,
-        idCard: data.data.userRegisterNm,
-        phone: data.data.userPhoneNm,
-        gender: data.data.userGender,
-        address: data.data.userAddress,
-        industry: industryMap[data.data.industryName] ?? data.data.industryName,
-        language: data.data.userLanguage,
-      });
-    }
-  }, [data]);
+    const fetchProfile = async () => {
+      try {
+        const data = await getUserProfile();
+        useProfileStore.getState().updateProfile({
+          name: data.data.userName,
+          idCard: data.data.userRegisterNm,
+          phone: data.data.userPhoneNm,
+          gender: data.data.userGender,
+          address: data.data.userAddress,
+          industry:
+            industryMap[data.data.industryName] ?? data.data.industryName,
+          language: data.data.userLanguage,
+        });
+        console.log('마이페이지 data', data);
+      } catch (error) {
+        console.error('프로필 불러오기 실패:', error);
+      }
+    };
+    fetchProfile();
+  }, []);
 
   return (
     <>
@@ -97,7 +103,7 @@ const MyPage = () => {
                 try {
                   console.log('프로필 수정:', profile);
 
-                  await editMutation.mutateAsync({
+                  await editUserProfile({
                     userName: profile.name,
                     userRegisterNm: profile.idCard,
                     userPhoneNm: profile.phone,
@@ -131,24 +137,14 @@ const MyPage = () => {
             icon={icon}
             label={label}
             value={
-              key === 'language' ? (
-                <div className="flex items-center gap-1">{profile[key]}</div>
-              ) : isEdit && !options ? (
-                <input
-                  value={profile[key]}
-                  onChange={(e) => updateProfile({ [key]: e.target.value })}
-                  className="border-b border-gray-300 text-[18px] py-1 px-2 w-full text-right"
-                />
-              ) : (
-                <div className="flex items-center gap-1">
-                  {key === 'industry'
-                    ? industryMap[profile[key]] ?? profile[key]
-                    : profile[key]}
-                </div>
-              )
+              <div className="flex items-center gap-1">
+                {key === 'industry'
+                  ? industryMap[profile[key]] ?? profile[key]
+                  : profile[key]}
+              </div>
             }
             editOptions={
-              isEdit && options && key !== 'language' ? (
+              isEdit && options ? (
                 <OptionButtons
                   options={options}
                   selected={profile[key] as string}

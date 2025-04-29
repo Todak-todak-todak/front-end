@@ -11,7 +11,7 @@ const IndustryDropdown = () => {
   const industries = [
     t('industry.options.manufacturing'),
     t('industry.options.construction'),
-    t('industry.options.etc'),
+    t('industry.options.fishery'),
   ];
 
   return (

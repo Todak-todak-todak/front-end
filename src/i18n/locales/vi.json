@@ -163,7 +163,7 @@
     "options": {
       "manufacturing": "Sản xuất",
       "construction": "Xây dựng",
-      "etc": "Vân vân"
+      "fishery": "Ngư nghiệp"
     }
   },
   "mypage": {
@@ -181,7 +181,7 @@
       "options": {
         "manufacturing": "Sản xuất",
         "construction": "Xây dựng",
-        "etc": "Van vân"
+        "fishery": "Ngư nghiệp"
       }
     },
     "language": {

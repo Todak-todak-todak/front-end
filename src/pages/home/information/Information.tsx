@@ -3,13 +3,28 @@ import InfoDetail from './InfoDetail';
 import MegaphoneIcon from '@assets/images/Home/Megaphone.svg?react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useQuery } from '@tanstack/react-query';
+import { getUserInfo } from '@/apis/doc';
+import { InfoDetailData, CounselProp, DeclarationProp } from '@/types/home';
+
+interface InformationProps {
+  data: InfoDetailData;
+  counsel: CounselProp[];
+  declaration: DeclarationProp[];
+}
 
 type Category = '주의사항' | '안전교육' | '의료기관' | '상담' | '신고';
 
-const Information = () => {
+const Information = ({ data, counsel, declaration }: InformationProps) => {
   const [isClicked, setIsClicked] = useState<Category>('주의사항');
   const { t } = useTranslation();
-  const userName = 'hfidf'; // 이건 필요에 따라 props로 받을 수 있음
+
+  const { data: headerData } = useQuery({
+    queryKey: ['header'],
+    queryFn: getUserInfo,
+  });
+
+  const userName = headerData?.data.userName;
 
   return (
     <div className="flex flex-col px-8 gap-5 pt-8">
@@ -23,7 +38,12 @@ const Information = () => {
         <InfoList isClicked={isClicked} setIsClicked={setIsClicked} />
       </div>
       <div>
-        <InfoDetail isClicked={isClicked} />
+        <InfoDetail
+          isClicked={isClicked}
+          data={data}
+          counsel={counsel}
+          declaration={declaration}
+        />
       </div>
     </div>
   );

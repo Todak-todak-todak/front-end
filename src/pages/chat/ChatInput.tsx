@@ -25,6 +25,7 @@ const ChatInput = ({
     if (!inputValue.trim()) return;
     onSend(inputValue);
     setInputValue('');
+    setIsOpen(false);
   };
 
   return (

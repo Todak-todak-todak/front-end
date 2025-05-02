@@ -16,7 +16,7 @@ const Footer = () => {
 
   const handleClick = (menu: string) => {
     if (menu === 'home') {
-      navigate('/');
+      navigate('/home');
     } else if (menu === 'chatlist') {
       navigate('/chatlist');
     } else if (menu === 'doclist') {

@@ -219,7 +219,8 @@
       "part": "다친 부위",
       "hospital": "의료기관",
       "treatmentType": "치료 구분",
-      "detail": "재해발생 경위"
+      "detail": "재해발생 경위",
+      "businessType": "업종명"
     }
   },
   "result": {

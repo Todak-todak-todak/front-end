@@ -2,6 +2,7 @@ import Box from '@/components/Box';
 import NextIcon from '@assets/images/Chat/Next.svg?react';
 import { useTranslation } from 'react-i18next';
 import { useGetChatList } from '@/apis/chat';
+import { useNavigate } from 'react-router-dom';
 
 interface chatProp {
   reportDate: string;
@@ -11,9 +12,12 @@ interface chatProp {
 const ListBox = () => {
   const { t } = useTranslation();
   const { data } = useGetChatList();
-  console.log(data);
-  const handleClick = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (reportId: number) => {
     console.log('채팅분석페이지 이동');
+    navigate(`/result?reportId=${reportId}`);
+    console.log(reportId);
   };
 
   return (
@@ -29,7 +33,7 @@ const ListBox = () => {
                 <p className="font-semibold text-[18px]">{chat?.reportDate}</p>
               </div>
               <div className="flex flex-[3] p-4 justify-end items-center">
-                <button onClick={handleClick}>
+                <button onClick={() => handleClick(chat?.reportId)}>
                   <NextIcon />
                 </button>
               </div>

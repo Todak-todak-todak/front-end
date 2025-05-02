@@ -10,7 +10,7 @@ const InfoList = ({ items }: { items: DocItem[] }) => {
           <span className="text-[#005BFF] font-medium whitespace-nowrap">
             {t(item.label)}
           </span>
-          <span className="text-[#191B1C] text-right max-w-[70%] break-words">
+          <span className="text-[#191B1C] text-right whitespace-pre-wrap break-keep">
             {item.value}
           </span>
         </div>

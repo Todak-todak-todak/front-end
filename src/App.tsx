@@ -64,7 +64,7 @@ function App() {
               <Route path="/doclist" element={<DocList />} />
               <Route path="/doc" element={<FormStepper />} />
               <Route path="/hoslist" element={<HosList />} />
-              <Route path="/docdetail" element={<DocDetail />} />
+              <Route path="/docdetail/:documentId" element={<DocDetail />} />
               <Route path="/mypage" element={<MyPage />} />
             </Routes>
           </div>

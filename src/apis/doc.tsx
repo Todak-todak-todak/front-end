@@ -36,3 +36,9 @@ export const patchDocStatus = async ({
   });
   return response.data;
 };
+
+export const getDocDetail = async (documentId: string) => {
+  const response = await api.get(`/document/detail/${documentId}`);
+  console.log(response.data);
+  return response.data;
+};

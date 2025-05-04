@@ -58,7 +58,7 @@ function App() {
               <Route path="/add" element={<Add />} />
               <Route path="/" element={<Splash />} />
               <Route path="/home" element={<Home />} />
-              <Route path="/result" element={<Result />} />
+              <Route path="/result/:chatResultId" element={<Result />} />
               <Route path="/chatlist" element={<ChatList />} />
               <Route path="/chat" element={<Chat />} />
               <Route path="/doclist" element={<DocList />} />

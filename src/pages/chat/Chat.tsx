@@ -7,7 +7,6 @@ import { useMutation } from '@tanstack/react-query';
 import { sendMessage } from './api/chatApi';
 import { getAccessToken } from '@/utils/authUtils';
 import ChatResponse from './ChatResponse';
-import { useNavigate } from 'react-router-dom';
 
 const Chat = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -17,12 +16,6 @@ const Chat = () => {
   >([]);
 
   const accessToken = getAccessToken();
-  const navigate = useNavigate();
-
-  const handleDetailClick = (approveValue: number) => {
-    console.log('approve:', approveValue);
-    navigate('/result', { state: { approve: approveValue } });
-  };
 
   const { mutate } = useMutation({
     mutationFn: (data: { question: string; accessToken: string }) =>
@@ -45,10 +38,9 @@ const Chat = () => {
         const botMessage = (
           <ChatResponse
             summary={summary}
-            approveProb={predict.approve_prob * 100}
+            approveProb={predict.approve_prob}
             industry={predict.industry}
             examples={related_industry_examples}
-            onClickDetail={() => handleDetailClick(predict.approve_prob * 100)}
           />
         );
         setMessages((prevMessages) => [

@@ -16,7 +16,7 @@ const ListBox = () => {
 
   const handleClick = (reportId: number) => {
     console.log('채팅분석페이지 이동');
-    navigate(`/result?reportId=${reportId}`);
+    navigate(`/detailresult/${reportId}`);
     console.log(reportId);
   };
 

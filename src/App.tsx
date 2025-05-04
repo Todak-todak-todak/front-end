@@ -23,6 +23,7 @@ import DocDetail from './pages/docList/DocDetail';
 import MyPage from './pages/mypage/MyPage';
 import './i18n';
 import { useEffect } from 'react';
+import DetailResult from './pages/result/DetailResult';
 
 function FooterCondition() {
   const location = useLocation();
@@ -59,6 +60,10 @@ function App() {
               <Route path="/" element={<Splash />} />
               <Route path="/home" element={<Home />} />
               <Route path="/result/:chatResultId" element={<Result />} />
+              <Route
+                path="/detailresult/:reportId"
+                element={<DetailResult />}
+              />
               <Route path="/chatlist" element={<ChatList />} />
               <Route path="/chat" element={<Chat />} />
               <Route path="/doclist" element={<DocList />} />

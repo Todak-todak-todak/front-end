@@ -1,60 +1,29 @@
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Header from '../../components/Header';
-import Calculate from './Calculate/Calculate';
-import Example from './Example';
+import DetailExample from './DetailExample';
 import Hospital from './KakaoMap/Hospital';
-import Percent from './Percent';
-import Save from '@assets/images/Result/Save.svg?react';
-import { saveResult } from '@/apis/result';
+import DetailPercent from './DetailPercent';
 import { useParams } from 'react-router-dom';
+import DetailCalculation from './Calculate/DetailCalculation';
 
 const DetailResult = () => {
   const { t } = useTranslation();
   const { reportId } = useParams<{ reportId: string }>();
 
-  const [calculatorId, setCalculatorId] = useState<number | null>(null);
-  const chatResultIdNum = reportId ? Number(reportId) : null;
-
-  const handleSave = () => {
-    if (!calculatorId || !chatResultIdNum) {
-      alert('먼저 계산을 완료해 주세요!');
-      return;
-    }
-
-    saveResult({ calculatorId, chatResultId: chatResultIdNum })
-      .then(() => {
-        alert('결과가 저장되었습니다!');
-      })
-      .catch((err) => {
-        console.error('[저장 실패]', err);
-        alert('저장에 실패했습니다.');
-      });
-  };
+  const reportIdNum = reportId ? Number(reportId) : null;
 
   return (
     <>
-      <Header
-        title={t('result.title')}
-        img={
-          <Save
-            className="w-[28px] h-[28px] cursor-pointer"
-            onClick={handleSave}
-          />
-        }
-      />
+      <Header title={t('result.title')} />
       <main className="flex-1 overflow-y-auto">
-        <Percent chatResultId={chatResultIdNum} />
+        <DetailPercent reportId={reportIdNum} />
         <div className="w-full h-[13px] bg-[#F6F7F9]"></div>
         <Hospital />
         <div className="w-full h-[13px] bg-[#F6F7F9]"></div>
-        <Calculate
-          setCalculatorId={setCalculatorId}
-          setChatResultId={() => {}}
-        />
+        <DetailCalculation />
         <div className="w-full h-[13px] bg-[#F6F7F9]"></div>
       </main>
-      <Example chatResultId={chatResultIdNum} />
+      {/* <DetailExample reportId={reportIdNum} /> */}
     </>
   );
 };

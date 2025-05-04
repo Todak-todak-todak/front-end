@@ -24,6 +24,7 @@ export const getDetailResult = async (reportId: number) => {
   console.log(response.data);
   return response.data;
 };
+
 export const getAddress = async () => {
   // 유저 주소만 불러오기 api
   const response = await api.get('/user/address');

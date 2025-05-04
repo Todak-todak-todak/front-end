@@ -224,6 +224,7 @@
     }
   },
   "result": {
+    "calculationResult": "산재 계산 결과",
     "title": "분석 결과",
     "possibility": "산재 처리 가능성",
     "goToDoc": "산재 신청 서류 작성하러 가기",

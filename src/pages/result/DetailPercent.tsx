@@ -4,14 +4,14 @@ import Allow from '@assets/images/Result/Allow-right.svg?react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
-import { getResult } from '@/apis/result';
+import { getDetailResult } from '@/apis/result';
 import { useState } from 'react';
 
 interface DetailPercentProps {
-  chatResultId: number | null;
+  reportId: number | null;
 }
 
-const DetailPercent = ({ chatResultId }: DetailPercentProps) => {
+const DetailPercent = ({ reportId }: DetailPercentProps) => {
   const [probability, setProbability] = useState<string | null>(null);
   const navigate = useNavigate();
   const { t } = useTranslation();
@@ -21,19 +21,19 @@ const DetailPercent = ({ chatResultId }: DetailPercentProps) => {
   };
 
   useEffect(() => {
-    if (!chatResultId) return;
+    if (!reportId) return;
     // 산재 처리 가능성 % 불러오기
     const fetchResult = async () => {
       try {
-        const data = await getResult(chatResultId);
-        setProbability(data.data.reportProbability);
+        const data = await getDetailResult(reportId);
+        setProbability(data.data.chatResult.reportProbability);
         console.log(data);
       } catch (error) {
         console.log(error);
       }
     };
     fetchResult();
-  }, [chatResultId]);
+  }, [reportId]);
 
   return (
     <div className="flex flex-col p-0 pr-[25px] pb-[21px] pl-[25px]">

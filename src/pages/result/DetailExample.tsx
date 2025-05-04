@@ -1,12 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
-import { getResult } from '@/apis/result';
+import { getDetailResult } from '@/apis/result';
 
 interface DetailExampleProps {
-  chatResultId: number | null;
+  reportId: number | null;
 }
 
-const DetailExample = ({ chatResultId }: DetailExampleProps) => {
+const DetailExample = ({ reportId }: DetailExampleProps) => {
   const { t } = useTranslation();
 
   const [examples, setExamples] = useState<string[]>([]);
@@ -14,11 +14,11 @@ const DetailExample = ({ chatResultId }: DetailExampleProps) => {
   const [name, setName] = useState('');
 
   useEffect(() => {
-    if (!chatResultId) return;
+    if (!reportId) return;
     // 산업 & 예시 불러오기
     const fetchResult = async () => {
       try {
-        const res = await getResult(chatResultId);
+        const res = await getDetailResult(reportId);
         setExamples(res.data.relatedIndustryExamples);
         setIndustry(res.data.industry);
         setName(res.data.userName);
@@ -28,7 +28,7 @@ const DetailExample = ({ chatResultId }: DetailExampleProps) => {
     };
 
     fetchResult();
-  }, [chatResultId]);
+  }, [reportId]);
 
   return (
     <div className="flex flex-col px-[25px] py-[20px] pb-[100px]">

@@ -2,7 +2,11 @@ import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import { getResult } from '@/apis/result';
 
-const Example = () => {
+interface ExampleProps {
+  chatResultId: number | null;
+}
+
+const Example = ({ chatResultId }: ExampleProps) => {
   const { t } = useTranslation();
 
   const [examples, setExamples] = useState<string[]>([]);
@@ -10,10 +14,11 @@ const Example = () => {
   const [name, setName] = useState('');
 
   useEffect(() => {
+    if (!chatResultId) return;
     // 산업 & 예시 불러오기
     const fetchResult = async () => {
       try {
-        const res = await getResult();
+        const res = await getResult(chatResultId);
         setExamples(res.data.relatedIndustryExamples);
         setIndustry(res.data.industry);
         setName(res.data.userName);
@@ -23,7 +28,7 @@ const Example = () => {
     };
 
     fetchResult();
-  }, []);
+  }, [chatResultId]);
 
   return (
     <div className="flex flex-col px-[25px] py-[20px] pb-[100px]">

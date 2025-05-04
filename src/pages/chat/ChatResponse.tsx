@@ -30,7 +30,7 @@ const ChatResponse = ({
         onSuccess: (data) => {
           const chatResultId = data?.data?.chatResultId;
           if (chatResultId) {
-            navigate(`/result/${chatResultId}`); // ← 여기!
+            navigate(`/result/${chatResultId}`);
           } else {
             alert('결과 저장에 실패했습니다.');
           }

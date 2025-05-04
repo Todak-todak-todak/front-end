@@ -7,23 +7,22 @@ import Hospital from './KakaoMap/Hospital';
 import Percent from './Percent';
 import Save from '@assets/images/Result/Save.svg?react';
 import { saveResult } from '@/apis/result';
+import { useParams } from 'react-router-dom';
 
 const Result = () => {
   const { t } = useTranslation();
+  const { chatResultId } = useParams<{ chatResultId: string }>();
 
   const [calculatorId, setCalculatorId] = useState<number | null>(null);
-  // eslint-disable-next-line
-  const [chatResultId, setChatResultId] = useState<number | null>(null);
+  const chatResultIdNum = chatResultId ? Number(chatResultId) : null;
 
   const handleSave = () => {
-    if (!calculatorId) {
+    if (!calculatorId || !chatResultIdNum) {
       alert('먼저 계산을 완료해 주세요!');
       return;
     }
 
-    const fakeChatResultId = 3;
-
-    saveResult({ calculatorId, chatResultId: fakeChatResultId })
+    saveResult({ calculatorId, chatResultId: chatResultIdNum })
       .then(() => {
         alert('결과가 저장되었습니다!');
       })
@@ -45,17 +44,17 @@ const Result = () => {
         }
       />
       <main className="flex-1 overflow-y-auto">
-        <Percent />
+        <Percent chatResultId={chatResultIdNum} />
         <div className="w-full h-[13px] bg-[#F6F7F9]"></div>
         <Hospital />
         <div className="w-full h-[13px] bg-[#F6F7F9]"></div>
         <Calculate
           setCalculatorId={setCalculatorId}
-          setChatResultId={setChatResultId}
+          setChatResultId={() => {}}
         />
         <div className="w-full h-[13px] bg-[#F6F7F9]"></div>
       </main>
-      <Example />
+      <Example chatResultId={chatResultIdNum} />
     </>
   );
 };

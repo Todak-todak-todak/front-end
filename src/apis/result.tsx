@@ -13,9 +13,10 @@ export interface SaveResultBody {
   calculatorId: number;
 }
 
-export const getResult = async () => {
+export const getResult = async (chatResultId: number) => {
   // 분석결과 초기 페이지 api
-  const response = await api.get('/chat/3'); //나중에 {chatResultId} 들어가야함. 임시 매핑
+  console.log('result: ', chatResultId);
+  const response = await api.get(`/chat/${chatResultId}`);
   return response.data;
 };
 

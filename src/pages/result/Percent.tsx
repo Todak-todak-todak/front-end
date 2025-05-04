@@ -7,7 +7,11 @@ import { useEffect } from 'react';
 import { getResult } from '@/apis/result';
 import { useState } from 'react';
 
-const Percent = () => {
+interface PercentProps {
+  chatResultId: number | null;
+}
+
+const Percent = ({ chatResultId }: PercentProps) => {
   const [probability, setProbability] = useState<string | null>(null);
   const navigate = useNavigate();
   const { t } = useTranslation();
@@ -17,10 +21,11 @@ const Percent = () => {
   };
 
   useEffect(() => {
+    if (!chatResultId) return;
     // 산재 처리 가능성 % 불러오기
     const fetchResult = async () => {
       try {
-        const data = await getResult();
+        const data = await getResult(chatResultId);
         setProbability(data.data.reportProbability);
         console.log(data);
       } catch (error) {
@@ -28,7 +33,7 @@ const Percent = () => {
       }
     };
     fetchResult();
-  }, []);
+  }, [chatResultId]);
 
   return (
     <div className="flex flex-col p-0 pr-[25px] pb-[21px] pl-[25px]">

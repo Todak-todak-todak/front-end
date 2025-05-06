@@ -105,12 +105,30 @@
     "title": "事故信息",
     "typeLabel": "请选择类型",
     "typeOptions": [
-      { "value": "", "label": "类型" },
-      { "value": "摔倒", "label": "摔倒" },
-      { "value": "割伤", "label": "割伤" },
-      { "value": "刺伤", "label": "刺伤" },
-      { "value": "碰撞", "label": "碰撞" },
-      { "value": "其他", "label": "其他" }
+      {
+        "value": "",
+        "label": "类型"
+      },
+      {
+        "value": "摔倒",
+        "label": "摔倒"
+      },
+      {
+        "value": "割伤",
+        "label": "割伤"
+      },
+      {
+        "value": "刺伤",
+        "label": "刺伤"
+      },
+      {
+        "value": "碰撞",
+        "label": "碰撞"
+      },
+      {
+        "value": "其他",
+        "label": "其他"
+      }
     ],
     "dateLabel": "请提供事故发生时间",
     "datePlaceholder": "YYYY年 MM月 DD日 00时 00分",
@@ -247,7 +265,27 @@
         "label": "日常工资"
       },
       "button": "预估赔偿金额",
-      "alert": "预估功能将在后续提供。"
+      "alert": "预估功能将在后续提供。",
+      "calculate": "估算",
+      "retry": "重新估算",
+      "rule": {
+        "sick": "病假",
+        "sickLeave": "病假标准",
+        "disability": "伤残标准",
+        "pension": "病补标准",
+        "survivorPension": "遗属津贴标准",
+        "survivorOneTime": "一次性标准",
+        "funeral": "丧葬标准"
+      }
+    },
+    "calculationResult": "赔偿结果",
+    "tabs": {
+      "sickLeave": "病假",
+      "disability": "伤残",
+      "pension": "病补",
+      "survivorPension": "遗属津贴",
+      "survivorOneTime": "一次性补偿",
+      "funeral": "丧葬费"
     }
   }
 }

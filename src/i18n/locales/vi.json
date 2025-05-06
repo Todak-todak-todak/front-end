@@ -105,12 +105,30 @@
     "title": "Thông tin tai nạn",
     "typeLabel": "Vui lòng chọn loại tai nạn",
     "typeOptions": [
-      { "value": "", "label": "Loại" },
-      { "value": "Ngã", "label": "Ngã" },
-      { "value": "Cắt", "label": "Cắt" },
-      { "value": "Đâm", "label": "Đâm" },
-      { "value": "Va chạm", "label": "Va chạm" },
-      { "value": "Khác", "label": "Khác" }
+      {
+        "value": "",
+        "label": "Loại"
+      },
+      {
+        "value": "Ngã",
+        "label": "Ngã"
+      },
+      {
+        "value": "Cắt",
+        "label": "Cắt"
+      },
+      {
+        "value": "Đâm",
+        "label": "Đâm"
+      },
+      {
+        "value": "Va chạm",
+        "label": "Va chạm"
+      },
+      {
+        "value": "Khác",
+        "label": "Khác"
+      }
     ],
     "dateLabel": "Vui lòng cung cấp thời gian xảy ra tai nạn",
     "datePlaceholder": "YYYY năm MM tháng DD ngày 00 giờ 00 phút",
@@ -247,7 +265,27 @@
         "label": "Lương 1 ngày"
       },
       "button": "Ước tính tiền bồi thường",
-      "alert": "Tính năng ước tính sẽ được cập nhật sau."
+      "alert": "Tính năng ước tính sẽ được cập nhật sau.",
+      "calculate": "Ước tính",
+      "retry": "Tính lại",
+      "rule": {
+        "sick": "Nghỉ ốm",
+        "sickLeave": "Tiêu chuẩn nghỉ ốm",
+        "disability": "Tiêu chuẩn thương tật",
+        "pension": "Tiêu chuẩn lương bệnh",
+        "survivorPension": "Tiêu chuẩn lương tử vong",
+        "survivorOneTime": "Tiêu chuẩn trợ cấp tử vong",
+        "funeral": "Tiêu chuẩn tang lễ"
+      }
+    },
+    "calculationResult": "Kết quả bồi thường",
+    "tabs": {
+      "sickLeave": "Nghỉ ốm",
+      "disability": "Thương tật",
+      "pension": "Lương bệnh",
+      "survivorPension": "Lương tử vong",
+      "survivorOneTime": "Trợ cấp tử vong",
+      "funeral": "Chi phí tang lễ"
     }
   }
 }

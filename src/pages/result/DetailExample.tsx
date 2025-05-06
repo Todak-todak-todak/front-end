@@ -15,13 +15,14 @@ const DetailExample = ({ reportId }: DetailExampleProps) => {
 
   useEffect(() => {
     if (!reportId) return;
-    // 산업 & 예시 불러오기
     const fetchResult = async () => {
       try {
         const res = await getDetailResult(reportId);
-        setExamples(res.data.relatedIndustryExamples);
-        setIndustry(res.data.industry);
-        setName(res.data.userName);
+        const safeExamples = res.data.chatResult.relatedIndustryExamples ?? [];
+        setExamples(safeExamples);
+        console.log();
+        setIndustry(res.data.chatResult.industry);
+        setName(res.data.chatResult.userName);
       } catch (error) {
         console.error(error);
       }

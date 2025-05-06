@@ -6,6 +6,7 @@ interface InfoItemProps {
   value: ReactNode;
   editOptions?: ReactNode;
   isButton?: boolean;
+  onClick?: () => void;
 }
 
 const InfoItem = ({
@@ -14,9 +15,13 @@ const InfoItem = ({
   value,
   editOptions,
   isButton,
+  onClick,
 }: InfoItemProps) => (
   <>
-    <div className={`py-8 ${isButton ? 'cursor-pointer' : ''}`}>
+    <div
+      className={`py-8 ${isButton ? 'cursor-pointer' : ''}`}
+      onClick={isButton ? onClick : undefined}
+    >
       <div className="flex items-center justify-between gap-3">
         <div className="w-[30px] h-[30px] flex items-center justify-center flex-shrink-0">
           {icon}

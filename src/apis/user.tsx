@@ -19,21 +19,6 @@ export const completeUserProfile = async (
   return response.data;
 };
 
-// export const getUserProfile = async () => {
-//   // 마이페이지 내 정보 불러오기
-//   const response = await api.get('/user/profile');
-//   return response.data;
-// };
-
-// export const editUserProfile = async (
-//   updateData: Partial<CompleteUserProfilePayload>
-// ) => {
-//   // 마이페이지 내 정보 수정하기
-//   const response = await api.put('/user/profile/update', updateData);
-//   console.log(response);
-//   return response.data;
-// };
-
 const fetchUserProfile = async () => {
   // 내 정보 불러오기 api 함수
   const response = await api.get('/user/profile');
@@ -60,5 +45,17 @@ export const useEditUserProfile = () => {
   // 내 정보 수정하기 react-query
   return useMutation({
     mutationFn: updateUserProfile,
+  });
+};
+
+export const logoutUser = async () => {
+  // 로그아웃하기
+  const response = await api.post('/auth/logout');
+  return response.data;
+};
+
+export const useLogout = () => {
+  return useMutation({
+    mutationFn: logoutUser,
   });
 };

@@ -117,12 +117,30 @@
     "title": "Accident Information",
     "typeLabel": "Please select a type",
     "typeOptions": [
-      { "value": "", "label": "Type" },
-      { "value": "Fall", "label": "Fall" },
-      { "value": "Cut", "label": "Cut" },
-      { "value": "Puncture", "label": "Puncture" },
-      { "value": "Collision", "label": "Collision" },
-      { "value": "Other", "label": "Other" }
+      {
+        "value": "",
+        "label": "Type"
+      },
+      {
+        "value": "Fall",
+        "label": "Fall"
+      },
+      {
+        "value": "Cut",
+        "label": "Cut"
+      },
+      {
+        "value": "Puncture",
+        "label": "Puncture"
+      },
+      {
+        "value": "Collision",
+        "label": "Collision"
+      },
+      {
+        "value": "Other",
+        "label": "Other"
+      }
     ],
     "dateLabel": "Please provide the accident date and time",
     "datePlaceholder": "YYYY-MM-DD HH:MM",
@@ -229,7 +247,6 @@
     "hospitalTitle": "Nearby Designated Hospitals for Industrial Accidents",
     "more": "more>",
     "hoslistTitle": "Approved Hospitals",
-
     "calculator": {
       "title": "Industrial Accident Compensation Estimator",
       "sub": "*The compensation is estimated based on the average wage.",
@@ -248,7 +265,27 @@
         "label": "Daily Ordinary Wage"
       },
       "button": "Estimate Compensation",
-      "alert": "Estimation feature will be available soon."
+      "alert": "Estimation feature will be available soon.",
+      "calculate": "Estimate",
+      "retry": "Retry",
+      "rule": {
+        "sick": "Sick Leave",
+        "sickLeave": "Sick Leave Criteria",
+        "disability": "Disability Criteria",
+        "pension": "Pension Criteria",
+        "survivorPension": "Survivor Pension Criteria",
+        "survivorOneTime": "Lump Sum Criteria",
+        "funeral": "Funeral Criteria"
+      }
+    },
+    "calculationResult": "Compensation Result",
+    "tabs": {
+      "sickLeave": "Sick Leave",
+      "disability": "Disability",
+      "pension": "Pension",
+      "survivorPension": "Survivor Pension",
+      "survivorOneTime": "Lump Sum",
+      "funeral": "Funeral"
     }
   }
 }

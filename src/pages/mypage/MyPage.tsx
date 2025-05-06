@@ -15,6 +15,8 @@ import OptionButtons from './OptionButtons';
 import { useTranslation } from 'react-i18next';
 import { useGetUserProfile, useEditUserProfile } from '@/apis/user';
 import { useEffect } from 'react';
+import { useLogout } from '@/apis/user';
+import { useNavigate } from 'react-router-dom';
 
 const industryMap: Record<string, string> = {
   MANUFACTURE: '제조업',
@@ -27,6 +29,20 @@ const MyPage = () => {
   const { t } = useTranslation();
   const { data } = useGetUserProfile();
   const editMutation = useEditUserProfile();
+  const { mutate: logout } = useLogout();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout(undefined, {
+      onSuccess: () => {
+        alert('로그아웃이 완료되었습니다!');
+        navigate('/');
+      },
+      onError: (error) => {
+        console.error(error);
+      },
+    });
+  };
 
   const infoFields: {
     icon: React.ReactNode;
@@ -162,6 +178,7 @@ const MyPage = () => {
         <InfoItem
           icon={<LogoutIcon />}
           label={t('mypage.logout')}
+          onClick={handleLogout}
           value=""
           isButton
         />

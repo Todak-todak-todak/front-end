@@ -1,12 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
-import { getResult } from '@/apis/result';
+import { getDetailResult } from '@/apis/result';
 
-interface ExampleProps {
-  chatResultId: number | null;
+interface DetailExampleProps {
+  reportId: number | null;
 }
 
-const Example = ({ chatResultId }: ExampleProps) => {
+const DetailExample = ({ reportId }: DetailExampleProps) => {
   const { t } = useTranslation();
 
   const [examples, setExamples] = useState<string[]>([]);
@@ -14,21 +14,22 @@ const Example = ({ chatResultId }: ExampleProps) => {
   const [name, setName] = useState('');
 
   useEffect(() => {
-    if (!chatResultId) return;
-    // 산업 & 예시 불러오기
+    if (!reportId) return;
     const fetchResult = async () => {
       try {
-        const res = await getResult(chatResultId);
-        setExamples(res.data.relatedIndustryExamples);
-        setIndustry(res.data.industry);
-        setName(res.data.userName);
+        const res = await getDetailResult(reportId);
+        const safeExamples = res.data.chatResult.relatedIndustryExamples ?? [];
+        setExamples(safeExamples);
+        console.log();
+        setIndustry(res.data.chatResult.industry);
+        setName(res.data.chatResult.userName);
       } catch (error) {
         console.error(error);
       }
     };
 
     fetchResult();
-  }, [chatResultId]);
+  }, [reportId]);
 
   return (
     <div className="flex flex-col px-[25px] py-[20px] pb-[100px]">
@@ -70,4 +71,4 @@ const Example = ({ chatResultId }: ExampleProps) => {
   );
 };
 
-export default Example;
+export default DetailExample;

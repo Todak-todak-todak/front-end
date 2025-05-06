@@ -13,9 +13,15 @@ export interface SaveResultBody {
   calculatorId: number;
 }
 
-export const getResult = async () => {
+export const getResult = async (chatResultId: number) => {
   // 분석결과 초기 페이지 api
-  const response = await api.get('/chat/3'); //나중에 {chatResultId} 들어가야함. 임시 매핑
+  const response = await api.get(`/chat/${chatResultId}`);
+  return response.data;
+};
+
+export const getDetailResult = async (reportId: number) => {
+  const response = await api.get(`report/detail/${reportId}`);
+  console.log(response.data);
   return response.data;
 };
 
@@ -33,5 +39,6 @@ export const postResult = async (body: ResultRequestBody) => {
 //분석 결과 저장
 export const saveResult = async (body: SaveResultBody) => {
   const response = await api.post('/report/save', body);
+  console.log(response.data);
   return response.data;
 };

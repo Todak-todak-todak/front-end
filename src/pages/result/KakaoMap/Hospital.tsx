@@ -12,6 +12,7 @@ const Hospital = () => {
     { lat: number; lng: number; name: string }[]
   >([]);
   const navigate = useNavigate();
+  const [hospitals, setHospitals] = useState<any[]>([]);
 
   // 주소 가져오기
   useEffect(() => {
@@ -22,36 +23,44 @@ const Hospital = () => {
     fetchAddress();
   }, []);
 
-  // 위도/경도 얻었을 때 병원 검색
   const handleCoordinates = async (lat: number, lng: number) => {
     try {
-      console.log('📍 위도/경도 좌표:', lat, lng);
-
       const res = await postNearbyHospitals({
         latitude: lat,
         longitude: lng,
         distance: 2,
       });
 
-      const hospitals = res.data?.data?.hospitals ?? [];
-      console.log(hospitals);
+      const hospitalsRaw = res.data?.data?.hospitals ?? [];
 
-      const hospitalMarkers = hospitals
-        .filter((h: any) => h.latitude && h.longitude && h.hospitalName)
-        .map((hospital: any) => ({
-          lat: hospital.latitude,
-          lng: hospital.longitude,
-          name: hospital.hospitalName,
+      const fullHospitalData = hospitalsRaw
+        .filter(
+          (h: any) =>
+            h.latitude &&
+            h.longitude &&
+            h.hospitalName &&
+            h.address &&
+            h.phoneNumber
+        )
+        .map((h: any) => ({
+          lat: h.latitude,
+          lng: h.longitude,
+          name: h.hospitalName,
+          address: h.address,
+          phoneNumber: h.phoneNumber,
         }));
 
-      setMarkers(hospitalMarkers);
+      setMarkers(fullHospitalData);
+      setHospitals(fullHospitalData);
     } catch (error) {
       console.error('❌ 병원 조회 실패:', error);
     }
   };
 
   const handleClick = () => {
-    navigate('/hoslist');
+    navigate('/hoslist', {
+      state: { hospitals: hospitals },
+    });
   };
 
   return (

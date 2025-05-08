@@ -8,11 +8,12 @@ const HosList = () => {
   const { t } = useTranslation();
   const location = useLocation();
   const hospitals = location.state?.hospitals ?? [];
+  const address = location.state?.address ?? '서울';
   return (
     <>
       <Header title={t('result.hoslistTitle')} />
-      <div className="pl-[25px] pr-[25px]">
-        <KakaoMap markers={hospitals} />
+      <div className="pl-[25px] pr-[25px] pb-[100px]">
+        <KakaoMap address={address} markers={hospitals} />
         <HosInfo hospitals={hospitals} />
       </div>
     </>

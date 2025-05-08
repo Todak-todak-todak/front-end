@@ -59,7 +59,10 @@ const Hospital = () => {
 
   const handleClick = () => {
     navigate('/hoslist', {
-      state: { hospitals: hospitals },
+      state: {
+        hospitals,
+        address,
+      },
     });
   };
 

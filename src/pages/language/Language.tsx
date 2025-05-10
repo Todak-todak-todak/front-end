@@ -10,10 +10,10 @@ import Vietnam from '@assets/images/Language/Vietnam.svg?react';
 import Button from '@/components/Button';
 
 const languages = [
-  { label: '한국어', Icon: Korea, value: '한국어' },
-  { label: 'English', Icon: America, value: '영어' },
-  { label: 'Tiếng Việt', Icon: Vietnam, value: '베트남어' },
-  { label: '中文', Icon: China, value: '중국어' },
+  { label: '한국어', Icon: Korea, value: 'ko' },
+  { label: 'English', Icon: America, value: 'en' },
+  { label: 'Tiếng Việt', Icon: Vietnam, value: 'vi' },
+  { label: '中文', Icon: China, value: 'zh' },
 ];
 
 const Language = () => {

@@ -1,16 +1,15 @@
-// utils/translateResponse.ts
-import { translatePapago } from '@/apis/translatePapago';
-import { getPapagoLang } from './getPapagoLang';
+import { translateGoogle } from './translateGoogle';
+import { getGoogleLang } from './getGoogleLang';
 
 export async function translateResponse(data: any): Promise<any> {
-  const lang = localStorage.getItem('lang') || 'ko';
-  if (lang === 'ko') return data; // 한국어는 번역 안 함
+  const langCode = localStorage.getItem('lang') || 'ko';
+  if (langCode === 'ko') return data;
 
-  const targetLang = getPapagoLang(lang);
+  const targetLang = getGoogleLang(langCode);
 
   const deepTranslate = async (obj: any): Promise<any> => {
     if (typeof obj === 'string') {
-      return await translatePapago(obj, targetLang);
+      return await translateGoogle(obj, targetLang);
     }
 
     if (Array.isArray(obj)) {

@@ -1,5 +1,5 @@
-export function getPapagoLang(userLang: string): 'en' | 'vi' | 'zh-CN' {
-  switch (userLang) {
+export function getGoogleLang(code: string): 'en' | 'vi' | 'zh-CN' {
+  switch (code) {
     case 'en':
       return 'en';
     case 'vi':
@@ -8,6 +8,6 @@ export function getPapagoLang(userLang: string): 'en' | 'vi' | 'zh-CN' {
     case 'zh-CN':
       return 'zh-CN';
     default:
-      return 'en';
+      return 'ko';
   }
 }

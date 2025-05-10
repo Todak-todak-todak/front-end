@@ -16,11 +16,11 @@ api.interceptors.request.use((config) => {
 
 api.interceptors.response.use(
   async (response) => {
+    const isGet = response.config.method === 'get';
     const isJson =
       response.headers['content-type']?.includes('application/json');
-    const isGet = response.config.method === 'get';
 
-    if (isJson && isGet) {
+    if (isGet && isJson) {
       response.data = await translateResponse(response.data);
     }
 

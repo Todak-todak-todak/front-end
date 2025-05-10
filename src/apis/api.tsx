@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { translateResponse } from '@/utils/translateResponse';
 
 const api = axios.create({
   baseURL: 'https://todak-back-end.store/api/v1',
@@ -14,7 +15,17 @@ api.interceptors.request.use((config) => {
 });
 
 api.interceptors.response.use(
-  (response) => response,
+  async (response) => {
+    const isJson =
+      response.headers['content-type']?.includes('application/json');
+    const isGet = response.config.method === 'get';
+
+    if (isJson && isGet) {
+      response.data = await translateResponse(response.data);
+    }
+
+    return response;
+  },
   async (error) => {
     const originalRequest = error.config;
     const errorCode = error.response?.data?.error?.errorCode;

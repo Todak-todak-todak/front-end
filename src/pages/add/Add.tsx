@@ -8,6 +8,8 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { completeUserProfile } from '@/apis/user';
+import { mapLangToKoreanLabel } from '@/utils/mapLangToKoreanLabel';
+import { mapIndustryLabelToKorean } from '@/utils/mapLangToKoreanLabel';
 
 export type FormValues = {
   name: string;
@@ -48,7 +50,8 @@ const Add = () => {
   } = methods;
 
   const onSubmit = async (data: FormValues) => {
-    const userLanguage = localStorage.getItem('lang') || 'ko';
+    const langCode = localStorage.getItem('lang') || 'ko';
+    const userLanguage = mapLangToKoreanLabel(langCode);
     console.log('🟢 onSubmit 실행됨');
     const payload = {
       userName: data.name,
@@ -57,7 +60,7 @@ const Add = () => {
       userGender: data.gender!,
       userLanguage,
       userAddress: data.address,
-      industryName: data.industry!,
+      industryName: mapIndustryLabelToKorean(data.industry!),
     };
 
     console.log('📦 전송할 payload:');

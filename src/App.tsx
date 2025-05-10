@@ -24,6 +24,10 @@ import MyPage from './pages/mypage/MyPage';
 import './i18n';
 import { useEffect } from 'react';
 import DetailResult from './pages/result/DetailResult';
+import i18n from './i18n';
+
+const savedLang = localStorage.getItem('lang') || 'ko';
+i18n.changeLanguage(savedLang);
 
 function FooterCondition() {
   const location = useLocation();

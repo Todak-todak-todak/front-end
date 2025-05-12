@@ -13,6 +13,10 @@ const DetailExample = ({ reportId }: DetailExampleProps) => {
   const [industry, setIndustry] = useState<string>('');
   const [name, setName] = useState('');
 
+  const truncate = (text: string, maxLength: number) => {
+    return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
+  };
+
   useEffect(() => {
     if (!reportId) return;
     const fetchResult = async () => {
@@ -61,7 +65,7 @@ const DetailExample = ({ reportId }: DetailExampleProps) => {
               </div>
 
               <p className="text-[14px] text-[#191B1C] leading-[1.5] whitespace-pre-line">
-                {content}
+                {truncate(content, 180)}
               </p>
             </div>
           ))}

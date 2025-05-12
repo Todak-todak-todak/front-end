@@ -1,10 +1,12 @@
+import i18n from '@/i18n';
+
 export const compensationTypes = [
-  { key: 'sickLeave', label: '휴업급여' },
-  { key: 'pension', label: '상병보상연금' },
-  { key: 'survivorPension', label: '유족연금' },
-  { key: 'disability', label: '장해급여' },
-  { key: 'survivorOneTime', label: '유족일시금' },
-  { key: 'funeral', label: '장례비' },
+  { key: 'sickLeave', label: i18n.t('compensation.sickLeave') },
+  { key: 'pension', label: i18n.t('compensation.pension') },
+  { key: 'survivorPension', label: i18n.t('compensation.survivorPension') },
+  { key: 'disability', label: i18n.t('compensation.disability') },
+  { key: 'survivorOneTime', label: i18n.t('compensation.survivorOneTime') },
+  { key: 'funeral', label: i18n.t('compensation.funeral') },
 ];
 
 export const disabilityCodeMap: Record<string, string> = {
@@ -39,25 +41,31 @@ export const survivorPensionCodeMap: Record<string, string> = {
 };
 
 export const gradeMap: Record<string, string[]> = {
-  sickLeave: ['등급 없음'],
-  pension: ['제1급', '제2급', '제3급'],
-  survivorPension: [
-    '배우자 1인',
-    '배우자 + 자녀 1인',
-    '배우자 + 자녀 2인 이상',
-    '자녀만 1인',
-    '자녀만 2인 이상',
+  sickLeave: [i18n.t('compensation.grade.none')],
+  pension: [
+    i18n.t('compensation.grade.pension.A'),
+    i18n.t('compensation.grade.pension.B'),
+    i18n.t('compensation.grade.pension.C'),
   ],
-  disability: Array.from({ length: 14 }, (_, i) => `${i + 1}급`),
-  survivorOneTime: ['등급 없음'],
-  funeral: ['등급 없음'],
+  survivorPension: [
+    i18n.t('compensation.grade.survivorPension.A'),
+    i18n.t('compensation.grade.survivorPension.B'),
+    i18n.t('compensation.grade.survivorPension.C'),
+    i18n.t('compensation.grade.survivorPension.D'),
+    i18n.t('compensation.grade.survivorPension.E'),
+  ],
+  disability: Object.values(disabilityCodeMap).map((code) =>
+    i18n.t(`compensation.grade.disability.${code}`)
+  ),
+  survivorOneTime: [i18n.t('compensation.grade.none')],
+  funeral: [i18n.t('compensation.grade.none')],
 };
 
 export const ruleMap: Record<string, string> = {
-  sickLeave: '평균임금 × 70%',
-  pension: '평균임금 × 중증요양상태 등급별 연금일수',
-  survivorPension: '평균임금 × 365일 × 유족수별 지급비율',
-  survivorOneTime: '평균임금 × 1300일 또는 1억 원 중 큰 금액',
-  funeral: '평균임금 × 120일',
-  disability: '평균임금 × 장해등급별 보상일수',
+  sickLeave: i18n.t('compensation.rule.sickLeave'),
+  pension: i18n.t('compensation.rule.pension'),
+  survivorPension: i18n.t('compensation.rule.survivorPension'),
+  survivorOneTime: i18n.t('compensation.rule.survivorOneTime'),
+  funeral: i18n.t('compensation.rule.funeral'),
+  disability: i18n.t('compensation.rule.disability'),
 };

@@ -13,6 +13,10 @@ const Example = ({ chatResultId }: ExampleProps) => {
   const [industry, setIndustry] = useState<string>('');
   const [name, setName] = useState('');
 
+  const truncate = (text: string, maxLength: number) => {
+    return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
+  };
+
   useEffect(() => {
     if (!chatResultId) return;
     // 산업 & 예시 불러오기
@@ -60,7 +64,7 @@ const Example = ({ chatResultId }: ExampleProps) => {
               </div>
 
               <p className="text-[14px] text-[#191B1C] leading-[1.5] whitespace-pre-line">
-                {content}
+                {truncate(content, 180)}
               </p>
             </div>
           ))}

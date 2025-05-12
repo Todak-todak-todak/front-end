@@ -228,6 +228,7 @@
       "name": "姓名",
       "id": "外国人登录号",
       "phone": "联系电话",
+      "businessType": "行业名称",
       "gender": "性别",
       "workerType": "工作类型",
       "address": "地址",
@@ -243,6 +244,7 @@
     }
   },
   "result": {
+    "won": "₩",
     "amount": "赔偿金额 : ",
     "category": "赔偿项目 : ",
     "title": "分析结果",
@@ -297,5 +299,52 @@
     "worker": "从业者",
     "view": "观看视频",
     "people": ""
+  },
+  "compensation": {
+    "sickLeave": "停工津贴",
+    "pension": "伤病补偿养老金",
+    "survivorPension": "遗属养老金",
+    "disability": "伤残补助金",
+    "survivorOneTime": "遗属一次性补偿",
+    "funeral": "丧葬费",
+    "rule": {
+      "sickLeave": "平均工资 × 70%",
+      "pension": "平均工资 × 根据重症等级的发放天数",
+      "survivorPension": "平均工资 × 365天 × 遗属比例",
+      "survivorOneTime": "1300天或1亿韩元中的较大者",
+      "funeral": "平均工资 × 120天",
+      "disability": "平均工资 × 按伤残等级的补偿天数"
+    },
+    "grade": {
+      "none": "无等级",
+      "pension": {
+        "A": "第1级",
+        "B": "第2级",
+        "C": "第3级"
+      },
+      "survivorPension": {
+        "A": "配偶1人",
+        "B": "配偶 + 1个子女",
+        "C": "配偶 + 2个或以上子女",
+        "D": "仅1个子女",
+        "E": "仅2个或以上子女"
+      },
+      "disability": {
+        "A": "第1级",
+        "B": "第2级",
+        "C": "第3级",
+        "D": "第4级",
+        "E": "第5级",
+        "F": "第6级",
+        "G": "第7级",
+        "H": "第8级",
+        "I": "第9级",
+        "J": "第10级",
+        "K": "第11级",
+        "L": "第12级",
+        "M": "第13级",
+        "N": "第14级"
+      }
+    }
   }
 }

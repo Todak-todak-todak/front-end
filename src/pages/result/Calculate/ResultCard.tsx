@@ -107,7 +107,7 @@ const ResultCard = ({
 
           {showResult && (
             <div className="text-[22px] font-bold text-[#0076FF] text-left">
-              {calculatedResult?.toLocaleString()}원
+              {calculatedResult?.toLocaleString()} {t(`result.won`)}
             </div>
           )}
         </div>

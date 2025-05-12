@@ -292,5 +292,10 @@
       "survivorOneTime": "一次性补偿",
       "funeral": "丧葬费"
     }
+  },
+  "home": {
+    "worker": "从业者",
+    "view": "观看视频",
+    "people": ""
   }
 }

@@ -30,15 +30,17 @@ const Language = () => {
   };
 
   return (
-    <>
-      <Header />
-      <div className="px-[30px] pb-[43px]">
-        <div className="text-[#111111] text-[28px] leading-[34px] tracking-[-0.6px] text-left pt-[20px]">
-          <p>사용할 언어를 선택하세요</p>
-          <p>Select your language</p>
+    <div className="flex flex-col h-screen">
+      <div className="flex flex-[1]">
+        <Header />
+      </div>
+      <div className="flex flex-col flex-[9] justify-between px-[30px]">
+        <div className="flex flex-col  font-semibold leading-[34px] tracking-[-0.6px] text-left ">
+          <p className="text-[24px]">사용할 언어를 선택하세요</p>
+          <p className="text-[20px]">Select your language</p>
         </div>
 
-        <div className="flex flex-wrap gap-x-12 gap-y-8 justify-center pb-[180px] pt-[93px]">
+        <div className="flex  flex-wrap gap-x-12 gap-y-8 justify-center  ">
           {languages.map(({ label, Icon, value }) => {
             const isSelected = language === value;
 
@@ -59,11 +61,11 @@ const Language = () => {
           })}
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex  justify-center pb-4">
           <Button text="다음" disabled={!language} onClick={handleClick} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

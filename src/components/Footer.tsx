@@ -35,12 +35,12 @@ const Footer = () => {
         <HomeIcon
           className="w-8 h-8"
           style={{
-            fill: currentPath === '/' ? '#275AEC' : '#B2B3B5',
+            fill: currentPath === '/home' ? '#275AEC' : '#B2B3B5',
           }}
         />
         <p
           className={`${
-            currentPath === '/' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
+            currentPath === '/home' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
           } font-bold text-sm`}
         >
           {t('footer.home')}
@@ -50,14 +50,23 @@ const Footer = () => {
         className="flex flex-col gap-1 items-center"
         onClick={() => handleClick('chatlist')}
       >
-        {currentPath === '/chatlist' ? (
+        {currentPath.startsWith('/result') ||
+        currentPath === '/chatlist' ||
+        currentPath.startsWith('/detailresult') ||
+        currentPath.startsWith('/hoslist') ? (
           <BlueChatBotIcon className="w-8 h-8" />
         ) : (
           <ChatBotIcon className="w-8 h-8" />
         )}
+
         <p
           className={`${
-            currentPath === '/chatlist' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
+            currentPath.startsWith('/chatlist') ||
+            currentPath.startsWith('/result') ||
+            currentPath.startsWith('/detailresult') ||
+            currentPath.startsWith('/hoslist')
+              ? 'text-[#275AEC]'
+              : 'text-[#B2B3B5]'
           } font-bold text-sm`}
         >
           {t('footer.chatbot')}
@@ -67,10 +76,10 @@ const Footer = () => {
         className="flex flex-col gap-1  items-center"
         onClick={() => handleClick('doclist')}
       >
-        {currentPath === '/doclist' ? <BlueBookIcon /> : <BookIcon />}
+        {currentPath.startsWith('/doc') ? <BlueBookIcon /> : <BookIcon />}
         <p
           className={`${
-            currentPath === '/doclist' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
+            currentPath.startsWith('/doc') ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
           } font-bold text-sm pt-[1.5px]`}
         >
           {t('footer.doc')}

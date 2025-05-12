@@ -292,5 +292,10 @@
       "survivorOneTime": "Lump Sum",
       "funeral": "Funeral"
     }
+  },
+  "home": {
+    "worker": "Worker",
+    "view": "Watch video",
+    "people": ""
   }
 }

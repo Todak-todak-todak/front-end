@@ -29,7 +29,7 @@ const Statistics = ({ data }: statisticsProps) => {
           <span> {t('statistics.title')}</span>
         </p>
       </div>
-      <div className="flex flex-row gap-4 h-44 ">
+      <div className="flex flex-row gap-4  ">
         <Box className="flex flex-col flex-[5] p-3 gap-1 ">
           <p className="font-bold text-mainBlue text-sm">
             {t('statistics.accidentTop3')}

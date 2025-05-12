@@ -10,6 +10,7 @@ export const getUserInfo = async () => {
 export const createDocRegister = async (payload: DocRegisterParams) => {
   try {
     const response = await api.post('/document/new', payload);
+    console.log(response);
     return response.data;
   } catch (error) {
     console.error('createDocRegister 에러:', error);

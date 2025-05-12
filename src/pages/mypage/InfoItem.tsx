@@ -19,7 +19,7 @@ const InfoItem = ({
 }: InfoItemProps) => (
   <>
     <div
-      className={`py-8 ${isButton ? 'cursor-pointer' : ''}`}
+      className={`py-5 ${isButton ? 'cursor-pointer' : ''}`}
       onClick={isButton ? onClick : undefined}
     >
       <div className="flex items-center justify-between gap-3">
@@ -28,12 +28,12 @@ const InfoItem = ({
         </div>
         <div className="flex-1 flex justify-between items-center">
           <span className="text-[18px] font-medium text-black">{label}</span>
-          <div className="text-[18px] font-medium text-black">{value}</div>
+          <div className="text-[17px] font-medium text-gray-600">{value}</div>
         </div>
       </div>
       {editOptions && <div>{editOptions}</div>}
     </div>
-    <div className="w-full h-[1px] bg-[#B2B3B5] mt-[-23px]" />
+    <div className="w-full h-[1px] bg-gray-200 " />
   </>
 );
 

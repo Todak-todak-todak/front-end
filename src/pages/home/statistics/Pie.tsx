@@ -35,17 +35,31 @@ const PieChartComponent = ({ data }: PieChartComponentProps) => {
         <Tooltip />
       </PieChart>
 
-      <ul className="flex flex-row gap-1 text-[10px]">
-        {formattedData?.map((entry, index) => (
-          <li key={entry.name} className="flex items-center gap-1">
-            <div
-              className="w-2 h-2 rounded"
-              style={{ backgroundColor: COLORS[index % COLORS.length] }}
-            />
-            <span className="font-semibold">{entry.name}</span>
-          </li>
-        ))}
-      </ul>
+      <div className="w-full flex justify-center">
+        <ul
+          className="
+        flex flex-wrap justify-center items-center
+        gap-1 text-[9px]
+      "
+        >
+          {formattedData?.map((entry, index) => (
+            <li
+              key={entry.name}
+              className="
+            flex items-center gap-1
+            /* 필요하면 li마다 min-w를 주거나 */
+            /* w-max */
+          "
+            >
+              <div
+                className="w-2 h-2 rounded"
+                style={{ backgroundColor: COLORS[index % COLORS.length] }}
+              />
+              <span className="font-semibold">{entry.name}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

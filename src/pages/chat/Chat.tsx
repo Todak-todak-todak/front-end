@@ -20,8 +20,26 @@ const Chat = () => {
   const { mutate } = useMutation({
     mutationFn: (data: { question: string; accessToken: string }) =>
       sendMessage(data),
+    onMutate: () => {
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { sender: 'bot', text: '응답 생성 중...' },
+      ]);
+    },
     onSuccess: (data) => {
       console.log('응답 데이터:', data);
+
+      // 마지막 메시지가 로딩이면 제거
+      setMessages((prevMessages) => {
+        const newMessages = [...prevMessages];
+        if (
+          newMessages.length > 0 &&
+          newMessages[newMessages.length - 1].text === '응답 생성 중...'
+        ) {
+          newMessages.pop();
+        }
+        return newMessages;
+      });
 
       if (data.followup_required) {
         setMessages((prevMessages) => [
@@ -51,13 +69,22 @@ const Chat = () => {
     },
     onError: (error) => {
       console.error('에러:', error);
-      setMessages((prevMessages) => [
-        ...prevMessages,
-        {
-          sender: 'bot',
-          text: '⚠️ 서버에서 응답을 받는 데 실패했어요. 다시 시도해주세요.',
-        },
-      ]);
+      setMessages((prevMessages) => {
+        const newMessages = [...prevMessages];
+        if (
+          newMessages.length > 0 &&
+          newMessages[newMessages.length - 1].text === '응답 생성 중...'
+        ) {
+          newMessages.pop();
+        }
+        return [
+          ...newMessages,
+          {
+            sender: 'bot',
+            text: '⚠️ 서버에서 응답을 받는 데 실패했어요. 다시 시도해주세요.',
+          },
+        ];
+      });
     },
   });
 

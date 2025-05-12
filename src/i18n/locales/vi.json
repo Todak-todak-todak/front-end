@@ -287,5 +287,10 @@
       "survivorOneTime": "Trợ cấp tử vong",
       "funeral": "Chi phí tang lễ"
     }
+  },
+  "home": {
+    "worker": "Lao động",
+    "view": "Xem video",
+    "people": ""
   }
 }

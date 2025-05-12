@@ -8,11 +8,12 @@ import Percent from './Percent';
 import Save from '@assets/images/Result/Save.svg?react';
 import { saveResult } from '@/apis/result';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Result = () => {
   const { t } = useTranslation();
   const { chatResultId } = useParams<{ chatResultId: string }>();
-
+  const navigate = useNavigate();
   const [calculatorId, setCalculatorId] = useState<number | null>(null);
   const chatResultIdNum = chatResultId ? Number(chatResultId) : null;
 
@@ -25,6 +26,7 @@ const Result = () => {
     saveResult({ calculatorId, chatResultId: chatResultIdNum })
       .then(() => {
         alert('결과가 저장되었습니다!');
+        navigate('/chatlist');
       })
       .catch((err) => {
         console.error('[저장 실패]', err);

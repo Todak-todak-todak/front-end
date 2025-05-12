@@ -77,7 +77,7 @@ function App() {
               <Route path="/mypage" element={<MyPage />} />
             </Routes>
           </div>
-          <div className="mt-auto">
+          <div className="mt-auto z-[10000]">
             <FooterCondition />
           </div>
         </div>

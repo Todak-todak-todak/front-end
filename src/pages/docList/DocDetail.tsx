@@ -31,18 +31,7 @@ const DocDetail = () => {
         { label: 'docDetail.label.workerType', value: detail.docType },
         {
           label: 'docDetail.label.address',
-          value: (
-            <>
-              {detail.userAddress
-                .split(' ')
-                .map((line: string, idx: number) => (
-                  <span key={idx}>
-                    {line}
-                    <br />
-                  </span>
-                ))}
-            </>
-          ),
+          value: detail.userAddress,
         },
       ]
     : [];
@@ -69,16 +58,7 @@ const DocDetail = () => {
         { label: 'docDetail.label.treatmentType', value: detail.therapy },
         {
           label: 'docDetail.label.detail',
-          value: (
-            <>
-              {detail.docReason.split(' ').map((line: string, idx: number) => (
-                <span key={idx}>
-                  {line}
-                  <br />
-                </span>
-              ))}
-            </>
-          ),
+          value: detail.docReason,
         },
       ]
     : [];

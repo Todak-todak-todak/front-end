@@ -290,6 +290,7 @@
   },
   "home": {
     "worker": "Worker",
-    "view": "Watch video"
+    "view": "Watch video",
+    "people": ""
   }
 }

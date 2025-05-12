@@ -52,6 +52,7 @@ const Footer = () => {
       >
         {currentPath.startsWith('/result') ||
         currentPath === '/chatlist' ||
+        currentPath.startsWith('/detailresult') ||
         currentPath.startsWith('/hoslist') ? (
           <BlueChatBotIcon className="w-8 h-8" />
         ) : (
@@ -62,6 +63,7 @@ const Footer = () => {
           className={`${
             currentPath.startsWith('/chatlist') ||
             currentPath.startsWith('/result') ||
+            currentPath.startsWith('/detailresult') ||
             currentPath.startsWith('/hoslist')
               ? 'text-[#275AEC]'
               : 'text-[#B2B3B5]'

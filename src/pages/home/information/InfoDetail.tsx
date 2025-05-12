@@ -128,7 +128,7 @@ const InfoDetail = ({
       </div>
 
       {modalContent && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-10">
+        <div className="fixed inset-0 z-[100000] bg-black bg-opacity-50 flex items-center justify-center p-10">
           <div className="bg-white rounded-xl p-8 max-w-sm w-full relative">
             <button
               onClick={() => setModalContent(null)}

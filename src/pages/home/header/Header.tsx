@@ -19,7 +19,7 @@ const Information = () => {
       <Box className="w-[90%] flex top-40 h-24 bg-white ">
         <div className="flex w-full flex-col h-full p-4 pt-5">
           <p className="flex w-full items-center font-semibold text-[1.3rem]">
-            {headerData?.data.userName} <p>님</p>
+            {headerData?.data.userName} <p>{t('home.people')}</p>
           </p>
           <div className="flex justify-between">
             <div className="flex">
@@ -33,7 +33,7 @@ const Information = () => {
           <PeopleIcon className="w-24 h-20" />
           <div
             className="
-      absolute bottom-1 left-5
+      absolute bottom-1 left-7
       flex flex-col items-center
       text-sm font-semibold text-gray-600
     "

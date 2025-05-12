@@ -189,6 +189,9 @@
     "name": "Name",
     "idCard": "Foreigner ID Number",
     "phone": "Phone Number",
+    "address": {
+      "label": "Address"
+    },
     "gender": {
       "label": "Gender",
       "female": "Female",
@@ -240,6 +243,8 @@
     }
   },
   "result": {
+    "amount": "Compensation amount : ",
+    "category": "Compensation category : ",
     "title": "Analysis Result",
     "possibility": "Industrial Accident Possibility",
     "goToDoc": "Go to fill out accident form",

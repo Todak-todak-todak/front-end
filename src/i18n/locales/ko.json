@@ -226,11 +226,13 @@
   "result": {
     "calculationResult": "산재 계산 결과",
     "title": "분석 결과",
+    "amount": "보상 금액 : ",
     "possibility": "산재 처리 가능성",
     "goToDoc": "산재 신청 서류 작성하러 가기",
     "similarCase": "{{name}}님과 비슷한 사례",
     "hospitalTitle": "인근 산재 지정 병원 안내",
     "hoslistTitle": "산재 인정 병원",
+    "category": "보상 항목 : ",
     "more": "더보기 >",
     "tabs": {
       "sickLeave": "휴업급여",

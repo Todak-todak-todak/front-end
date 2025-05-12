@@ -189,6 +189,9 @@
     "name": "Họ và tên",
     "idCard": "Mã người nước ngoài",
     "phone": "Số điện thoại",
+    "address": {
+      "label": "Địa chỉ"
+    },
     "gender": {
       "label": "Giới tính",
       "female": "Nữ",
@@ -240,6 +243,8 @@
     }
   },
   "result": {
+    "amount": "Số tiền bồi thường : ",
+    "category": "Hạng mục bồi thường : ",
     "title": "Kết quả phân tích",
     "possibility": "Khả năng được xử lý tai nạn lao động",
     "goToDoc": "Chuyển đến điền hồ sơ tai nạn",

@@ -189,6 +189,9 @@
     "name": "姓名",
     "idCard": "外国人登记号码",
     "phone": "电话号码",
+    "address": {
+      "label": "地址"
+    },
     "gender": {
       "label": "性别",
       "female": "女",
@@ -240,6 +243,8 @@
     }
   },
   "result": {
+    "amount": "赔偿金额 : ",
+    "category": "赔偿项目 : ",
     "title": "分析结果",
     "possibility": "工伤处理可能性",
     "goToDoc": "前往填写工伤申请表",

@@ -75,31 +75,31 @@ const Add = () => {
   };
 
   return (
-    <>
+    <div className="overflow-y-auto">
       <Header />
       <FormProvider {...methods}>
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="px-[30px] pb-[23px] flex flex-col justify-between"
         >
-          <div>
-            <div className="text-[#111111] text-[28px] leading-[34px] tracking-[-0.6px] text-left pb-[30px]">
+          <div className="">
+            <div className="text-[#111111] text-[24px] font-semibold leading-[34px] tracking-[-0.6px] text-left pb-[30px]">
               <p>{t('form.informationTitle')}</p>
             </div>
 
-            <div className="flex flex-col gap-4 text-left">
+            <div className="flex flex-col gap-4 text-left ">
               <InputSection />
               <GenderSelector />
               <IndustryDropdown />
             </div>
           </div>
 
-          <div className="flex justify-center mt-[93px]">
+          <div className="flex justify-center mt-8">
             <Button text={t('form.next')} disabled={!isValid} type="submit" />
           </div>
         </form>
       </FormProvider>
-    </>
+    </div>
   );
 };
 

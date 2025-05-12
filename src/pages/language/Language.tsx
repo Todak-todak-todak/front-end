@@ -61,7 +61,7 @@ const Language = () => {
           })}
         </div>
 
-        <div className="flex  justify-center">
+        <div className="flex  justify-center pb-4">
           <Button text="다음" disabled={!language} onClick={handleClick} />
         </div>
       </div>

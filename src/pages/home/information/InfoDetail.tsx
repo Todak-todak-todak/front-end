@@ -39,7 +39,6 @@ const InfoDetail = ({
 }: InfoDetailProps) => {
   const IconComponent = iconMap[isClicked];
   const { t } = useTranslation();
-  console.log(counsel);
 
   const [modalContent, setModalContent] = useState<string | null>(null);
 
@@ -85,10 +84,16 @@ const InfoDetail = ({
             key={index}
             className="flex flex-col w-36 h-40 px-4 py-4 flex-shrink-0 gap-2"
           >
-            <p className="flex flex-[4] items-center text-[15px] justify-center font-semibold whitespace-normal text-center">
-              {item.title}
-            </p>
-
+            <div className="flex flex-[4]  items-center  justify-center ">
+              <p
+                className="
+                     text-[15px] font-semibold whitespace-normal text-center
+                     leading-[1.2] line-clamp-2 cursor-pointer"
+                onClick={() => item.title && setModalContent(item.title)}
+              >
+                {item.title}
+              </p>
+            </div>
             <div className="flex flex-[6] flex-col gap-1 justify-center">
               <div className="flex items-center gap-1">
                 <IconComponent />
@@ -104,7 +109,7 @@ const InfoDetail = ({
                     rel="noopener noreferrer"
                     className="flex text-white text-[12px] underline justify-center"
                   >
-                    교육 영상 보기
+                    {t('home.view')}
                   </a>
                 ) : (
                   <p
@@ -124,7 +129,7 @@ const InfoDetail = ({
 
       {modalContent && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-10">
-          <div className="bg-white rounded-xl p-8 max-w-md w-full relative">
+          <div className="bg-white rounded-xl p-8 max-w-sm w-full relative">
             <button
               onClick={() => setModalContent(null)}
               className="absolute top-2 right-3 text-gray-600 text-xl"

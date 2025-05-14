@@ -55,11 +55,11 @@ const DetailCalculation = () => {
       </p>
       <div className="bg-white border border-[#DDD] rounded-[10px] p-4 shadow-sm">
         <div className="mb-3">
-          <span className="font-semibold">평균 임금: </span>
-          {calculation.averageSalary.toLocaleString()}원
+          <span className="font-semibold"> {t('result.amount')} </span>
+          {calculation.averageSalary.toLocaleString()} {t('result.won')}
         </div>
         <div>
-          <span className="font-semibold">보상 항목: </span>
+          <span className="font-semibold">{t('result.category')}</span>
           {calculation.accidentType}
         </div>
       </div>

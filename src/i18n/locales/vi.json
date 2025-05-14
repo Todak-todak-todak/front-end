@@ -189,6 +189,9 @@
     "name": "Họ và tên",
     "idCard": "Mã người nước ngoài",
     "phone": "Số điện thoại",
+    "address": {
+      "label": "Địa chỉ"
+    },
     "gender": {
       "label": "Giới tính",
       "female": "Nữ",
@@ -226,6 +229,7 @@
       "id": "Số ĐKNN",
       "phone": "Số điện thoại",
       "gender": "Giới tính",
+      "businessType": "Tên ngành nghề",
       "workerType": "Loại lao động",
       "address": "Địa chỉ",
       "companyId": "Mã quản lý DN",
@@ -240,11 +244,14 @@
     }
   },
   "result": {
+    "won": "₩",
+    "amount": "Số tiền bồi thường : ",
+    "category": "Hạng mục bồi thường : ",
     "title": "Kết quả phân tích",
     "possibility": "Khả năng được xử lý tai nạn lao động",
     "goToDoc": "Chuyển đến điền hồ sơ tai nạn",
     "similarCase": "Trường hợp tương tự với {{name}}",
-    "hospitalTitle": "Hướng dẫn bệnh viện chỉ định gần nhất",
+    "hospitalTitle": "Hướng dẫn bệnh viện gần nhất",
     "more": "Thêm>",
     "hoslistTitle": "Bệnh viện được công nhận",
     "calculator": {
@@ -292,5 +299,52 @@
     "worker": "Lao động",
     "view": "Xem video",
     "people": ""
+  },
+  "compensation": {
+    "sickLeave": "Trợ cấp nghỉ bệnh",
+    "pension": "Lương hưu bồi thường thương tật",
+    "survivorPension": "Lương hưu cho người thân",
+    "disability": "Trợ cấp thương tật",
+    "survivorOneTime": "Trợ cấp một lần cho người thân",
+    "funeral": "Chi phí tang lễ",
+    "rule": {
+      "sickLeave": "Tiền lương trung bình × 70%",
+      "pension": "Tiền lương trung bình × số ngày theo cấp độ nặng",
+      "survivorPension": "Tiền lương trung bình × 365 ngày × tỷ lệ người thụ hưởng",
+      "survivorOneTime": "Giá trị lớn hơn giữa 1.300 ngày hoặc 100 triệu KRW",
+      "funeral": "Tiền lương trung bình × 120 ngày",
+      "disability": "Tiền lương trung bình × số ngày theo cấp độ thương tật"
+    },
+    "grade": {
+      "none": "Không có cấp",
+      "pension": {
+        "A": "Hạng 1",
+        "B": "Hạng 2",
+        "C": "Hạng 3"
+      },
+      "survivorPension": {
+        "A": "Chỉ có vợ/chồng",
+        "B": "Vợ/chồng + 1 con",
+        "C": "Vợ/chồng + từ 2 con trở lên",
+        "D": "Chỉ có 1 con",
+        "E": "Từ 2 con trở lên"
+      },
+      "disability": {
+        "A": "Hạng 1",
+        "B": "Hạng 2",
+        "C": "Hạng 3",
+        "D": "Hạng 4",
+        "E": "Hạng 5",
+        "F": "Hạng 6",
+        "G": "Hạng 7",
+        "H": "Hạng 8",
+        "I": "Hạng 9",
+        "J": "Hạng 10",
+        "K": "Hạng 11",
+        "L": "Hạng 12",
+        "M": "Hạng 13",
+        "N": "Hạng 14"
+      }
+    }
   }
 }

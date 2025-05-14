@@ -20,11 +20,13 @@ const SalaryInputItem = ({
     <div className="flex flex-col gap-[6px]">
       <div className="flex items-center justify-between">
         <div className="flex flex-col">
-          <label className="text-[16px] text-[#191B1C] font-medium">
+          <label className="text-[16px] text-[#191B1C] font-medium text-left">
             {label}
           </label>
           {subText && (
-            <p className="text-[12px] text-[#666] mt-[2px]">{subText}</p>
+            <p className="text-[12px] text-[#666] mt-[2px] text-left">
+              {subText}
+            </p>
           )}
         </div>
 

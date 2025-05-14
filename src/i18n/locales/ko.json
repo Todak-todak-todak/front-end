@@ -197,6 +197,7 @@
     "logout": "로그아웃"
   },
   "docDetail": {
+    "inProgress": "처리중",
     "completed": "처리완료",
     "back": "이전으로",
     "section": {
@@ -224,13 +225,16 @@
     }
   },
   "result": {
+    "won": "원",
     "calculationResult": "산재 계산 결과",
     "title": "분석 결과",
+    "amount": "보상 금액 : ",
     "possibility": "산재 처리 가능성",
     "goToDoc": "산재 신청 서류 작성하러 가기",
     "similarCase": "{{name}}님과 비슷한 사례",
     "hospitalTitle": "인근 산재 지정 병원 안내",
     "hoslistTitle": "산재 인정 병원",
+    "category": "보상 항목 : ",
     "more": "더보기 >",
     "tabs": {
       "sickLeave": "휴업급여",
@@ -276,5 +280,52 @@
     "worker": "종사자",
     "view": "교육 영상 보기 ",
     "people": "님"
+  },
+  "compensation": {
+    "sickLeave": "휴업급여",
+    "pension": "상병보상연금",
+    "survivorPension": "유족연금",
+    "disability": "장해급여",
+    "survivorOneTime": "유족일시금",
+    "funeral": "장례비",
+    "rule": {
+      "sickLeave": "평균임금 × 70%",
+      "pension": "평균임금 × 중증요양상태 등급별 연금일수",
+      "survivorPension": "평균임금 × 365일 × 유족수별 지급비율",
+      "survivorOneTime": "평균임금 × 1300일 또는 1억 원 중 큰 금액",
+      "funeral": "평균임금 × 120일",
+      "disability": "평균임금 × 장해등급별 보상일수"
+    },
+    "grade": {
+      "none": "등급 없음",
+      "pension": {
+        "A": "제1급",
+        "B": "제2급",
+        "C": "제3급"
+      },
+      "survivorPension": {
+        "A": "배우자 1인",
+        "B": "배우자 + 자녀 1인",
+        "C": "배우자 + 자녀 2인 이상",
+        "D": "자녀만 1인",
+        "E": "자녀만 2인 이상"
+      },
+      "disability": {
+        "A": "1급",
+        "B": "2급",
+        "C": "3급",
+        "D": "4급",
+        "E": "5급",
+        "F": "6급",
+        "G": "7급",
+        "H": "8급",
+        "I": "9급",
+        "J": "10급",
+        "K": "11급",
+        "L": "12급",
+        "M": "13급",
+        "N": "14급"
+      }
+    }
   }
 }

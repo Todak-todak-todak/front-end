@@ -189,6 +189,9 @@
     "name": "Name",
     "idCard": "Foreigner ID Number",
     "phone": "Phone Number",
+    "address": {
+      "label": "Address"
+    },
     "gender": {
       "label": "Gender",
       "female": "Female",
@@ -236,10 +239,14 @@
       "part": "Injured Part",
       "hospital": "Hospital",
       "treatmentType": "Treatment Type",
-      "detail": "Details of the Accident"
+      "detail": "Details of the Accident",
+      "businessType": "Industry name"
     }
   },
   "result": {
+    "won": "KRW",
+    "amount": "Compensation amount : ",
+    "category": "Compensation category : ",
     "title": "Analysis Result",
     "possibility": "Industrial Accident Possibility",
     "goToDoc": "Go to fill out accident form",
@@ -292,5 +299,52 @@
     "worker": "Worker",
     "view": "Watch video",
     "people": ""
+  },
+  "compensation": {
+    "sickLeave": "Sick Leave Benefit",
+    "pension": "Injury Compensation Pension",
+    "survivorPension": "Survivor Pension",
+    "disability": "Disability Benefit",
+    "survivorOneTime": "One-time Survivor Payment",
+    "funeral": "Funeral Expense",
+    "rule": {
+      "sickLeave": "Average wage × 70%",
+      "pension": "Average wage × pension days based on severity",
+      "survivorPension": "Average wage × 365 days × survivor ratio",
+      "survivorOneTime": "Higher of 1.3M days or 100 million KRW",
+      "funeral": "Average wage × 120 days",
+      "disability": "Average wage × days by disability grade"
+    },
+    "grade": {
+      "none": "No grade",
+      "pension": {
+        "A": "Grade 1",
+        "B": "Grade 2",
+        "C": "Grade 3"
+      },
+      "survivorPension": {
+        "A": "Spouse only",
+        "B": "Spouse + 1 child",
+        "C": "Spouse + 2 or more children",
+        "D": "1 child only",
+        "E": "2 or more children only"
+      },
+      "disability": {
+        "A": "Grade 1",
+        "B": "Grade 2",
+        "C": "Grade 3",
+        "D": "Grade 4",
+        "E": "Grade 5",
+        "F": "Grade 6",
+        "G": "Grade 7",
+        "H": "Grade 8",
+        "I": "Grade 9",
+        "J": "Grade 10",
+        "K": "Grade 11",
+        "L": "Grade 12",
+        "M": "Grade 13",
+        "N": "Grade 14"
+      }
+    }
   }
 }

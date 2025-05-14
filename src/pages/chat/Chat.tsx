@@ -4,7 +4,7 @@ import ChatBox from './ChatBox';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useMutation } from '@tanstack/react-query';
-import { sendMessage } from './api/chatApi';
+import { sendMessage } from './api/chat';
 import { getAccessToken } from '@/utils/authUtils';
 import ChatResponse from './ChatResponse';
 

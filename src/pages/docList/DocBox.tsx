@@ -71,7 +71,7 @@ const DocBox = () => {
                   <button
                     onClick={() => handleClick(doc.docPk)}
                     className={`${
-                      isSuccess ? 'bg-mainGray' : 'bg-mainBlue'
+                      isSuccess ? 'bg-mainBlue' : 'bg-mainGray'
                     } py-2 px-5 rounded-xl`}
                   >
                     <p className="text-white font-semibold text-sm">

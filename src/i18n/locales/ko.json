@@ -197,6 +197,7 @@
     "logout": "로그아웃"
   },
   "docDetail": {
+    "inProgress": "처리중",
     "completed": "처리완료",
     "back": "이전으로",
     "section": {

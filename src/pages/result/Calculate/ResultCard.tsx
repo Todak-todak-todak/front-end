@@ -71,7 +71,7 @@ const ResultCard = ({
 
   return (
     <div className="bg-white rounded-2xl shadow p-5 space-y-5">
-      <div className="flex justify-between border-b pb-2 overflow-x-auto">
+      <div className="flex justify-between border-b pb-2 overflow-x-auto gap-x-2 scrollbar-hide">
         {compensationTypes.map((c) => (
           <button
             key={c.key}

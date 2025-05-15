@@ -64,7 +64,7 @@ const Example = ({ chatResultId }: ExampleProps) => {
               </div>
 
               <p className="text-[14px] text-[#191B1C] leading-[1.5] whitespace-pre-line">
-                {truncate(content, 180)}
+                {truncate(content, 80)}
               </p>
             </div>
           ))}

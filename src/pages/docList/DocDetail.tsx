@@ -88,10 +88,12 @@ const DocDetail = () => {
           <InfoList items={mappedInjuryInfo} />
         </SectionCard>
 
-        <Button
-          text={t('docDetail.back')}
-          onClick={() => navigate('/doclist')}
-        />
+        <div className="flex justify-center">
+          <Button
+            text={t('docDetail.back')}
+            onClick={() => navigate('/doclist')}
+          />
+        </div>
       </div>
     </>
   );

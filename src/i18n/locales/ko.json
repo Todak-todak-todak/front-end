@@ -167,7 +167,7 @@
   "mypage": {
     "title": "내정보",
     "name": "이름",
-    "idCard": "외국인 등록번호",
+    "idCard": "등록번호",
     "phone": "전화번호",
     "address": {
       "label": "주소"

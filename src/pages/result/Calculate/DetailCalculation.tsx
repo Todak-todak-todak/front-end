@@ -45,7 +45,7 @@ const DetailCalculation = () => {
   return (
     <div className="px-[25px] py-[20px]">
       <p
-        className="text-[22px] leading-[120%] text-[#191B1C] font-normal mb-[10px] text-left"
+        className="text-xl leading-[120%] text-[#191B1C] font-normal mb-[10px] text-left"
         style={{
           WebkitTextStrokeWidth: '0.3px',
           WebkitTextStrokeColor: '#000',

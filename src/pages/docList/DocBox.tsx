@@ -44,11 +44,11 @@ const DocBox = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4 px-4 h-screen pb-24">
+    <div className="flex flex-col gap-4 px-4  ">
       <p className="flex items-start text-xl font-bold px-4">
         {t('docBox.title')}
       </p>
-      <div className="flex flex-col gap-4 px-4  overflow-y-auto pt-1 pb-2">
+      <div className="flex flex-col gap-4 px-4  pt-1 pb-2 ">
         {docListData &&
           docListData.data.map((doc) => {
             const isSuccess = doc.docWhether;
@@ -71,10 +71,10 @@ const DocBox = () => {
                   <button
                     onClick={() => handleClick(doc.docPk)}
                     className={`${
-                      isSuccess ? 'bg-mainBlue' : 'bg-mainGray'
-                    } py-2 px-5 rounded-xl`}
+                      isSuccess ? 'bg-mainGray' : 'bg-mainBlue'
+                    } py-2 px-2 rounded-xl`}
                   >
-                    <p className="text-white font-semibold text-sm">
+                    <p className="text-white font-semibold text-[14px]">
                       {isSuccess ? t('docBox.done') : t('docBox.progress')}
                     </p>
                   </button>

@@ -46,11 +46,11 @@ const InfoList = ({ isClicked, setIsClicked }: InfoListProps) => {
         <button
           onClick={() => handleClick(label)}
           key={index}
-          className="flex flex-col gap-2"
+          className="flex flex-col gap-2 justify-center items-center"
         >
           <Box
-            className="flex w-14 h-14 bg-white rounded-xl justify-center items-center
-            transition-transform duration-200 hover:scale-[1.2]"
+            className="flex  w-[3.5rem] h-[3.5rem] bg-white rounded-xl justify-center items-center
+            transition-transform duration-200 hover:scale-[1.1]"
             style={{
               border: isClicked === label ? '1.5px solid #0158FE' : 'none',
             }}
@@ -58,7 +58,7 @@ const InfoList = ({ isClicked, setIsClicked }: InfoListProps) => {
             <Icon width={width} height={height} />
           </Box>
           <p
-            className={`font-bold text-sm ${
+            className={`flex font-bold text-sm justify-center items center ${
               isClicked === label ? 'text-mainBlue' : 'text-mainGray'
             }`}
           >

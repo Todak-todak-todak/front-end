@@ -27,13 +27,13 @@ const Footer = () => {
   };
 
   return (
-    <div className="w-full max-w-[470px] h-20 flex justify-around items-center px-8 fixed bottom-0 bg-white rounded-t-3xl shadow-footer">
+    <div className="w-full max-w-[470px] h-16 pb-1 flex justify-around items-center px-2 fixed bottom-0 bg-white rounded-t-3xl shadow-footer">
       <button
-        className="flex flex-col gap-1 items-center"
+        className="flex flex-col items-center"
         onClick={() => handleClick('home')}
       >
         <HomeIcon
-          className="w-8 h-8"
+          className="w-7 h-7"
           style={{
             fill: currentPath === '/home' ? '#275AEC' : '#B2B3B5',
           }}
@@ -41,22 +41,22 @@ const Footer = () => {
         <p
           className={`${
             currentPath === '/home' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
-          } font-bold text-sm`}
+          } font-bold text-[13px]`}
         >
           {t('footer.home')}
         </p>
       </button>
       <button
-        className="flex flex-col gap-1 items-center"
+        className="flex flex-col items-center"
         onClick={() => handleClick('chatlist')}
       >
         {currentPath.startsWith('/result') ||
         currentPath === '/chatlist' ||
         currentPath.startsWith('/detailresult') ||
         currentPath.startsWith('/hoslist') ? (
-          <BlueChatBotIcon className="w-8 h-8" />
+          <BlueChatBotIcon className="w-7 h-7" />
         ) : (
-          <ChatBotIcon className="w-8 h-8" />
+          <ChatBotIcon className="w-7 h-7" />
         )}
 
         <p
@@ -67,30 +67,30 @@ const Footer = () => {
             currentPath.startsWith('/hoslist')
               ? 'text-[#275AEC]'
               : 'text-[#B2B3B5]'
-          } font-bold text-sm`}
+          } font-bold text-[13px]`}
         >
           {t('footer.chatbot')}
         </p>
       </button>
       <button
-        className="flex flex-col gap-1  items-center"
+        className="flex flex-col   items-center"
         onClick={() => handleClick('doclist')}
       >
         {currentPath.startsWith('/doc') ? <BlueBookIcon /> : <BookIcon />}
         <p
           className={`${
             currentPath.startsWith('/doc') ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
-          } font-bold text-sm pt-[1.5px]`}
+          } font-bold text-[13px] pt-[1.5px]`}
         >
           {t('footer.doc')}
         </p>
       </button>
       <button
-        className="flex flex-col gap-1 items-center"
+        className="flex flex-col  items-center"
         onClick={() => handleClick('mypage')}
       >
         <AccountIcon
-          className="w-8 h-8"
+          className="w-7 h-7"
           style={{
             fill: currentPath === '/mypage' ? '#275AEC' : '#B2B3B5',
           }}
@@ -98,7 +98,7 @@ const Footer = () => {
         <p
           className={`${
             currentPath === '/mypage' ? 'text-[#275AEC]' : 'text-[#B2B3B5]'
-          } font-bold text-sm`}
+          } font-bold text-[13px]`}
         >
           {t('footer.mypage')}
         </p>

@@ -100,24 +100,30 @@ const FormStepper = () => {
 
   return (
     <FormProvider {...methods}>
-      <div className="flex flex-col min-h-screen">
+      <div className="relative  flex flex-col">
+        {/* 헤더 */}
         {step !== 5 && (
-          <div>
+          <div className="">
             <Header title={getHeaderTitle()} />
           </div>
         )}
-        <div className="flex-grow">{steps[step]}</div>
 
-        <div className="sticky bottom-20 bg-white p-4">
-          <StepNavigation
-            step={step}
-            handleBack={handleBack}
-            handleNext={handleNext}
-            handleCancel={handleCancel}
-            isValid={methods.formState.isValid}
-            onSubmit={onSubmit}
-          />
-        </div>
+        {/* 폼 콘텐츠 - 스크롤 영역 */}
+        <div className="overflow-y-auto  mb-16">{steps[step]}</div>
+
+        {/* 고정 버튼 */}
+        {step !== 6 && (
+          <div className="fixed bottom-16 w-full w-max-[470px] z-50 px-4 bg-white">
+            <StepNavigation
+              step={step}
+              handleBack={handleBack}
+              handleNext={handleNext}
+              handleCancel={handleCancel}
+              isValid={methods.formState.isValid}
+              onSubmit={onSubmit}
+            />
+          </div>
+        )}
       </div>
     </FormProvider>
   );

@@ -106,7 +106,7 @@ const ResultCard = ({
           </div>
 
           {showResult && (
-            <div className="text-[22px] font-bold text-[#0076FF] text-left">
+            <div className="text-xl font-bold text-[#0076FF] text-left">
               {calculatedResult?.toLocaleString()} {t(`result.won`)}
             </div>
           )}

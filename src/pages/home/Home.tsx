@@ -19,7 +19,7 @@ const Home = () => {
   });
   console.log(counselData);
   return (
-    <div className="flex flex-col h-screen w-full mb-36">
+    <div className="flex flex-col w-full">
       <div className="flex-[2] w-full">
         <Header />
       </div>

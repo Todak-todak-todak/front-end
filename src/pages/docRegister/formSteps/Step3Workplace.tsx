@@ -10,7 +10,7 @@ const Step3Workplace = () => {
         {t('workplace.title')}
       </p>
 
-      <div className="flex flex-col w-full gap-8 py-4 mb-20">
+      <div className="flex flex-col w-full gap-8 py-4 ">
         <TextInputField
           name="businessInfo.businessNumber"
           label={t('workplace.businessNumber')}

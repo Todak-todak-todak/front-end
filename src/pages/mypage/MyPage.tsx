@@ -140,7 +140,7 @@ const MyPage = () => {
         }
       />
 
-      <div className="px-4 sm:px-8 pb-24 bg-white">
+      <div className="px-8 sm:px-8  ">
         {infoFields.map(({ icon, label, key, options }) => (
           <InfoItem
             key={key}
@@ -153,7 +153,7 @@ const MyPage = () => {
                 <input
                   value={profile[key]}
                   onChange={(e) => updateProfile({ [key]: e.target.value })}
-                  className="min-w-0 flex-shrink-0 border-b border-gray-300 text-[17px] py-1 px-2 w-full text-right"
+                  className="min-w-0 flex-shrink-0 border-b border-gray-300 text-[15px] py-1 px-2 w-full text-right"
                 />
               ) : (
                 <div className="flex items-center gap-1">

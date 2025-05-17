@@ -10,14 +10,16 @@ const ChatList = () => {
     navigate('/chat');
   };
   return (
-    <div className="flex flex-col h-screen gap-4">
-      <div className="flex flex-col gap-4 py-8 justify-center items-center h-[30%] bg-[#CADCFF] rounded-b-3xl ">
-        <p className="font-bold text-2xl">{t('chatList.analysisPrompt')}</p>
+    <div className="flex flex-col gap-4 ">
+      <div className="flex flex-col gap-2 py-6 justify-center items-center  bg-[#CADCFF] rounded-b-3xl ">
+        <p className="font-bold text-xl">{t('chatList.analysisPrompt')}</p>
         <button onClick={() => handleClick()}>
-          <AddIcon width={90} />
+          <AddIcon width={80} />
         </button>
       </div>
-      <ListBox />
+      <div className="flex flex-col">
+        <ListBox />
+      </div>
     </div>
   );
 };

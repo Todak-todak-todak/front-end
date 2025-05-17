@@ -114,7 +114,7 @@ const StepNavigation = ({
 
   if (step === 0) {
     return (
-      <div className="flex justify-between gap-[0.8]">
+      <div className="flex justify-between gap-[0.8] ">
         <Button text={t('docButton.cancel')} onClick={handleCancel!} />
         {renderNextButton(t('docButton.next'), handleValidateAndNext)}
       </div>
@@ -141,7 +141,7 @@ const StepNavigation = ({
 
   if (step === 5) {
     return (
-      <div className="mt-6 flex justify-end">
+      <div className="mt-6 flex ">
         <Button
           text={t('docButton.confirm')}
           onClick={() => {

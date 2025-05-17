@@ -26,7 +26,7 @@ const Step2Worker = () => {
   }, [userData, setValue]);
 
   return (
-    <div className="flex flex-col gap-4 pb-20">
+    <div className="h-full flex-1 flex-col gap-4  ">
       <p className="flex font-semibold text-[20px] px-8">{t('worker.title')}</p>
       <div className="flex flex-col w-full gap-8 py-4">
         <TextInputField

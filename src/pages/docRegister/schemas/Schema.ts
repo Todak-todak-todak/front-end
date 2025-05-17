@@ -15,7 +15,7 @@ export const workerInfoSchema = z.object({
   name: z.string().min(1, '이름을 입력해주세요.'),
   ssn: z.string().min(1, '외국인등록번호를 입력해주세요'),
   address: z.string().min(1, '거주지를 입력해주세요.'),
-  phone: z.string().min(1, '전화번호를 입력해주세요.'),
+  phone: z.string().min(2, '전화번호를 입력해주세요.'),
   gender: z.union([z.literal('남'), z.literal('여')]),
   employmentType: z.string().min(1, '근로자유형을 알려주세요'),
 });

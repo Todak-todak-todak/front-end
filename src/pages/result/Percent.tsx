@@ -38,7 +38,7 @@ const Percent = ({ chatResultId }: PercentProps) => {
   return (
     <div className="flex flex-col p-0 pr-[25px] pb-[21px] pl-[25px]">
       <p
-        className="text-[22px] leading-[120%] text-[#191B1C] font-normal mb-[17px] text-left"
+        className="text-xl leading-[120%] text-[#191B1C] font-normal mb-[17px] text-left"
         style={{
           WebkitTextStrokeWidth: '0.3px',
           WebkitTextStrokeColor: '#000',
@@ -62,7 +62,7 @@ const Percent = ({ chatResultId }: PercentProps) => {
           onClick={handleClick}
         >
           <div className="flex items-center justify-center gap-2">
-            <p className="text-[18px] text-[#0158FE] font-normal">
+            <p className="text-[16px] text-[#0158FE] font-normal">
               {t('result.goToDoc')}
             </p>
             <Allow />

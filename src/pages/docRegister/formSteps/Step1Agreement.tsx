@@ -13,7 +13,7 @@ const Step1Agreement = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="px-8 pt-2 space-y-8 bg-white">
+    <div className=" h-full px-8 pt-2 space-y-8 ">
       {/* 개인정보 동의 */}
       <FormControl
         component="fieldset"

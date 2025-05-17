@@ -82,7 +82,7 @@ const InfoDetail = ({
         {list.map((item, index) => (
           <Box
             key={index}
-            className="flex flex-col w-36 h-40 px-4 py-4 flex-shrink-0 gap-2"
+            className="flex flex-col w-36 h-36 px-4 py-4 flex-shrink-0 gap-2"
           >
             <div className="flex flex-[4]  items-center  justify-center ">
               <p

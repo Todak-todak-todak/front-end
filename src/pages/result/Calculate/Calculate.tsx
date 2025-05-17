@@ -40,7 +40,7 @@ const Calculate = ({ setCalculatorId, setChatResultId }: CalculateProps) => {
         <>
           <div className="flex flex-col">
             <p
-              className="text-[22px] leading-[120%] text-[#191B1C] font-normal text-left"
+              className="text-xl leading-[120%] text-[#191B1C] font-normal text-left"
               style={{
                 WebkitTextStrokeWidth: '0.3px',
                 WebkitTextStrokeColor: '#000',

@@ -29,15 +29,13 @@ import i18n from './i18n';
 const savedLang = localStorage.getItem('lang') || 'ko';
 i18n.changeLanguage(savedLang);
 
-function FooterCondition() {
+const queryClient = new QueryClient();
+
+function AppContent() {
   const location = useLocation();
   const hideFooterPaths = ['/', '/add', '/chat', '/language'];
   const showFooter = !hideFooterPaths.includes(location.pathname);
-  return showFooter ? <Footer /> : null;
-}
-const queryClient = new QueryClient();
 
-function App() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const accessToken = params.get('accessToken');
@@ -53,34 +51,39 @@ function App() {
   }, []);
 
   return (
+    <div className="flex flex-col  bg-[#FDFDFD] w-full max-w-[470px] mx-auto overflow-hidden">
+      {/* <GlobalStyle /> */}
+      <div className={` h-full flex-1  ${showFooter ? 'pb-24' : ''}`}>
+        <Routes>
+          <Route path="/language" element={<Language />} />
+          <Route path="/add" element={<Add />} />
+          <Route path="/" element={<Splash />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/result/:chatResultId" element={<Result />} />
+          <Route path="/detailresult/:reportId" element={<DetailResult />} />
+          <Route path="/chatlist" element={<ChatList />} />
+          <Route path="/chat" element={<Chat />} />
+          <Route path="/doclist" element={<DocList />} />
+          <Route path="/doc" element={<FormStepper />} />
+          <Route path="/hoslist" element={<HosList />} />
+          <Route path="/docdetail/:documentId" element={<DocDetail />} />
+          <Route path="/mypage" element={<MyPage />} />
+        </Routes>
+      </div>
+      {showFooter && (
+        <div className="mt-auto z-[10000]">
+          <Footer />
+        </div>
+      )}
+    </div>
+  );
+}
+
+function App() {
+  return (
     <QueryClientProvider client={queryClient}>
       <Router>
-        <div className="flex flex-col min-h-screen bg-[#FDFDFD] w-full max-w-[470px] mx-auto">
-          {/* <GlobalStyle /> */}
-          <div className="flex-1">
-            <Routes>
-              <Route path="/language" element={<Language />} />
-              <Route path="/add" element={<Add />} />
-              <Route path="/" element={<Splash />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/result/:chatResultId" element={<Result />} />
-              <Route
-                path="/detailresult/:reportId"
-                element={<DetailResult />}
-              />
-              <Route path="/chatlist" element={<ChatList />} />
-              <Route path="/chat" element={<Chat />} />
-              <Route path="/doclist" element={<DocList />} />
-              <Route path="/doc" element={<FormStepper />} />
-              <Route path="/hoslist" element={<HosList />} />
-              <Route path="/docdetail/:documentId" element={<DocDetail />} />
-              <Route path="/mypage" element={<MyPage />} />
-            </Routes>
-          </div>
-          <div className="mt-auto z-[10000]">
-            <FooterCondition />
-          </div>
-        </div>
+        <AppContent />
       </Router>
     </QueryClientProvider>
   );

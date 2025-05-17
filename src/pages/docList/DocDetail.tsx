@@ -66,8 +66,8 @@ const DocDetail = () => {
   return (
     <>
       <div
-        className={`w-full h-[180px] ${
-          detail?.docWhether ? 'bg-[#005BFF]' : 'bg-gray-400'
+        className={`w-full h-[10rem] ${
+          detail?.docWhether ? 'bg-mainGray' : 'bg-mainBlue'
         } text-white text-[28px] font-bold flex items-center justify-center rounded-b-[20px] leading-[32px] tracking-[-0.75px] mb-[24px]`}
       >
         {detail?.docWhether
@@ -75,7 +75,7 @@ const DocDetail = () => {
           : t('docDetail.inProgress')}
       </div>
 
-      <div className="flex flex-col gap-[20px] px-[20px] pb-[100px]">
+      <div className="flex flex-col gap-[20px] px-8 ">
         <SectionCard title={t('docDetail.section.victim')}>
           <InfoList items={mappedVictimInfo} />
         </SectionCard>

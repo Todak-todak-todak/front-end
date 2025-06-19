@@ -40,7 +40,7 @@ const Language = () => {
           <p className="text-[20px]">Select your language</p>
         </div>
 
-        <div className="flex  flex-wrap gap-x-12 gap-y-8 justify-center  ">
+        <div className="grid grid-cols-2 gap-x-12 gap-y-8 justify-items-center">
           {languages.map(({ label, Icon, value }) => {
             const isSelected = language === value;
 
@@ -50,7 +50,7 @@ const Language = () => {
                 variant="selectable"
                 selected={isSelected}
                 onClick={() => setLanguage(value)}
-                className="w-[181px] h-[181px] flex flex-col items-center justify-center gap-3 cursor-pointer transition-colors"
+                className="w-[40vw]  max-w-[181px] h-[40vw] max-h-[180px] flex flex-col items-center justify-center gap-3 cursor-pointer transition-colors"
               >
                 <Icon />
                 <span className="text-[20px] font-medium text-[#111]">

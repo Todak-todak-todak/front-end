@@ -1,4 +1,4 @@
-import Box from '@/components/Box';
+import Box from '@/components/box/Box';
 import LogoIcon from '@/assets/images/Home/Logo.svg?react';
 import PeopleIcon from '@assets/images/Home/People.svg?react';
 import { useQuery } from '@tanstack/react-query';

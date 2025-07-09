@@ -1,5 +1,5 @@
 import React from 'react';
-import Box from '@/components/Box';
+import Box from '@/components/box/Box';
 import NextIcon from '@assets/images/Chat/Next.svg?react';
 import { useTranslation } from 'react-i18next';
 import { useGetChatList } from '@/apis/chat';

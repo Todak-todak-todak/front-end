@@ -9,7 +9,7 @@ import './App.css';
 import Home from './pages/home/Home';
 // import { GlobalStyle } from './styles/globalStyle';
 import './index.css';
-import Footer from './components/Footer';
+import Footer from './components/footer/Footer';
 import ChatList from './pages/chatList/ChatList';
 import Language from './pages/language/Language';
 import Add from './pages/add/Add';

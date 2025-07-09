@@ -1,5 +1,5 @@
 import StatisticsIcon from '@assets/images/Home/Statistics.svg?react';
-import Box from '@/components/Box';
+import Box from '@/components/box/Box';
 import Pie from './Pie';
 import { useTranslation } from 'react-i18next';
 import { InfoDetailData } from '@/types/home';

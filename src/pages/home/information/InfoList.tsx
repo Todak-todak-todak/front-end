@@ -3,7 +3,7 @@ import EducationIcon from '@assets/images/Home/Education.svg?react';
 import HospitalIcon from '@assets/images/Home/Hospital.svg?react';
 import ConsultationIcon from '@assets/images/Home/Consultation.svg?react';
 import ReportIcon from '@assets/images/Home/Report.svg?react';
-import Box from '@/components/Box';
+import Box from '@/components/box/Box';
 import { useTranslation } from 'react-i18next';
 
 type Category = '주의사항' | '안전교육' | '의료기관' | '상담' | '신고';

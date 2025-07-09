@@ -1,5 +1,5 @@
 import { useFormContext } from 'react-hook-form';
-import Input from '@/components/Input';
+import Input from '@/components/Input/Input';
 import { FormValues } from './Add';
 import { useTranslation } from 'react-i18next';
 

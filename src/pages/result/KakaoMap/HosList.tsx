@@ -1,4 +1,4 @@
-import Header from '@/components/Header';
+import Header from '@/components/Header/Header';
 import KakaoMap from './KakaoMap';
 import HosInfo from './HosInfo';
 import { useTranslation } from 'react-i18next';

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import CustomSelect from '@/components/CustomSelect';
+import CustomSelect from '@/components/CustomSelect/CustomSelect';
 import { calculateAmount } from '@/utils/Calculate/calculateAmount';
 import { postResult } from '@/apis/result';
 import { ResultRequestBody } from '@/apis/result';

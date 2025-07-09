@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import Header from '../../components/Header';
+import Header from '../../components/Header/Header';
 import Calculate from './Calculate/Calculate';
 import Example from './Example';
 import Hospital from './KakaoMap/Hospital';

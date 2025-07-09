@@ -1,4 +1,4 @@
-import Box from '@/components/Box';
+import Box from '@/components/box/Box';
 import { useTranslation } from 'react-i18next';
 import { useQuery, useQueryClient, useMutation } from '@tanstack/react-query';
 import { getDocList } from '@/apis/doc';

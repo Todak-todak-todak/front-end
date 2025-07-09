@@ -1,4 +1,4 @@
-import Box from '@/components/Box';
+import Box from '@/components/box/Box';
 import { usePostChatReport } from '@/apis/chat';
 import { useNavigate } from 'react-router-dom';
 

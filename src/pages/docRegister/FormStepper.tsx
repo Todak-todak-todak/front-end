@@ -113,7 +113,7 @@ const FormStepper = () => {
 
         {/* 고정 버튼 */}
         {step !== 6 && (
-          <div className="fixed bottom-16 w-full w-max-[470px] z-50 px-4 bg-white">
+          <div className="fixed bottom-16 w-[470px] z-50 px-4 bg-white">
             <StepNavigation
               step={step}
               handleBack={handleBack}

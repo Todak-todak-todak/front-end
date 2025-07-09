@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Header from '@/components/header/Header';
-import Box from '@/components/Box';
+import Box from '@/components/box/Box';
 import Korea from '@assets/images/Language/Korea.svg?react';
 import America from '@assets/images/Language/America.svg?react';
 import China from '@assets/images/Language/China.svg?react';

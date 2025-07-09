@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Box from '@/components/Box';
+import Box from '@/components/box/Box';
 import LinkIcon from '@/assets/images/Home/Link.svg?react';
 import ExclamationIcon from '@assets/images/Home/Exclamation.svg?react';
 import MapIcon from '@/assets/images/Home/Map.svg?react';

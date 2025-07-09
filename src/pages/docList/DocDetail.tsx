@@ -1,4 +1,4 @@
-import Button from '@/components/Button/Button';
+import Button from '@/components/button/Button';
 import SectionCard from './SectionCard';
 import InfoList from './InfoList';
 import { useNavigate, useParams } from 'react-router-dom';

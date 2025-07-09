@@ -1,4 +1,4 @@
-import Header from '@/components/Header/Header';
+import Header from '@/components/header/Header';
 import ChatInput from './ChatInput';
 import ChatBox from './ChatBox';
 import { useState } from 'react';

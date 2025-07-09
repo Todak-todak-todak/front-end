@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import Header from '../../components/Header/Header';
+import Header from '../../components/header/Header';
 import DetailExample from './DetailExample';
 import Hospital from './KakaoMap/Hospital';
 import DetailPercent from './DetailPercent';

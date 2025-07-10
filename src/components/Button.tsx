@@ -1,5 +1,7 @@
 type ButtonProps = {
   text: string;
+  height?: string;
+  width?: string;
   disabled?: boolean;
   onClick?: () => void;
   className?: string;
@@ -8,6 +10,8 @@ type ButtonProps = {
 
 const Button = ({
   text,
+  height = 'h-[52px]',
+  width = 'w-[420px]',
   disabled = false,
   onClick,
   className = '',
@@ -18,17 +22,12 @@ const Button = ({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`flex items-center justify-center rounded-[10px] m-2 px-4
-        h-[52px] w-[420px]
+      className={`flex items-center justify-center rounded-[10px] m-2 px-4 ${height} ${width} 
         ${
-          disabled
-            ? 'bg-gray-300 cursor-not-allowed text-white'
-            : 'bg-mainBlue text-white'
-        }
-        ${className}
-      `}
+          disabled ? 'bg-gray-300 cursor-not-allowed' : 'bg-mainBlue'
+        } ${className}`}
     >
-      <span className="text-center font-sans text-[16px] font-bold leading-none">
+      <span className="text-white text-center font-sans text-[16px] font-bold leading-none">
         {text}
       </span>
     </button>

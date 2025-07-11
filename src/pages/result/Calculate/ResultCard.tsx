@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import CustomSelect from '@/components/customselect/CustomSelect';
-import { calculateAmount } from '@/utils/Calculate/calculateAmount';
+import { calculateAmount } from '@/utils/calculates/calculateAmount';
 import { postResult } from '@/apis/result';
 import { ResultRequestBody } from '@/apis/result';
 import { Dispatch, SetStateAction } from 'react';

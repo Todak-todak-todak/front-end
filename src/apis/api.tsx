@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { translateResponse } from '@/utils/translateResponse';
+import { translateResponse } from '@/utils/translate/translateResponse';
 
 const api = axios.create({
   baseURL: 'https://todak-back-end.store/api/v1',

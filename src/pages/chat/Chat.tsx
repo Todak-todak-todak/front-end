@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useMutation } from '@tanstack/react-query';
 import { sendMessage } from './api/chat';
-import { getAccessToken } from '@/utils/authUtils';
+import { getAccessToken } from '@/utils/auth/authUtils';
 import ChatResponse from './ChatResponse';
 
 const Chat = () => {

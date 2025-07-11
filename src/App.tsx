@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import { RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import './App.css';
@@ -7,6 +7,7 @@ import './i18n';
 import i18n from './i18n';
 import router from './Router';
 import extractToken from './utils/auth/extractToken';
+import LoadingSpinner from './components/loading/LoadingSpinner';
 
 const savedLang = localStorage.getItem('lang') || 'ko';
 i18n.changeLanguage(savedLang);
@@ -21,7 +22,9 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="flex flex-col bg-[#FDFDFD] w-full max-w-[470px] mx-auto overflow-hidden">
-        <RouterProvider router={router} />
+        <Suspense fallback={<LoadingSpinner />}>
+          <RouterProvider router={router} />
+        </Suspense>
       </div>
     </QueryClientProvider>
   );

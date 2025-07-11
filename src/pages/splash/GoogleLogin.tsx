@@ -1,8 +1,8 @@
 const GoogleLoginButton = () => {
   const handleGoogleLogin = () => {
-    window.location.href =
-      'https://todak-back-end.store/oauth2/authorization/google';
+    window.location.href = 'http://localhost:8080/oauth2/authorization/google';
   };
+  //나중에 배포주소로 변경
 
   return (
     <button

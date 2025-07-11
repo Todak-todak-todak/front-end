@@ -4,15 +4,13 @@ import SendIcon from '@assets/images/Chat/Send.svg?react';
 import ListIcon from '@assets/images/Chat/List.svg?react';
 import { useTranslation } from 'react-i18next';
 
-const ChatInput = ({
-  isOpen,
-  setIsOpen,
-  onSend,
-}: {
+interface ChatInputProps {
   isOpen: boolean;
   setIsOpen: (value: boolean) => void;
   onSend: (message: string) => void;
-}) => {
+}
+
+const ChatInput = ({ isOpen, setIsOpen, onSend }: ChatInputProps) => {
   const { t } = useTranslation();
   const [inputValue, setInputValue] = useState('');
 
@@ -31,44 +29,21 @@ const ChatInput = ({
   return (
     <div className="flex flex-col bottom-0">
       {isOpen && (
-        <div className="flex justify-center">
-          <BottomSheet isOpen={isOpen} onClose={() => setIsOpen(false)}>
-            <div className="flex flex-col items-start gap-4 px-2 ">
+        <BottomSheet onClose={() => setIsOpen(false)}>
+          <div className="flex flex-col items-start gap-4 px-2 ">
+            {['question1', 'question2', 'question3'].map((key) => (
               <button
                 className="text-sm"
                 onClick={() =>
-                  handleBottomSheetTextClick(
-                    t('chatInput.bottomSheet.question1')
-                  )
+                  handleBottomSheetTextClick(t(`chatInput.bottomSheet.${key}`))
                 }
               >
-                {t('chatInput.bottomSheet.question1')}
+                {t(`chatInput.bottomSheet.${key}`)}
               </button>
-              <button
-                className="text-sm"
-                onClick={() =>
-                  handleBottomSheetTextClick(
-                    t('chatInput.bottomSheet.question2')
-                  )
-                }
-              >
-                {t('chatInput.bottomSheet.question2')}
-              </button>
-              <button
-                className="text-sm"
-                onClick={() =>
-                  handleBottomSheetTextClick(
-                    t('chatInput.bottomSheet.question3')
-                  )
-                }
-              >
-                {t('chatInput.bottomSheet.question3')}
-              </button>
-            </div>
-          </BottomSheet>
-        </div>
+            ))}
+          </div>
+        </BottomSheet>
       )}
-
       <div className="h-[5rem] flex items-center justify-between px-4 z-[1000] bg-white">
         <button onClick={() => setIsOpen(!isOpen)}>
           <ListIcon width={20} height={28} />
@@ -79,6 +54,12 @@ const ChatInput = ({
           rows={1}
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+              e.preventDefault();
+              handleSend();
+            }
+          }}
         />
         <button onClick={handleSend}>
           <SendIcon width={32} height={32} />

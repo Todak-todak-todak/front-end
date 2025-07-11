@@ -3,7 +3,7 @@ import { useFormContext, useWatch } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-import Button from '@/components/Button';
+import Button from '@/components/button/Button';
 import type { CustomFormData } from '../types/formTypes';
 
 interface StepNavigationProps {

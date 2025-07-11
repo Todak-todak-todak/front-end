@@ -1,6 +1,6 @@
 import { useForm, FormProvider } from 'react-hook-form';
-import Header from '@/components/Header';
-import Button from '@/components/Button';
+import Header from '@/components/header/Header';
+import Button from '@/components/button/Button';
 import InputSection from './InputSection';
 import GenderSelector from '@/pages/add/GenderSelector';
 import IndustryDropdown from '@/pages/add/IndustryDropdown';

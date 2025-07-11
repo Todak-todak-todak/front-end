@@ -1,5 +1,5 @@
 import { useProfileStore } from './ProfileStore';
-import Header from '@/components/Header';
+import Header from '@/components/header/Header';
 import Edit from '@assets/images/MyPage/Edit.svg?react';
 import Check from '@assets/images/MyPage/Check.svg?react';
 import UserIcon from '@assets/images/MyPage/User.svg?react';

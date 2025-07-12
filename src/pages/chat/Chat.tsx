@@ -1,4 +1,4 @@
-import Header from '@/components/Header';
+import Header from '@/components/header/Header';
 import ChatInput from './component/ChatInput';
 import ChatBox from './component/ChatBox';
 import { useTranslation } from 'react-i18next';

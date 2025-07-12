@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
 import { sendMessage } from '@/pages/chat/api/chat';
-import { getAccessToken } from '@/utils/authUtils';
+import { getAccessToken } from '@/utils/auth/authUtils';
 
 export type Message = {
   sender: 'user' | 'bot';

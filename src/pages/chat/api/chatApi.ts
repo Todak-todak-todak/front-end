@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { translateResponse } from '@/utils/translateResponse';
+import { translateResponse } from '@/utils/translate/translateResponse';
 
 const chatApi = axios.create({
   baseURL: 'https://todak-chatbot.store/api/v1',

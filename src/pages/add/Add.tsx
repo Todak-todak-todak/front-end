@@ -1,6 +1,6 @@
 import { useForm, FormProvider } from 'react-hook-form';
-import Header from '@/components/Header';
-import Button from '@/components/Button';
+import Header from '@/components/header/Header';
+import Button from '@/components/button/Button';
 import InputSection from './InputSection';
 import GenderSelector from '@/pages/add/GenderSelector';
 import IndustryDropdown from '@/pages/add/IndustryDropdown';
@@ -8,8 +8,8 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { completeUserProfile } from '@/apis/user';
-import { mapLangToKoreanLabel } from '@/utils/mapLangToKoreanLabel';
-import { mapIndustryLabelToKorean } from '@/utils/mapLangToKoreanLabel';
+import { mapLangToKoreanLabel } from '@/utils/auth/mapLangToKoreanLabel';
+import { mapIndustryLabelToKorean } from '@/utils/auth/mapLangToKoreanLabel';
 
 export type FormValues = {
   name: string;
@@ -52,7 +52,6 @@ const Add = () => {
   const onSubmit = async (data: FormValues) => {
     const langCode = localStorage.getItem('lang') || 'ko';
     const userLanguage = mapLangToKoreanLabel(langCode);
-    console.log('🟢 onSubmit 실행됨');
     const payload = {
       userName: data.name,
       userRegisterNm: data.registerNumber,
@@ -63,7 +62,6 @@ const Add = () => {
       industryName: mapIndustryLabelToKorean(data.industry!),
     };
 
-    console.log('📦 전송할 payload:');
     Object.entries(payload).forEach(([key, value]) =>
       console.log(`  ${key}: ${value}`)
     );

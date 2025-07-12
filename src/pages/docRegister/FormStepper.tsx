@@ -12,7 +12,7 @@ import Step5Treatment from './formSteps/Setp5Treatment';
 import Step6Complete from './formSteps/Step6Complete';
 
 import StepNavigation from './component/StepNavigation';
-import Header from '@/components/Header';
+import Header from '@/components/header/Header';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 

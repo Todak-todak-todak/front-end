@@ -1,10 +1,8 @@
 import { useEffect, useRef } from 'react';
+import ChatResponse from './ChatResponse';
+import { Message } from '@/hooks/useSendMessage';
 
-const ChatBox = ({
-  messages,
-}: {
-  messages: { sender: string; text: React.ReactNode }[];
-}) => {
+const ChatBox = ({ messages }: { messages: Message[] }) => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -12,6 +10,25 @@ const ChatBox = ({
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
   }, [messages]);
+
+  const renderMessage = (msg: Message) => {
+    if (msg.type === 'chatResponse') {
+      try {
+        const data = JSON.parse(msg.text);
+        return (
+          <ChatResponse
+            summary={data.summary}
+            approveProb={data.approveProb}
+            industry={data.industry}
+            examples={data.examples}
+          />
+        );
+      } catch {
+        return '⚠️ 잘못된 응답 형식입니다.';
+      }
+    }
+    return msg.text;
+  };
 
   return (
     <div
@@ -32,7 +49,7 @@ const ChatBox = ({
                 : 'bg-gray-200 text-black'
             }`}
           >
-            {msg.text}
+            {renderMessage(msg)}
           </p>
         </div>
       ))}

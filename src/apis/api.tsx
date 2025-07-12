@@ -2,8 +2,9 @@ import axios from 'axios';
 import { translateResponse } from '@/utils/translate/translateResponse';
 
 const api = axios.create({
-  baseURL: 'https://todak-back-end.store/api/v1',
+  baseURL: 'http://localhost:8080/api/v1',
 });
+//나중에 배포주소로 변경
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('accessToken');
@@ -41,7 +42,7 @@ api.interceptors.response.use(
         const refreshToken = localStorage.getItem('refreshToken');
 
         const res = await axios.post(
-          'https://todak-back-end.store/api/v1/auth/refresh',
+          'http://localhost:8080/api/v1/auth/refresh',
           {},
           {
             headers: {

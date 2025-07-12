@@ -16,7 +16,6 @@ const ChatResponse = ({
   examples,
 }: ChatResponseProps) => {
   const navigate = useNavigate();
-
   const { mutate } = usePostChatReport();
 
   const handleClickDetail = () => {
@@ -60,12 +59,18 @@ const ChatResponse = ({
       </div>
       <div className="p-2 border-b border-gray-300">
         <div className="font-semibold mb-1">📌 유사 사례</div>
-        <ul className="list-disc ml-5 space-y-1">
+        <div className="flex overflow-x-auto gap-2 scrollbar-hide">
           {examples.map((ex, i) => (
-            <li key={i}>{ex}</li>
+            <div
+              key={i}
+              className="flex items-center min-w-[200px] bg-gray-100 px-3 py-2 rounded-lg text-sm "
+            >
+              {ex}
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
+
       <button
         className="flex justify-center w-full"
         onClick={handleClickDetail}

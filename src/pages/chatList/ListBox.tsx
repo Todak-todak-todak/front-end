@@ -28,14 +28,16 @@ const ListBox: React.FC = () => {
       </p>
       <div className="flex flex-col gap-4 px-4  pt-1 pb-2  ">
         {reversedData.map((chat: ChatProp) => (
-          <Box key={chat.reportId} className="flex gap-4 h-16 items-center">
+          <Box
+            onClick={() => handleClick(chat.reportId)}
+            key={chat.reportId}
+            className="flex gap-4 h-16 items-center cursor-pointer"
+          >
             <div className="flex flex-col h-20 flex-[7] items-start justify-center p-4">
               <p className="font-semibold text-[18px]">{chat.reportDate}</p>
             </div>
             <div className="flex flex-[3] h-20 p-4 justify-end items-center">
-              <button onClick={() => handleClick(chat.reportId)}>
-                <NextIcon width={16} height={16} />
-              </button>
+              <NextIcon width={16} height={16} />
             </div>
           </Box>
         ))}

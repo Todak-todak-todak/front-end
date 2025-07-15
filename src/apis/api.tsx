@@ -2,7 +2,7 @@ import axios from 'axios';
 import { translateResponse } from '@/utils/translate/translateResponse';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8080/api/v1',
+  baseURL: `${import.meta.env.VITE_API_BASE_URL}/api/v1`,
 });
 //나중에 배포주소로 변경
 
@@ -42,7 +42,7 @@ api.interceptors.response.use(
         const refreshToken = localStorage.getItem('refreshToken');
 
         const res = await axios.post(
-          'http://localhost:8080/api/v1/auth/refresh',
+          `${import.meta.env.VITE_API_BASE_URL}/api/v1/auth/refresh`,
           {},
           {
             headers: {

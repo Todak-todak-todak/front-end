@@ -7,7 +7,7 @@ import './i18n';
 import i18n from './i18n';
 import router from './Router';
 import extractToken from './utils/auth/extractToken';
-import LoadingSpinner from './components/loading/LoadingSpinner';
+import LoadingSpinner from './components/common/loading/LoadingSpinner';
 
 const savedLang = localStorage.getItem('lang') || 'ko';
 i18n.changeLanguage(savedLang);

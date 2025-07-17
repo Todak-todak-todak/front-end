@@ -1,5 +1,5 @@
 import React from 'react';
-import ChatResponse from '@/pages/chat/component/ChatResponse';
+import ChatResponse from '@/components/feature/chat/ChatResponse';
 import { Message } from '@/hooks/useSendMessage';
 
 export function renderMessage(msg: Message) {

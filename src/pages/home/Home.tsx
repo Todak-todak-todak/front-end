@@ -1,6 +1,6 @@
-import Header from './header/Header';
-import Information from './information/Information';
-import Statistics from './statistics/Statistics';
+import Header from '../../components/feature/home/header/Header';
+import Information from '../../components/feature/home/information/Information';
+import Statistics from '../../components/feature/home/statistics/Statistics';
 import { useQuery } from '@tanstack/react-query';
 import { getInfomation, getCounsel, getDeclaration } from '@/apis/home';
 

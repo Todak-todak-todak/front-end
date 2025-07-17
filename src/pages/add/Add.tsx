@@ -1,9 +1,9 @@
 import { useForm, FormProvider } from 'react-hook-form';
-import Header from '@/components/header/Header';
-import Button from '@/components/button/Button';
-import InputSection from './InputSection';
-import GenderSelector from '@/pages/add/GenderSelector';
-import IndustryDropdown from '@/pages/add/IndustryDropdown';
+import Header from '@/components/common/header/Header';
+import Button from '@/components/common/button/Button';
+import InputSection from '../../components/feature/add/InputSection';
+import GenderSelector from '@/components/feature/add/GenderSelector';
+import IndustryDropdown from '@/components/feature/add/IndustryDropdown';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';

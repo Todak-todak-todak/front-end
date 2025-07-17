@@ -1,18 +1,18 @@
 import { useState } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { fullFormSchema } from './schemas/Schema';
-import type { CustomFormData } from './types/formTypes';
+import { fullFormSchema } from '../../schemas/Schema';
+import type { CustomFormData } from '../../types/formTypes';
 
-import Step1Agreement from './formSteps/Step1Agreement';
-import Step2Worker from './formSteps/Step2Worker';
-import Step3Workplace from './formSteps/Step3Workplace';
-import Step4Accident from './formSteps/Step4Accident';
-import Step5Treatment from './formSteps/Setp5Treatment';
-import Step6Complete from './formSteps/Step6Complete';
+import Step1Agreement from '@/components/feature/docRegister/formSteps/Step1Agreement';
+import Step2Worker from '@/components/feature/docRegister/formSteps/Step2Worker';
+import Step3Workplace from '@/components/feature/docRegister/formSteps/Step3Workplace';
+import Step4Accident from '@/components/feature/docRegister/formSteps/Step4Accident';
+import Step5Treatment from '@/components/feature/docRegister/formSteps/Step5Treatment';
+import Step6Complete from '@/components/feature/docRegister/formSteps/Step6Complete';
 
-import StepNavigation from './component/StepNavigation';
-import Header from '@/components/header/Header';
+import StepNavigation from '../../components/feature/docRegister/StepNavigation';
+import Header from '@/components/common/header/Header';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 

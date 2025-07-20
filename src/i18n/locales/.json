@@ -1,0 +1,348 @@
+{
+  "header": {
+    "chatTitle": ""
+  },
+  "footer": {
+    "home": "",
+    "chatbot": "",
+    "doc": "",
+    "mypage": ""
+  },
+  "chatList": {
+    "analysisPrompt": ""
+  },
+  "listBox": {
+    "recentAnalysisResults": ""
+  },
+  "chatInput": {
+    "placeholder": "",
+    "bottomSheet": {
+      "question1": "",
+      "question2": "",
+      "question3": ""
+    }
+  },
+  "treatment": {
+    "title": "",
+    "bodyPartLabel": "",
+    "bodyPartPlaceholder": "头等",
+    "hospitalLabel": "",
+    "hospitalPlaceholder": "",
+    "categoryLabel": "",
+    "categoryOptions": {
+      "admission": "",
+      "outpatient": ""
+    }
+  },
+  "information": {
+    "title": ""
+  },
+  "category": {
+    "caution": "",
+    "safety": "",
+    "hospital": "",
+    "consult": "",
+    "report": ""
+  },
+  "statistics": {
+    "title": "",
+    "accidentTop3": "",
+    "injuryTop3": ""
+  },
+  "docBox": {
+    "title": "",
+    "progress": "",
+    "done": ""
+  },
+  "docList": {
+    "title": ""
+  },
+  "docForm": {
+    "title": ""
+  },
+  "docButton": {
+    "cancel": "",
+    "next": "",
+    "previous": "",
+    "submit": "",
+    "confirm": ""
+  },
+  "complete": "",
+  "agreement": {
+    "personalTitle": "",
+    "personalDescription": "",
+    "agencyTitle": "",
+    "agencyDescription": "",
+    "agree": "",
+    "disagree": ""
+  },
+  "worker": {
+    "title": "",
+    "name": "",
+    "namePlaceholder": "",
+    "ssn": "",
+    "ssnPlaceholder": "",
+    "address": "",
+    "addressPlaceholder": "",
+    "phone": "",
+    "phonePlaceholder": "",
+    "gender": "",
+    "male": "",
+    "female": "",
+    "employmentType": "",
+    "employmentTypePlaceholder": "",
+    "worker": "",
+    "serviceProvider": "",
+    "smeOwner": "",
+    "smeFamilyWorker": "",
+    "studentResearcher": "",
+    "childWithHealthIssues": "",
+    "specialWorker": "",
+    "intern": ""
+  },
+  "workplace": {
+    "title": "",
+    "businessNumber": "",
+    "businessNumberPlaceholder": "",
+    "address": "",
+    "addressPlaceholder": "",
+    "phone": "",
+    "phonePlaceholder": "",
+    "ownerName": "",
+    "ownerNamePlaceholder": "",
+    "businessName": "",
+    "businessNamePlaceholder": ""
+  },
+  "accident": {
+    "title": "",
+    "typeLabel": "",
+    "typeOptions[0]": {
+      "value": "",
+      "label": ""
+    },
+    "typeOptions[1]": {
+      "value": "",
+      "label": ""
+    },
+    "typeOptions[2]": {
+      "value": "",
+      "label": ""
+    },
+    "typeOptions[3]": {
+      "value": "",
+      "label": ""
+    },
+    "typeOptions[4]": {
+      "value": "",
+      "label": ""
+    },
+    "typeOptions[5]": {
+      "value": "",
+      "label": ""
+    },
+    "dateLabel": "",
+    "datePlaceholder": "",
+    "detailsLabel": "",
+    "detailsPlaceholder": "",
+    "guidance": ""
+  },
+  "form": {
+    "informationTitle": "",
+    "next": ""
+  },
+  "input": {
+    "name": {
+      "label": "",
+      "placeholder": ""
+    },
+    "registerNumber": {
+      "label": "",
+      "placeholder": ""
+    },
+    "phone": {
+      "label": "",
+      "placeholder": ""
+    },
+    "address": {
+      "label": "",
+      "placeholder": ""
+    }
+  },
+  "gender": {
+    "label": "",
+    "female": "",
+    "male": ""
+  },
+  "industry": {
+    "label": "",
+    "placeholder": "",
+    "options": {
+      "manufacturing": "",
+      "construction": "",
+      "etc": ""
+    }
+  },
+  "mypage": {
+    "title": "",
+    "name": "",
+    "idCard": "",
+    "phone": "",
+    "address": {
+      "label": ""
+    },
+    "gender": {
+      "label": "",
+      "female": "",
+      "male": ""
+    },
+    "industry": {
+      "label": "",
+      "options": {
+        "manufacturing": "",
+        "construction": "",
+        "etc": ""
+      }
+    },
+    "language": {
+      "label": "",
+      "options": {
+        "ko": "",
+        "en": "",
+        "vi": "",
+        "zh": ""
+      }
+    },
+    "logout": ""
+  },
+  "docDetail": {
+    "completed": "",
+    "back": "",
+    "section": {
+      "victim": "",
+      "company": "",
+      "injury": ""
+    },
+    "label": {
+      "name": "",
+      "id": "",
+      "phone": "",
+      "gender": "",
+      "workerType": "",
+      "address": "",
+      "companyId": "",
+      "ceo": "",
+      "companyName": "",
+      "type": "",
+      "date": "",
+      "part": "",
+      "hospital": "",
+      "treatmentType": "",
+      "detail": "",
+      "businessType": ""
+    }
+  },
+  "result": {
+    "won": "",
+    "amount": "",
+    "category": "",
+    "title": "",
+    "possibility": "",
+    "goToDoc": "",
+    "similarCase": "",
+    "hospitalTitle": "",
+    "more": "",
+    "hoslistTitle": "",
+    "calculator": {
+      "title": "",
+      "sub": "",
+      "currency": "",
+      "recentSalary": {
+        "label": "",
+        "sub": ""
+      },
+      "annualBonus": {
+        "label": ""
+      },
+      "unusedVacationPay": {
+        "label": ""
+      },
+      "dailyWage": {
+        "label": ""
+      },
+      "button": "",
+      "alert": "",
+      "calculate": "",
+      "retry": "",
+      "rule": {
+        "sick": "",
+        "sickLeave": "",
+        "disability": "",
+        "pension": "",
+        "survivorPension": "",
+        "survivorOneTime": "",
+        "funeral": ""
+      }
+    },
+    "calculationResult": "",
+    "tabs": {
+      "sickLeave": "",
+      "disability": "",
+      "pension": "",
+      "survivorPension": "",
+      "survivorOneTime": "",
+      "funeral": ""
+    }
+  },
+  "home": {
+    "worker": "",
+    "view": "",
+    "people": ""
+  },
+  "compensation": {
+    "sickLeave": "",
+    "pension": "",
+    "survivorPension": "",
+    "disability": "",
+    "survivorOneTime": "",
+    "funeral": "",
+    "rule": {
+      "sickLeave": "",
+      "pension": "",
+      "survivorPension": "",
+      "survivorOneTime": "",
+      "funeral": "",
+      "disability": ""
+    },
+    "grade": {
+      "none": "",
+      "pension": {
+        "A": "",
+        "B": "",
+        "C": ""
+      },
+      "survivorPension": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": "",
+        "E": ""
+      },
+      "disability": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": "",
+        "E": "",
+        "F": "",
+        "G": "",
+        "H": "",
+        "I": "",
+        "J": "",
+        "K": "",
+        "L": "",
+        "M": "",
+        "N": ""
+      }
+    }
+  }
+}

@@ -116,37 +116,39 @@
   "accident": {
     "title": "Accident Information",
     "typeLabel": "Please select a type",
-    "typeOptions": [
-      {
-        "value": "",
-        "label": "Type"
-      },
-      {
-        "value": "Fall",
-        "label": "Fall"
-      },
-      {
-        "value": "Cut",
-        "label": "Cut"
-      },
-      {
-        "value": "Puncture",
-        "label": "Puncture"
-      },
-      {
-        "value": "Collision",
-        "label": "Collision"
-      },
-      {
-        "value": "Other",
-        "label": "Other"
-      }
-    ],
+    "typeOptions[0]": {
+      "value": "",
+      "label": "Type"
+    },
+    "typeOptions[1]": {
+      "value": "Fall",
+      "label": "Fall"
+    },
+    "typeOptions[2]": {
+      "value": "Cut",
+      "label": "Cut"
+    },
+    "typeOptions[3]": {
+      "value": "Puncture",
+      "label": "Puncture"
+    },
+    "typeOptions[4]": {
+      "value": "Collision",
+      "label": "Collision"
+    },
+    "typeOptions[5]": {
+      "value": "Other",
+      "label": "Other"
+    },
     "dateLabel": "Please provide the accident date and time",
     "datePlaceholder": "YYYY-MM-DD HH:MM",
     "detailsLabel": "Please provide the accident details",
     "detailsPlaceholder": "Accident details",
     "guidance": "Please describe where, what was being done, what was used, how it happened, and the reason for the accident."
+  },
+  "form": {
+    "informationTitle": "Provide your information",
+    "next": "next"
   },
   "input": {
     "name": {
@@ -179,10 +181,6 @@
       "construction": "Construction",
       "etc": "Etc"
     }
-  },
-  "form": {
-    "next": "next",
-    "informationTitle": "Provide your information"
   },
   "mypage": {
     "title": "Mypage",
@@ -245,8 +243,8 @@
   },
   "result": {
     "won": "KRW",
-    "amount": "Compensation amount : ",
-    "category": "Compensation category : ",
+    "amount": "Compensation amount :",
+    "category": "Compensation category :",
     "title": "Analysis Result",
     "possibility": "Industrial Accident Possibility",
     "goToDoc": "Go to fill out accident form",

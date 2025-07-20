@@ -1,5 +1,5 @@
-import InfoList from './InfoList';
-import InfoDetail from './InfoDetail';
+import InfoList from './component/InfoList';
+import InfoDetail from './component/InfoDetail';
 import MegaphoneIcon from '@assets/images/Home/Megaphone.svg?react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';

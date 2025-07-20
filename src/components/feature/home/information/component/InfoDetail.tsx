@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Box from '@/components/common/box/Box';
+import InfoCard from './InfoCard';
 import LinkIcon from '@/assets/images/Home/Link.svg?react';
 import ExclamationIcon from '@assets/images/Home/Exclamation.svg?react';
 import MapIcon from '@/assets/images/Home/Map.svg?react';
@@ -80,50 +80,15 @@ const InfoDetail = ({
     <>
       <div className="flex overflow-x-auto pb-4 custom-scrollbar whitespace-nowrap gap-4">
         {list.map((item, index) => (
-          <Box
+          <InfoCard
             key={index}
-            className="flex flex-col w-36 h-36 px-4 py-4 flex-shrink-0 gap-2"
-          >
-            <div className="flex flex-[4]  items-center  justify-center ">
-              <p
-                className="
-                     text-[15px] font-semibold whitespace-normal text-center
-                     leading-[1.2] line-clamp-2 cursor-pointer"
-                onClick={() => item.title && setModalContent(item.title)}
-              >
-                {item.title}
-              </p>
-            </div>
-            <div className="flex flex-[6] flex-col gap-1 justify-center">
-              <div className="flex items-center gap-1">
-                <IconComponent />
-                <p className="font-bold text-[11px]">
-                  {t(categoryMap[isClicked])}
-                </p>
-              </div>
-              <div className="bg-mainBlue rounded-xl p-1.5">
-                {item.url ? (
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex text-white text-[12px] underline justify-center"
-                  >
-                    {t('home.view')}
-                  </a>
-                ) : (
-                  <p
-                    className="text-white text-[12px] leading-[1.2] whitespace-normal line-clamp-2 cursor-pointer"
-                    onClick={() =>
-                      item.description && setModalContent(item.description)
-                    }
-                  >
-                    {item.description ?? '상세 정보 없음'}
-                  </p>
-                )}
-              </div>
-            </div>
-          </Box>
+            title={item.title}
+            description={item.description}
+            url={item.url}
+            icon={IconComponent}
+            categoryLabel={t(categoryMap[isClicked])}
+            onClick={(text) => setModalContent(text)}
+          />
         ))}
       </div>
 

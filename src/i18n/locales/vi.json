@@ -22,6 +22,18 @@
       "question3": "Cần giấy tờ gì để yêu cầu bồi thường?"
     }
   },
+  "treatment": {
+    "title": "Chi tiết điều trị",
+    "bodyPartLabel": "Vui lòng cho biết bộ phận cơ thể bị thương",
+    "bodyPartPlaceholder": "ví dụ: cánh tay, chân, đầu, v.v.",
+    "hospitalLabel": "Vui lòng cho biết cơ sở y tế",
+    "hospitalPlaceholder": "Nhập tên cơ sở y tế",
+    "categoryLabel": "Vui lòng phân loại điều trị",
+    "categoryOptions": {
+      "admission": "Nhập viện",
+      "outpatient": "Điều trị ngoại trú"
+    }
+  },
   "information": {
     "title": "Thông tin dành cho {{name}}"
   },
@@ -104,49 +116,12 @@
   "accident": {
     "title": "Thông tin tai nạn",
     "typeLabel": "Vui lòng chọn loại tai nạn",
-    "typeOptions": [
-      {
-        "value": "",
-        "label": "Loại"
-      },
-      {
-        "value": "Ngã",
-        "label": "Ngã"
-      },
-      {
-        "value": "Cắt",
-        "label": "Cắt"
-      },
-      {
-        "value": "Đâm",
-        "label": "Đâm"
-      },
-      {
-        "value": "Va chạm",
-        "label": "Va chạm"
-      },
-      {
-        "value": "Khác",
-        "label": "Khác"
-      }
-    ],
+    "typeOptions": "[{\"value\": \"Loại\", \"label\": \"Loại\"}, {\"value\": \"Ngã\", \"label\": \"Ngã\"}, {\"value\": \"Cắt\", \"label\": \"Cắt\"}, {\"value\": \"Đâm\", \"label\": \"Đâm\"}]",
     "dateLabel": "Vui lòng cung cấp thời gian xảy ra tai nạn",
     "datePlaceholder": "YYYY năm MM tháng DD ngày 00 giờ 00 phút",
     "detailsLabel": "Vui lòng cung cấp chi tiết về tai nạn",
     "detailsPlaceholder": "Chi tiết tai nạn",
     "guidance": "Vui lòng mô tả nơi xảy ra tai nạn, mục đích, phương tiện sử dụng, cách thức và lý do tai nạn xảy ra."
-  },
-  "treatment": {
-    "title": "Chi tiết điều trị",
-    "bodyPartLabel": "Vui lòng cho biết bộ phận cơ thể bị thương",
-    "bodyPartPlaceholder": "ví dụ: cánh tay, chân, đầu, v.v.",
-    "hospitalLabel": "Vui lòng cho biết cơ sở y tế",
-    "hospitalPlaceholder": "Nhập tên cơ sở y tế",
-    "categoryLabel": "Vui lòng phân loại điều trị",
-    "categoryOptions": {
-      "admission": "Nhập viện",
-      "outpatient": "Điều trị ngoại trú"
-    }
   },
   "form": {
     "informationTitle": "Vui lòng nhập thông tin của bạn",
@@ -229,7 +204,6 @@
       "id": "Số ĐKNN",
       "phone": "Số điện thoại",
       "gender": "Giới tính",
-      "businessType": "Tên ngành nghề",
       "workerType": "Loại lao động",
       "address": "Địa chỉ",
       "companyId": "Mã quản lý DN",
@@ -240,13 +214,14 @@
       "part": "Bộ phận bị thương",
       "hospital": "Bệnh viện",
       "treatmentType": "Phương pháp điều trị",
-      "detail": "Chi tiết tai nạn"
+      "detail": "Chi tiết tai nạn",
+      "businessType": "Tên ngành nghề"
     }
   },
   "result": {
     "won": "₩",
-    "amount": "Số tiền bồi thường : ",
-    "category": "Hạng mục bồi thường : ",
+    "amount": "Số tiền bồi thường :",
+    "category": "Hạng mục bồi thường :",
     "title": "Kết quả phân tích",
     "possibility": "Khả năng được xử lý tai nạn lao động",
     "goToDoc": "Chuyển đến điền hồ sơ tai nạn",
@@ -256,8 +231,8 @@
     "hoslistTitle": "Bệnh viện được công nhận",
     "calculator": {
       "title": "Công cụ ước tính tiền bồi thường tai nạn lao động",
-      "currency": "Won",
       "sub": "*Tiền bồi thường được ước tính dựa trên lương trung bình.",
+      "currency": "Won",
       "recentSalary": {
         "label": "Lương 3 tháng gần nhất",
         "sub": "*(Lương cơ bản + Phụ cấp)"

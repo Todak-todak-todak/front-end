@@ -14,6 +14,7 @@ const categoryMap = {
   상담: 'category.consult',
   신고: 'category.report',
 } as const;
+
 const icons: {
   Icon: React.FC<React.SVGProps<SVGSVGElement>>;
   label: Category;
@@ -37,7 +38,6 @@ const InfoList = ({ isClicked, setIsClicked }: InfoListProps) => {
 
   const handleClick = (label: Category) => {
     setIsClicked(label);
-    console.log(isClicked);
   };
 
   return (

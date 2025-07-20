@@ -94,5 +94,5 @@ export function useSendMessage() {
     mutation.mutate({ question, accessToken });
   };
 
-  return { messages, send };
+  return { messages, send, isPending: mutation.isPending };
 }

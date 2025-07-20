@@ -1,4 +1,3 @@
-import React from 'react';
 import Box from '@/components/common/box/Box';
 import NextIcon from '@assets/images/Chat/Next.svg?react';
 import { useTranslation } from 'react-i18next';
@@ -10,7 +9,7 @@ interface ChatProp {
   reportId: number;
 }
 
-const ListBox: React.FC = () => {
+const ListBox = () => {
   const { t } = useTranslation();
   const { data } = useGetChatList();
   const navigate = useNavigate();

@@ -8,13 +8,18 @@ import { useState } from 'react';
 const Chat = () => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(true);
-  const { messages, send } = useSendMessage();
+  const { messages, send, isPending } = useSendMessage();
 
   return (
     <div className="flex flex-col justify-between h-screen">
       <Header title={t('header.chatTitle')} />
       <ChatBox messages={messages} />
-      <ChatInput isOpen={isOpen} setIsOpen={setIsOpen} onSend={send} />
+      <ChatInput
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        onSend={send}
+        isPending={isPending}
+      />
     </div>
   );
 };

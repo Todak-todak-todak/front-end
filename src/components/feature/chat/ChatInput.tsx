@@ -8,9 +8,15 @@ interface ChatInputProps {
   isOpen: boolean;
   setIsOpen: (value: boolean) => void;
   onSend: (message: string) => void;
+  isPending: boolean;
 }
 
-const ChatInput = ({ isOpen, setIsOpen, onSend }: ChatInputProps) => {
+const ChatInput = ({
+  isOpen,
+  setIsOpen,
+  onSend,
+  isPending,
+}: ChatInputProps) => {
   const { t } = useTranslation();
   const [inputValue, setInputValue] = useState('');
 
@@ -20,7 +26,7 @@ const ChatInput = ({ isOpen, setIsOpen, onSend }: ChatInputProps) => {
   };
 
   const handleSend = () => {
-    if (!inputValue.trim()) return;
+    if (isPending || !inputValue.trim()) return;
     onSend(inputValue);
     setInputValue('');
     setIsOpen(false);
@@ -61,7 +67,7 @@ const ChatInput = ({ isOpen, setIsOpen, onSend }: ChatInputProps) => {
             }
           }}
         />
-        <button onClick={handleSend}>
+        <button onClick={handleSend} disabled={isPending}>
           <SendIcon width={32} height={32} />
         </button>
       </div>

@@ -9,13 +9,12 @@ import router from './Router';
 import extractToken from './utils/auth/extractToken';
 import LoadingSpinner from './components/common/loading/LoadingSpinner';
 
-const savedLang = localStorage.getItem('lang') || 'ko';
-i18n.changeLanguage(savedLang);
-
 const queryClient = new QueryClient();
 
 function App() {
   useEffect(() => {
+    const savedLang = localStorage.getItem('lang') || 'ko';
+    i18n.changeLanguage(savedLang);
     extractToken();
   }, []);
 

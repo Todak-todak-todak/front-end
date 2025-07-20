@@ -5,7 +5,6 @@ import InputSection from '../../components/feature/add/InputSection';
 import GenderSelector from '@/components/feature/add/GenderSelector';
 import IndustryDropdown from '@/components/feature/add/IndustryDropdown';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { completeUserProfile } from '@/apis/user';
 import { mapLangToKoreanLabel } from '@/utils/auth/mapLangToKoreanLabel';
@@ -22,15 +21,7 @@ export type FormValues = {
 
 const Add = () => {
   const navigate = useNavigate();
-  const { i18n, t } = useTranslation();
-
-  useEffect(() => {
-    const savedLang = localStorage.getItem('lang');
-    console.log('선택된 언어', savedLang);
-    if (savedLang) {
-      i18n.changeLanguage(savedLang);
-    }
-  }, [i18n]);
+  const { t } = useTranslation();
 
   const methods = useForm<FormValues>({
     mode: 'onChange',

@@ -116,30 +116,7 @@
   "accident": {
     "title": "재해 정보",
     "typeLabel": "유형을 선택해주세요",
-    "typeOptions[0]": {
-      "value": "유형",
-      "label": "유형"
-    },
-    "typeOptions[1]": {
-      "value": "업무상 질병",
-      "label": "업무상 질병"
-    },
-    "typeOptions[2]": {
-      "value": "업무상 사고",
-      "label": "업무상 사고"
-    },
-    "typeOptions[3]": {
-      "value": "출퇴근 재해",
-      "label": "출퇴근 재해"
-    },
-    "typeOptions[4]": {
-      "value": "Collision",
-      "label": "Collision"
-    },
-    "typeOptions[5]": {
-      "value": "Other",
-      "label": "Other"
-    },
+    "typeOptions": "[{\"value\": \"유형\", \"label\": \"유형\"}, {\"value\": \"업무상 질병\", \"label\": \"업무상 질병\"}, {\"value\": \"업무상 사고\", \"label\": \"업무상 사고\"}, {\"value\": \"출퇴근 재해\", \"label\": \"출퇴근 재해\"}]",
     "dateLabel": "재해발생일시를 알려주세요",
     "datePlaceholder": "YYYY년 MM월 DD일 00시 00분",
     "detailsLabel": "재해발생 경위를 알려주세요",

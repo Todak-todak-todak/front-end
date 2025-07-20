@@ -116,30 +116,7 @@
   "accident": {
     "title": "Accident Information",
     "typeLabel": "Please select a type",
-    "typeOptions[0]": {
-      "value": "",
-      "label": "Type"
-    },
-    "typeOptions[1]": {
-      "value": "Fall",
-      "label": "Fall"
-    },
-    "typeOptions[2]": {
-      "value": "Cut",
-      "label": "Cut"
-    },
-    "typeOptions[3]": {
-      "value": "Puncture",
-      "label": "Puncture"
-    },
-    "typeOptions[4]": {
-      "value": "Collision",
-      "label": "Collision"
-    },
-    "typeOptions[5]": {
-      "value": "Other",
-      "label": "Other"
-    },
+    "typeOptions": "[{\"value\": \"type\", \"label\": \"Type\"}, {\"value\": \"fall\", \"label\": \"Fall\"}, {\"value\": \"cut\", \"label\": \"Cut\"}, {\"value\": \"puncture\", \"label\": \"Puncture\"}]",
     "dateLabel": "Please provide the accident date and time",
     "datePlaceholder": "YYYY-MM-DD HH:MM",
     "detailsLabel": "Please provide the accident details",

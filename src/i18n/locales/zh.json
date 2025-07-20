@@ -9,7 +9,7 @@
     "mypage": "我的信息"
   },
   "chatList": {
-    "analysisPrompt": "与AI聊天机器人对话"
+    "analysisPrompt": "与AI聊天机器人对话分析事故情况。"
   },
   "listBox": {
     "recentAnalysisResults": "最近分析结果列表"
@@ -18,7 +18,7 @@
     "placeholder": "请向我们的 AI 聊天机器人提问。",
     "bottomSheet": {
       "question1": "通勤途中发生的事故是否被认定为工伤？",
-      "question2": "如果经过诊断后辞职",
+      "question2": "如果经过诊断后辞职能获得工伤赔偿吗？",
       "question3": "申请工伤赔偿时需要准备哪些文件？"
     }
   },
@@ -70,7 +70,7 @@
   "complete": "工伤申请已提交",
   "agreement": {
     "personalTitle": "[必填] 同意为医疗机构代理申请而收集和提供个人信息",
-    "personalDescription": "我同意收集和使用个人信息",
+    "personalDescription": "我同意收集和使用个人信息以代为申请提交治疗补助申请书。",
     "agencyTitle": "[必填] 同意提供代理人",
     "agencyDescription": "我同意将所选医疗机构委托提交治疗补助申请书至韩国劳动福利公团。",
     "agree": "同意",
@@ -116,30 +116,7 @@
   "accident": {
     "title": "事故信息",
     "typeLabel": "请选择类型",
-    "typeOptions[0]": {
-      "value": "类型",
-      "label": "类型"
-    },
-    "typeOptions[1]": {
-      "value": "摔倒",
-      "label": "摔倒"
-    },
-    "typeOptions[2]": {
-      "value": "割伤",
-      "label": "割伤"
-    },
-    "typeOptions[3]": {
-      "value": "刺伤",
-      "label": "刺伤"
-    },
-    "typeOptions[4]": {
-      "value": "碰撞",
-      "label": "碰撞"
-    },
-    "typeOptions[5]": {
-      "value": "其他",
-      "label": "其他"
-    },
+    "typeOptions": "[{\"value\": \"类型\", \"label\": \"类型\"}, {\"value\": \"摔倒\", \"label\": \"摔倒\"}, {\"value\": \"割伤\", \"label\": \"割伤\"}, {\"value\": \"刺伤\", \"label\": \"刺伤\"}]\n",
     "dateLabel": "请提供事故发生时间",
     "datePlaceholder": "YYYY年 MM月 DD日 00时 00分",
     "detailsLabel": "请提供事故详情",

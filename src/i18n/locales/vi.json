@@ -116,30 +116,7 @@
   "accident": {
     "title": "Thông tin tai nạn",
     "typeLabel": "Vui lòng chọn loại tai nạn",
-    "typeOptions[0]": {
-      "value": "Loại",
-      "label": "Loại"
-    },
-    "typeOptions[1]": {
-      "value": "Ngã",
-      "label": "Ngã"
-    },
-    "typeOptions[2]": {
-      "value": "Cắt",
-      "label": "Cắt"
-    },
-    "typeOptions[3]": {
-      "value": "Đâm",
-      "label": "Đâm"
-    },
-    "typeOptions[4]": {
-      "value": "Va chạm",
-      "label": "Va chạm"
-    },
-    "typeOptions[5]": {
-      "value": "Khác",
-      "label": "Khác"
-    },
+    "typeOptions": "[{\"value\": \"Loại\", \"label\": \"Loại\"}, {\"value\": \"Ngã\", \"label\": \"Ngã\"}, {\"value\": \"Cắt\", \"label\": \"Cắt\"}, {\"value\": \"Đâm\", \"label\": \"Đâm\"}]",
     "dateLabel": "Vui lòng cung cấp thời gian xảy ra tai nạn",
     "datePlaceholder": "YYYY năm MM tháng DD ngày 00 giờ 00 phút",
     "detailsLabel": "Vui lòng cung cấp chi tiết về tai nạn",

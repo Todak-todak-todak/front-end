@@ -39,3 +39,12 @@ export interface CustomFormData {
   accidentInfo: AccidentInfo;
   treatmentInfo: TreatmentInfo;
 }
+
+export type AddProfileFormValues = {
+  name: string;
+  registerNumber: string;
+  phone: string;
+  address: string;
+  gender: 'FEMALE' | 'MALE' | null;
+  industry: string | null;
+};

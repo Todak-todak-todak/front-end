@@ -1,6 +1,6 @@
 import Header from '@/components/common/header/Header';
-import ChatInput from '@/components/feature/chat/ChatInput';
-import ChatBox from '@/components/feature/chat/ChatBox';
+import ChatInput from '@/components/features/chat/ChatInput';
+import ChatBox from '@/components/features/chat/ChatBox';
 import { useTranslation } from 'react-i18next';
 import { useSendMessage } from '@/hooks/useSendMessage';
 import { useState } from 'react';

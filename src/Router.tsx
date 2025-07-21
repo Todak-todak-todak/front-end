@@ -13,7 +13,7 @@ const Chat = lazy(() => import('@/pages/chat/Chat'));
 const DocList = lazy(() => import('@/pages/docList/DocList'));
 const FormStepper = lazy(() => import('@/pages/docRegister/FormStepper'));
 const HosList = lazy(() => import('@/pages/hosList/HosList'));
-const DocDetail = lazy(() => import('@/components/feature/docList/DocDetail'));
+const DocDetail = lazy(() => import('@/components/features/docList/DocDetail'));
 const MyPage = lazy(() => import('@/pages/mypage/MyPage'));
 
 const router = createBrowserRouter([

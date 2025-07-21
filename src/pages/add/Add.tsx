@@ -6,7 +6,7 @@ import GenderSelector from '@/components/feature/add/GenderSelector';
 import IndustryDropdown from '@/components/feature/add/IndustryDropdown';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { completeUserProfile } from '@/apis/user';
+import { completeUserProfile } from '@/apis/user/user';
 import { mapLangToKoreanLabel } from '@/utils/auth/mapLangToKoreanLabel';
 import { mapIndustryLabelToKorean } from '@/utils/auth/mapLangToKoreanLabel';
 

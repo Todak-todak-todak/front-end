@@ -1,8 +1,10 @@
+import { Gender } from '@/constants/gender';
+
 export interface CompleteUserProfilePayload {
   userName: string;
   userRegisterNm: string;
   userPhoneNm: string;
-  userGender: 'MALE' | 'FEMALE';
+  userGender: Gender;
   userLanguage: string;
   userAddress: string;
   industryName: string;
@@ -13,7 +15,7 @@ export interface UserProfile {
   userName: string;
   userRegisterNm: string;
   userPhoneNm: string;
-  userGender: 'MALE' | 'FEMALE';
+  userGender: Gender;
   userLanguage: string;
   userAddress: string;
   industryName: string;

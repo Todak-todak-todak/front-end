@@ -1,3 +1,5 @@
+import { Gender } from '@/constants/gender';
+
 export interface ConsentInfo {
   personalAgreement: boolean;
   agencyAgreement: boolean;
@@ -45,6 +47,6 @@ export type AddProfileFormValues = {
   registerNumber: string;
   phone: string;
   address: string;
-  gender: 'MALE' | 'FEMALE' | null;
+  gender: Gender | null;
   industry: string | null;
 };

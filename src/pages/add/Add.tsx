@@ -1,4 +1,4 @@
-import AddProfileForm from '@/components/features/add/AddProfileForm';
+import AddProfileForm from '@/components/feature/add/AddProfileForm';
 
 const Add = () => {
   return (

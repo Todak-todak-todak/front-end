@@ -20,6 +20,7 @@ export const useAddProfileForm = () => {
 
   const onSubmit = (data: AddProfileFormValues) => {
     const payload = mapFormToPayload(data);
+    console.log(payload);
     mutate(payload);
   };
 

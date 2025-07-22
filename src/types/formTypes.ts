@@ -45,6 +45,6 @@ export type AddProfileFormValues = {
   registerNumber: string;
   phone: string;
   address: string;
-  gender: 'FEMALE' | 'MALE';
+  gender: 'MALE' | 'FEMALE' | null;
   industry: string | null;
 };

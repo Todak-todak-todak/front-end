@@ -15,7 +15,7 @@ import OptionButtons from '../../components/features/mypage/OptionButtons';
 import { useTranslation } from 'react-i18next';
 import { useGetUserProfile, useEditUserProfile } from '@/apis/user/user';
 import { useEffect } from 'react';
-import { useLogout } from '@/apis/user/user';
+import { useLogout } from '@/apis/auth/auth.query';
 import { useNavigate } from 'react-router-dom';
 
 const industryMap: Record<string, string> = {

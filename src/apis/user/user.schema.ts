@@ -2,7 +2,7 @@ export interface CompleteUserProfilePayload {
   userName: string;
   userRegisterNm: string;
   userPhoneNm: string;
-  userGender: string;
+  userGender: 'MALE' | 'FEMALE';
   userLanguage: string;
   userAddress: string;
   industryName: string;

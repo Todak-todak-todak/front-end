@@ -1,4 +1,4 @@
-import api from './api';
+import api from '../api';
 import { useQuery, useMutation } from '@tanstack/react-query';
 
 interface CompleteUserProfilePayload {

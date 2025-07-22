@@ -4,7 +4,6 @@ import { translateResponse } from '@/utils/translate/translateResponse';
 const api = axios.create({
   baseURL: `${import.meta.env.VITE_API_BASE_URL}/api/v1`,
 });
-//나중에 배포주소로 변경
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('accessToken');

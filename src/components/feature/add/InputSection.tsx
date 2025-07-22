@@ -1,10 +1,10 @@
 import { useFormContext } from 'react-hook-form';
 import Input from '@/components/common/input/Input';
-import { FormValues } from '../../../pages/add/Add';
+import { AddProfileFormValues } from '@/types/formTypes';
 import { useTranslation } from 'react-i18next';
 
 const InputSection = () => {
-  const { register } = useFormContext<FormValues>();
+  const { register } = useFormContext<AddProfileFormValues>();
   const { t } = useTranslation();
 
   return (

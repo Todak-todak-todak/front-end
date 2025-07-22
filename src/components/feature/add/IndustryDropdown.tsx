@@ -1,11 +1,11 @@
 import { useFormContext, Controller } from 'react-hook-form';
 import { Listbox } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
-import { FormValues } from '../../../pages/add/Add';
+import { AddProfileFormValues } from '@/types/formTypes';
 import { useTranslation } from 'react-i18next';
 
 const IndustryDropdown = () => {
-  const { control } = useFormContext<FormValues>();
+  const { control } = useFormContext<AddProfileFormValues>();
   const { t } = useTranslation();
 
   const industries = [

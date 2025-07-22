@@ -1,4 +1,3 @@
-import React from 'react';
 import ChatResponse from '@/components/feature/chat/ChatResponse';
 import { Message } from '@/hooks/useSendMessage';
 

@@ -3,18 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Header from '@/components/common/header/Header';
 import Box from '@/components/common/box/Box';
-import Korea from '@assets/images/Language/Korea.svg?react';
-import America from '@assets/images/Language/America.svg?react';
-import China from '@assets/images/Language/China.svg?react';
-import Vietnam from '@assets/images/Language/Vietnam.svg?react';
 import Button from '@/components/common/button/Button';
-
-const languages = [
-  { label: '한국어', Icon: Korea, value: 'ko' },
-  { label: 'English', Icon: America, value: 'en' },
-  { label: 'Tiếng Việt', Icon: Vietnam, value: 'vi' },
-  { label: '中文', Icon: China, value: 'zh' },
-];
+import { languages } from '@/constants/languages';
 
 const Language = () => {
   const [language, setLanguage] = useState<string | null>(null);
@@ -23,7 +13,6 @@ const Language = () => {
 
   const handleClick = () => {
     if (!language) return;
-
     localStorage.setItem('lang', language);
     i18n.changeLanguage(language);
     navigate('/add');

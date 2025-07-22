@@ -13,9 +13,9 @@ import AddressIcon from '@assets/images/MyPage/Address.svg?react';
 import InfoItem from '../../components/feature/mypage/InfoItem';
 import OptionButtons from '../../components/feature/mypage/OptionButtons';
 import { useTranslation } from 'react-i18next';
-import { useGetUserProfile, useEditUserProfile } from '@/apis/user';
+import { useGetUserProfile, useEditUserProfile } from '@/apis/user/user';
 import { useEffect } from 'react';
-import { useLogout } from '@/apis/user';
+import { useLogout } from '@/apis/auth/auth.query';
 import { useNavigate } from 'react-router-dom';
 
 const industryMap: Record<string, string> = {

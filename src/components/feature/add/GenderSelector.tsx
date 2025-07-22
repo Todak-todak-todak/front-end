@@ -1,9 +1,9 @@
 import { useFormContext, Controller } from 'react-hook-form';
-import { FormValues } from '../../../pages/add/Add';
+import { AddProfileFormValues } from '@/types/formTypes';
 import { useTranslation } from 'react-i18next';
 
 const GenderSelector = () => {
-  const { control } = useFormContext<FormValues>();
+  const { control } = useFormContext<AddProfileFormValues>();
   const { t } = useTranslation();
 
   const options: { label: string; value: string }[] = [

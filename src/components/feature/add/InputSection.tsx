@@ -1,10 +1,13 @@
 import { useFormContext } from 'react-hook-form';
 import Input from '@/components/common/input/Input';
-import { AddProfileFormValues } from '@/types/formTypes';
+import { AddProfileFormValues } from '@/schemas/addProfileSchema';
 import { useTranslation } from 'react-i18next';
 
 const InputSection = () => {
-  const { register } = useFormContext<AddProfileFormValues>();
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext<AddProfileFormValues>();
   const { t } = useTranslation();
 
   return (
@@ -13,7 +16,7 @@ const InputSection = () => {
         <p className="text-[#111] text-[18px]">{t('input.name.label')}</p>
         <Input
           type="text"
-          {...register('name', { required: true })}
+          {...register('name')}
           placeholder={t('input.name.placeholder')}
         />
       </div>
@@ -24,7 +27,7 @@ const InputSection = () => {
         </p>
         <Input
           type="text"
-          {...register('registerNumber', { required: true })}
+          {...register('registerNumber')}
           placeholder={t('input.registerNumber.placeholder')}
         />
       </div>
@@ -33,7 +36,7 @@ const InputSection = () => {
         <p className="text-[#111] text-[18px]">{t('input.phone.label')}</p>
         <Input
           type="text"
-          {...register('phone', { required: true })}
+          {...register('phone')}
           placeholder={t('input.phone.placeholder')}
         />
       </div>
@@ -42,10 +45,14 @@ const InputSection = () => {
         <p className="text-[#111] text-[18px]">{t('input.address.label')}</p>
         <Input
           type="text"
-          {...register('address', { required: true })}
+          {...register('address')}
           placeholder={t('input.address.placeholder')}
         />
       </div>
+
+      {errors.name && (
+        <span className="text-red-500 text-sm mt-1">{errors.name.message}</span>
+      )}
     </>
   );
 };

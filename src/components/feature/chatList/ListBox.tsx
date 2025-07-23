@@ -22,7 +22,7 @@ const ListBox = () => {
 
   return (
     <div className="flex flex-col gap-4 px-4">
-      <p className="flex items-start text-xl font-bold px-4">
+      <p className="flex items-start text-[18px] font-bold px-4">
         {t('listBox.recentAnalysisResults')}
       </p>
       <div className="flex flex-col gap-4 px-4  pt-1 pb-2  ">

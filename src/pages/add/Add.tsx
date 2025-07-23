@@ -4,12 +4,10 @@ import Button from '@/components/common/button/Button';
 import AddProfileForm from '@/components/feature/add/AddProfileForm';
 import { useAddProfileForm } from '@/hooks/useAddProfileForm';
 import { useTranslation } from 'react-i18next';
-import {
-  AddProfileFormValues,
-  addProfileSchema,
-} from '@/schemas/addProfileSchema';
+import { addProfileSchema } from '@/schemas/addProfileSchema';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { AddProfileFormValues } from '@/schemas/addProfileSchema';
 
 const Add = () => {
   const { t } = useTranslation();
@@ -17,6 +15,14 @@ const Add = () => {
   const methods = useForm<AddProfileFormValues>({
     resolver: zodResolver(addProfileSchema),
     mode: 'onChange',
+    defaultValues: {
+      name: '',
+      registerNumber: '',
+      phone: '',
+      address: '',
+      gender: undefined,
+      industry: undefined,
+    },
   });
 
   return (

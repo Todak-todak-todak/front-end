@@ -5,10 +5,7 @@ import { AddProfileFormValues } from '@/schemas/addProfileSchema';
 import { useTranslation } from 'react-i18next';
 
 const IndustryDropdown = () => {
-  const {
-    control,
-    formState: { errors },
-  } = useFormContext<AddProfileFormValues>();
+  const { control } = useFormContext<AddProfileFormValues>();
   const { t } = useTranslation();
 
   const industries = [
@@ -61,11 +58,6 @@ const IndustryDropdown = () => {
                 </div>
               )}
             </Listbox>
-            {errors.industry && (
-              <span className="text-red-500 text-sm mt-1">
-                {errors.industry.message}
-              </span>
-            )}
           </div>
         </div>
       )}

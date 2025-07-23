@@ -4,10 +4,7 @@ import { AddProfileFormValues } from '@/schemas/addProfileSchema';
 import { useTranslation } from 'react-i18next';
 
 const InputSection = () => {
-  const {
-    register,
-    formState: { errors },
-  } = useFormContext<AddProfileFormValues>();
+  const { register } = useFormContext<AddProfileFormValues>();
   const { t } = useTranslation();
 
   return (
@@ -49,10 +46,6 @@ const InputSection = () => {
           placeholder={t('input.address.placeholder')}
         />
       </div>
-
-      {errors.name && (
-        <span className="text-red-500 text-sm mt-1">{errors.name.message}</span>
-      )}
     </>
   );
 };

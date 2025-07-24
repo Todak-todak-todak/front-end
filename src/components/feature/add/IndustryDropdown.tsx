@@ -1,7 +1,7 @@
 import { useFormContext, Controller } from 'react-hook-form';
 import { Listbox } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
-import { AddProfileFormValues } from '@/types/formTypes';
+import { AddProfileFormValues } from '@/schemas/addProfileSchema';
 import { useTranslation } from 'react-i18next';
 
 const IndustryDropdown = () => {
@@ -18,7 +18,6 @@ const IndustryDropdown = () => {
     <Controller
       control={control}
       name="industry"
-      rules={{ required: true }}
       render={({ field }) => (
         <div className="flex flex-col gap-3  ">
           <p className="text-[#111] text-[18px]">{t('industry.label')}</p>

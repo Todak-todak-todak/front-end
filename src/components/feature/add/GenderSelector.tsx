@@ -1,5 +1,5 @@
 import { useFormContext, Controller } from 'react-hook-form';
-import { AddProfileFormValues } from '@/types/formTypes';
+import { AddProfileFormValues } from '@/schemas/addProfileSchema';
 import { useTranslation } from 'react-i18next';
 
 const GenderSelector = () => {
@@ -15,7 +15,6 @@ const GenderSelector = () => {
     <Controller
       control={control}
       name="gender"
-      rules={{ required: true }}
       render={({ field }) => (
         <div className="flex flex-col gap-3">
           <p className="text-[#111] text-[18px]">{t('gender.label')}</p>

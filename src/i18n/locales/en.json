@@ -9,7 +9,8 @@
     "mypage": "My Info"
   },
   "chatList": {
-    "analysisPrompt": "Analyze your accident by chatting with our AI chatbot."
+    "analysisPrompt": "Analyze your accident by chatting with our AI chatbot.",
+    "chat": "Go to chat"
   },
   "listBox": {
     "recentAnalysisResults": "Recent Analysis Results"
@@ -55,7 +56,8 @@
     "done": "Completed"
   },
   "docList": {
-    "title": "Easily apply for accident with Todak"
+    "title": "Easily apply for accident with Todak",
+    "doc": "Go to industrial accident application"
   },
   "docForm": {
     "title": "Accident Report"

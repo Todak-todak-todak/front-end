@@ -7,12 +7,12 @@ export default function MessageIcon() {
   return (
     <Canvas
       camera={{
-        position: [0, 0, 4], // 카메라를 정면 (X=0, Y=0)으로 놓고 Z축으로 5만큼 떨어뜨려 모델을 바라보게 합니다.
-        fov: 50, // Field of View를 조정하여 원근감을 조절할 수 있습니다. (기본값 50)
+        position: [0, 0, 4],
+        fov: 50,
       }}
     >
-      <ambientLight intensity={0.7} /> {/* 전체적인 밝기 조절 */}
-      <directionalLight position={[1, 1, 1]} intensity={1.2} />{' '}
+      <ambientLight intensity={1.5} /> {/* 전체적인 밝기 조절 */}
+      <directionalLight position={[5, 2, 5]} intensity={1.5} />{' '}
       {/* 특정 방향에서 오는 빛 */}
       <Suspense fallback={null}>
         <MessageModel />
@@ -43,12 +43,5 @@ function MessageModel() {
     }
   });
 
-  return (
-    <primitive
-      ref={ref}
-      object={scene}
-      scale={20} // 초기값, 애니메이션에 의해 덮어씌워짐
-      position={[0, 0, 0]}
-    />
-  );
+  return <primitive ref={ref} object={scene} scale={20} position={[0, 0, 0]} />;
 }

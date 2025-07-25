@@ -11,21 +11,21 @@ const ChatList = () => {
   };
   return (
     <div className="flex flex-col gap-4 ">
-      <div>
-        <div className="relative flex flex-col gap-8 py-6 justify-center items-center bg-gradient-to-b from-[#CADCFF] to-white rounded-b-3xl overflow-hidden">
-          {/* 콘텐츠 */}
+      <div className="flex flex-col gap-4">
+        <div className="relative flex flex-col gap-4 py-6 justify-center items-center bg-gradient-to-b from-[#CADCFF] to-white rounded-b-3xl overflow-hidden">
           <p className="font-bold text-xl z-10">
             {t('chatList.analysisPrompt')}
           </p>
-          <div className="flex flex-col justify-center items-center ">
-            <div className="z-10">
+          <div className="flex flex-col justify-center items-center gap-2 ">
+            <button onClick={handleClick} className="z-10">
               <MessageIcon />
-            </div>
+            </button>
             <button
               onClick={handleClick}
-              className="text-mainBlue text-xl font-bold"
+              className="relative flex items-center justify-center gap-2 w-full py-2 rounded-full bg-gradient-to-r from-mainBlue to-inputBlue text-white text-lg font-semibold shadow-md"
             >
-              채팅 하러 가기
+              {t('chatList.chat')}
+              <span className="inline-block animate-bounce-x-repeat"> →</span>
             </button>
           </div>
         </div>

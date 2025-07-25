@@ -16,7 +16,7 @@ const variantClassMap: Record<ButtonVariant, string> = {
   'gray-half': 'bg-mainGray w-1/2',
 };
 
-const disabledClass = 'bg-gray-200 cursor-not-allowed w-full';
+const disabledClass = 'bg-gray-200 cursor-not-allowed';
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -26,7 +26,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const variantClass = variantClassMap[variant];
     const classes = cn(
       'mb-5 text-white px-4 py-2 h-[52px] rounded-xl',
-      disabled ? disabledClass : variantClass,
+      variantClass,
+      disabled && disabledClass,
       className
     );
 

@@ -1,4 +1,4 @@
-import { useProfileStore } from '../../stores/ProfileStore';
+import { useProfileStore } from '@/stores/ProfileStore';
 import Header from '@/components/common/header/Header';
 import Edit from '@assets/images/MyPage/Edit.svg?react';
 import Check from '@assets/images/MyPage/Check.svg?react';
@@ -10,8 +10,8 @@ import IndustryIcon from '@assets/images/MyPage/Industry.svg?react';
 import LanguageIcon from '@assets/images/MyPage/Lang.svg?react';
 import LogoutIcon from '@assets/images/MyPage/Logout.svg?react';
 import AddressIcon from '@assets/images/MyPage/Address.svg?react';
-import InfoItem from '../../components/features/mypage/InfoItem';
-import OptionButtons from '../../components/features/mypage/OptionButtons';
+import InfoItem from '@/components/features/mypage/InfoItem';
+import OptionButtons from '@/components/features/mypage/OptionButtons';
 import { useTranslation } from 'react-i18next';
 import { useGetUserProfile, useEditUserProfile } from '@/apis/user/user';
 import { useEffect } from 'react';

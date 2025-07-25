@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import Header from '../../components/common/header/Header';
+import Header from '@/components/common/header/Header';
 import Calculate from '@/components/features/calculate/Calculate';
-import Example from '../../components/features/result/Example';
-import Hospital from '../../components/features/hosList/Hospital';
-import Percent from '../../components/features/result/Percent';
+import Example from '@/components/features/result/Example';
+import Hospital from '@/components/features/hosList/Hospital';
+import Percent from '@/components/features/result/Percent';
 import Save from '@assets/images/Result/Save.svg?react';
 import { saveResult } from '@/apis/result';
 import { useParams } from 'react-router-dom';

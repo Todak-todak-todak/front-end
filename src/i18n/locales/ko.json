@@ -9,7 +9,8 @@
     "mypage": "내정보"
   },
   "chatList": {
-    "analysisPrompt": "AI 챗봇과 대화하며 산재를 분석해보세요."
+    "analysisPrompt": "AI 챗봇과 대화하며 산재를 분석해보세요.",
+    "chat": "채팅 하러 가기"
   },
   "listBox": {
     "recentAnalysisResults": "최근 분석 결과 목록"
@@ -55,7 +56,8 @@
     "done": "처리완료"
   },
   "docList": {
-    "title": "토닥과 쉽게 산재를 신청해보세요"
+    "title": "토닥과 쉽게 산재를 신청해보세요",
+    "doc": "산재 신청 하러 가기"
   },
   "docForm": {
     "title": "산재신청"

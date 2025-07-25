@@ -9,7 +9,8 @@
     "mypage": "我的信息"
   },
   "chatList": {
-    "analysisPrompt": "与AI聊天机器人对话分析事故情况。"
+    "analysisPrompt": "与AI聊天机器人对话分析事故情况。",
+    "chat": "去聊天"
   },
   "listBox": {
     "recentAnalysisResults": "最近分析结果列表"
@@ -55,7 +56,8 @@
     "done": "已处理"
   },
   "docList": {
-    "title": "和Todak一起轻松申请工伤"
+    "title": "和Todak一起轻松申请工伤",
+    "doc": "前往工伤事故申请"
   },
   "docForm": {
     "title": "工伤申请"

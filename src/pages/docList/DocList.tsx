@@ -1,7 +1,7 @@
 import DocBox from '../../components/feature/docList/DocBox';
-import AddIcon from '@assets/images/Chat/Add.svg?react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import DocumentIcon from '@/3D/Document';
 
 const DocList = () => {
   const navigate = useNavigate();
@@ -10,15 +10,26 @@ const DocList = () => {
   };
   const { t } = useTranslation();
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex flex-col gap-2 py-6 justify-center items-center h-[30%] bg-[#CADCFF] rounded-b-3xl ">
-        <p className="font-bold text-xl">{t('docList.title')}</p>
-        <button onClick={() => handleClick()}>
-          <AddIcon width={80} />
-        </button>
-      </div>
-      <div>
-        <DocBox />
+    <div className="flex flex-col gap-4 ">
+      <div className="flex flex-col gap-4">
+        <div className="relative flex flex-col gap-4 py-6 justify-center items-center bg-gradient-to-b from-[#CADCFF] to-white rounded-b-3xl overflow-hidden">
+          <p className="font-bold text-xl">{t('docList.title')}</p>
+          <div className="flex flex-col justify-center items-center gap-2 ">
+            <button onClick={handleClick} className="z-10">
+              <DocumentIcon />
+            </button>
+            <button
+              onClick={handleClick}
+              className="relative flex items-center justify-center gap-2 w-full py-2 rounded-full bg-gradient-to-r from-mainBlue to-inputBlue text-white text-lg font-semibold shadow-md"
+            >
+              {t('docList.doc')}
+              <span className="inline-block animate-bounce-x-repeat"> →</span>
+            </button>
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <DocBox />
+        </div>
       </div>
     </div>
   );

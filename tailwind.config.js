@@ -21,6 +21,19 @@ module.exports = {
         footer: '0 -2px 6px 1px rgba(0, 0, 0, 0.08)',
         commonBox: '2px 2px 10px 0px rgba(0, 0, 0, 0.08)',
       },
+      keyframes: {
+        'bounce-x-repeat': {
+          '0%': { transform: 'translateX(0)' },
+          '10%': { transform: 'translateX(6px)' },
+          '20%': { transform: 'translateX(0)' },
+          '30%': { transform: 'translateX(6px)' },
+          '40%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(0)' }, // 나머지는 정지 상태
+        },
+      },
+      animation: {
+        'bounce-x-repeat': 'bounce-x-repeat 2s infinite',
+      },
     },
   },
   plugins: [require('@tailwindcss/line-clamp')],

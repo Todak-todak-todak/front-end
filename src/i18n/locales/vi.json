@@ -9,7 +9,8 @@
     "mypage": "Cá nhân"
   },
   "chatList": {
-    "analysisPrompt": "Phân tích tai nạn bằng cách trò chuyện với chatbot AI."
+    "analysisPrompt": "Phân tích tai nạn bằng cách trò chuyện với chatbot AI.",
+    "chat": "Đi tới trò chuyện"
   },
   "listBox": {
     "recentAnalysisResults": "Danh sách kết quả phân tích gần đây"
@@ -55,7 +56,8 @@
     "done": "Xong"
   },
   "docList": {
-    "title": "Nộp đơn tai nạn lao động với Todak"
+    "title": "Nộp đơn tai nạn lao động với Todak",
+    "doc": "Đến ứng dụng tai nạn lao động"
   },
   "docForm": {
     "title": "Đăng ký tai nạn lao động"

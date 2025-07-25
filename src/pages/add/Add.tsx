@@ -1,7 +1,7 @@
 import { FormProvider } from 'react-hook-form';
 import Header from '@/components/common/header/Header';
 import Button from '@/components/common/button/Button';
-import AddProfileForm from '@/components/feature/add/AddProfileForm';
+import AddProfileForm from '@/components/features/add/AddProfileForm';
 import { useAddProfileForm } from '@/hooks/useAddProfileForm';
 import { useTranslation } from 'react-i18next';
 import { addProfileSchema } from '@/schemas/addProfileSchema';

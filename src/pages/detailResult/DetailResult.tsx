@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import Header from '../../components/common/header/Header';
-import DetailExample from '../../components/feature/result/DetailExample';
-import Hospital from '../../components/feature/hosList/Hospital';
-import DetailPercent from '../../components/feature/result/DetailPercent';
+import DetailExample from '../../components/features/result/DetailExample';
+import Hospital from '../../components/features/hosList/Hospital';
+import DetailPercent from '../../components/features/result/DetailPercent';
 import { useParams } from 'react-router-dom';
-import DetailCalculation from '../../components/feature/calculate/DetailCalculation';
+import DetailCalculation from '../../components/features/calculate/DetailCalculation';
 
 const DetailResult = () => {
   const { t } = useTranslation();

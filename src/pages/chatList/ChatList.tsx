@@ -1,4 +1,4 @@
-import ListBox from '../../components/feature/chatList/ListBox';
+import ListBox from '../../components/features/chatList/ListBox';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import MessageIcon from '@/3D/MessageIcon';

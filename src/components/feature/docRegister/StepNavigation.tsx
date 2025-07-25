@@ -103,7 +103,7 @@ const StepNavigation = ({
     <Button
       text={label}
       onClick={onClick}
-      className={`px-4 py-2 rounded ${
+      className={`px-4 py-2 ${
         canProceed
           ? 'bg-[#275AEC] text-white'
           : 'bg-gray-300 text-gray-500 cursor-not-allowed'
@@ -114,7 +114,7 @@ const StepNavigation = ({
 
   if (step === 0) {
     return (
-      <div className="flex justify-between gap-[0.8] ">
+      <div className="flex justify-between gap-5 ">
         <Button text={t('docButton.cancel')} onClick={handleCancel!} />
         {renderNextButton(t('docButton.next'), handleValidateAndNext)}
       </div>
@@ -123,7 +123,7 @@ const StepNavigation = ({
 
   if (step >= 1 && step <= 3) {
     return (
-      <div className="flex justify-between">
+      <div className="flex justify-between gap-5">
         <Button text={t('docButton.previous')} onClick={handleBack} />
         {renderNextButton(t('docButton.next'), handleValidateAndNext)}
       </div>
@@ -132,7 +132,7 @@ const StepNavigation = ({
 
   if (step === 4) {
     return (
-      <div className="flex justify-between">
+      <div className="flex justify-between gap-5">
         <Button text={t('docButton.previous')} onClick={handleBack} />
         {renderNextButton(t('docButton.submit'), handleFinalSubmit)}
       </div>

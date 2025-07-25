@@ -1,4 +1,4 @@
-import ChatResponse from '@/components/feature/chat/ChatResponse';
+import ChatResponse from '@/components/features/chat/ChatResponse';
 import { Message } from '@/hooks/useSendMessage';
 
 export function renderMessage(msg: Message) {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Logo from '@assets/images/Splash/MainLogo.svg?react';
 import { motion } from 'framer-motion';
-import GoogleLoginButton from '@/components/feature/splash/GoogleLogin';
+import GoogleLoginButton from '@/components/features/splash/GoogleLogin';
 import {
   ANIMATION_CONFIG,
   LOGO_ANIMATION,

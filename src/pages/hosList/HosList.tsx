@@ -1,6 +1,6 @@
 import Header from '@/components/common/header/Header';
-import KakaoMap from '../../components/feature/hosList/KakaoMap';
-import HosInfo from '../../components/feature/hosList/HosInfo';
+import KakaoMap from '@/components/features/hosList/KakaoMap';
+import HosInfo from '@/components/features/hosList/HosInfo';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 

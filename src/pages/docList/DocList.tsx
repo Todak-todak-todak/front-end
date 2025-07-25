@@ -1,4 +1,4 @@
-import DocBox from '../../components/feature/docList/DocBox';
+import DocBox from '../../components/features/docList/DocBox';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import DocumentIcon from '@/3D/Document';

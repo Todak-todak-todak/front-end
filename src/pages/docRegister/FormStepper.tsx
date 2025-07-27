@@ -20,12 +20,12 @@ import { createDocRegister } from '@/apis/doc';
 import { useMutation } from '@tanstack/react-query';
 
 const steps = [
-  <Step1Agreement key="step1" />,
-  <Step2Worker key="step2" />,
-  <Step3Workplace key="step3" />,
-  <Step4Accident key="step4" />,
-  <Step5Treatment key="step5" />,
-  <Step6Complete key="step6" />,
+  () => <Step1Agreement />,
+  () => <Step2Worker />,
+  () => <Step3Workplace />,
+  () => <Step4Accident />,
+  () => <Step5Treatment />,
+  () => <Step6Complete />,
 ];
 
 const FormStepper = () => {
@@ -35,8 +35,7 @@ const FormStepper = () => {
 
   const { mutate: createDocument } = useMutation({
     mutationFn: createDocRegister,
-    onSuccess: (data) => {
-      console.log('문서 생성 성공:', data);
+    onSuccess: () => {
       setStep(5);
     },
     onError: (error) => {
@@ -48,12 +47,6 @@ const FormStepper = () => {
     resolver: zodResolver(fullFormSchema),
     mode: 'onChange',
   });
-
-  // const onSubmit = (data: CustomFormData) => {
-  //   console.log('최종 제출:', data);
-  //   createDocument(data)
-  //   setStep(5);
-  // };
 
   const onSubmit = (data: CustomFormData) => {
     console.log('원본 data:', data);
@@ -109,7 +102,7 @@ const FormStepper = () => {
         )}
 
         {/* 폼 콘텐츠 - 스크롤 영역 */}
-        <div className="overflow-y-auto  mb-16">{steps[step]}</div>
+        <div className="overflow-y-auto mb-16">{steps[step]()}</div>
 
         {/* 고정 버튼 */}
         {step !== 6 && (

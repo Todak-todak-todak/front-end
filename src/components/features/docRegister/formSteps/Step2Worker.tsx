@@ -1,14 +1,21 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { useFormContext, Controller } from 'react-hook-form';
-import TextInputField from '../TextInputField';
-import SelectField from '../Select';
-import CircleCheckbox from '../CheckBox';
+import TextInputField from '../formControls/TextInputField';
+import SelectField from '../formControls/Select';
+import CircleCheckbox from '../formControls/CheckBox';
 import { useTranslation } from 'react-i18next';
 import { useQuery } from '@tanstack/react-query';
 import { getUserInfo } from '@/apis/doc';
+import get from 'lodash.get';
+import { FieldError } from 'react-hook-form';
+import { FormHelperText } from '@mui/material';
 
 const Step2Worker = () => {
-  const { control, setValue } = useFormContext();
+  const {
+    control,
+    setValue,
+    formState: { errors },
+  } = useFormContext();
   const { t } = useTranslation();
 
   const { data: userData } = useQuery({
@@ -16,7 +23,31 @@ const Step2Worker = () => {
     queryFn: getUserInfo,
   });
 
-  React.useEffect(() => {
+  const textFields = [
+    {
+      name: 'workerInfo.name',
+      label: t('worker.name'),
+      placeholder: t('worker.namePlaceholder'),
+    },
+    {
+      name: 'workerInfo.ssn',
+      label: t('worker.ssn'),
+      placeholder: t('worker.ssnPlaceholder'),
+    },
+    {
+      name: 'workerInfo.address',
+      label: t('worker.address'),
+      placeholder: t('worker.addressPlaceholder'),
+    },
+    {
+      name: 'workerInfo.phone',
+      label: t('worker.phone'),
+      placeholder: t('worker.phonePlaceholder'),
+      type: 'tel',
+    },
+  ];
+
+  useEffect(() => {
     if (userData) {
       setValue('workerInfo.name', userData.data.userName || '');
       setValue('workerInfo.ssn', userData.data.userRegisterNm || '');
@@ -25,31 +56,22 @@ const Step2Worker = () => {
     }
   }, [userData, setValue]);
 
+  const fieldError = get(errors, 'workerInfo.gender') as FieldError | undefined;
+  const hasError = !!fieldError;
+
   return (
     <div className="h-full flex-1 flex-col gap-4  ">
       <p className="flex font-semibold text-[20px] px-8">{t('worker.title')}</p>
       <div className="flex flex-col w-full gap-8 py-4">
-        <TextInputField
-          name="workerInfo.name"
-          label={t('worker.name')}
-          placeholder={t('worker.namePlaceholder')}
-        />
-        <TextInputField
-          name="workerInfo.ssn"
-          label={t('worker.ssn')}
-          placeholder={t('worker.ssnPlaceholder')}
-        />
-        <TextInputField
-          name="workerInfo.address"
-          label={t('worker.address')}
-          placeholder={t('worker.addressPlaceholder')}
-        />
-        <TextInputField
-          name="workerInfo.phone"
-          label={t('worker.phone')}
-          placeholder={t('worker.phonePlaceholder')}
-          type="tel"
-        />
+        {textFields.map(({ name, label, placeholder, type }) => (
+          <TextInputField
+            key={name}
+            name={name}
+            label={label}
+            placeholder={placeholder}
+            type={type}
+          />
+        ))}
 
         <div className="flex flex-col px-8 gap-4 items-start">
           <p className="font-semibold">{t('worker.gender')}</p>
@@ -58,27 +80,25 @@ const Step2Worker = () => {
             control={control}
             render={({ field }) => (
               <div className="flex gap-6">
-                <label className="flex items-center">
-                  <CircleCheckbox
-                    checked={field.value === '남'}
-                    onChange={() => field.onChange('남')}
-                  />
-                  <span className="text-sm text-gray-800">
-                    {t('worker.male')}
-                  </span>
-                </label>
-                <label className="flex items-center">
-                  <CircleCheckbox
-                    checked={field.value === '여'}
-                    onChange={() => field.onChange('여')}
-                  />
-                  <span className="text-sm text-gray-800">
-                    {t('worker.female')}
-                  </span>
-                </label>
+                {['남', '여'].map((value) => (
+                  <label key={value} className="flex items-center">
+                    <CircleCheckbox
+                      checked={field.value === value}
+                      onChange={() => field.onChange(value)}
+                    />
+                    <span className="text-sm text-gray-800">
+                      {t(`worker.${value === '남' ? 'male' : 'female'}`)}
+                    </span>
+                  </label>
+                ))}
               </div>
             )}
           />
+          {hasError && (
+            <FormHelperText className="flex w-full justify-start" error>
+              {fieldError?.message?.toString()}
+            </FormHelperText>
+          )}
         </div>
 
         <SelectField

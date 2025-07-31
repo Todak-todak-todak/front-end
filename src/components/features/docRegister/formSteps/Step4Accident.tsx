@@ -1,32 +1,13 @@
-import TextInputField from '../TextInputField';
-import SelectField from '../Select';
-import TextAreaField from '../TextAreaField';
+import TextInputField from '../formControls/TextInputField';
+import SelectField from '../formControls/Select';
+import TextAreaField from '../formControls/TextAreaField';
 import { useTranslation } from 'react-i18next';
 
 const Step3Accident = () => {
   const { t } = useTranslation();
-  let mappedOptions: { value: string; label: string }[] = [];
-
-  try {
-    const typeOptionsString = t('accident.typeOptions', {
-      returnObjects: true,
-    });
-    const parsedOptions = JSON.parse(typeOptionsString as string);
-
-    if (Array.isArray(parsedOptions)) {
-      mappedOptions = parsedOptions.map((option: any) => ({
-        value: option.value,
-        label: option.label,
-      }));
-    } else {
-      console.warn(
-        "번역 키 'accident.typeOptions'의 데이터가 올바른 배열 형식이 아닙니다:",
-        parsedOptions
-      );
-    }
-  } catch (error) {
-    console.error("번역 키 'accident.typeOptions' 파싱 중 오류 발생:", error);
-  }
+  const typeOptionsJson =
+    '[{"value": "유형", "label": "유형"}, {"value": "업무상 질병", "label": "업무상 질병"}, {"value": "업무상 사고", "label": "업무상 사고"}, {"value": "출퇴근 재해", "label": "출퇴근 재해"}]';
+  const typeOptions = JSON.parse(typeOptionsJson);
 
   return (
     <div className="flex flex-col gap-4">
@@ -38,7 +19,7 @@ const Step3Accident = () => {
         <SelectField
           name="accidentInfo.type"
           label={t('accident.typeLabel')}
-          options={mappedOptions}
+          options={typeOptions}
         />
 
         <TextInputField

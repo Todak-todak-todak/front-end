@@ -1,11 +1,21 @@
 import { useFormContext, Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
-import TextInputField from '../TextInputField';
-import CircleCheckbox from '../CheckBox';
+import TextInputField from '../formControls/TextInputField';
+import CircleCheckbox from '../formControls/CheckBox';
+import get from 'lodash.get';
+import { FieldError } from 'react-hook-form';
+import { FormHelperText } from '@mui/material';
 
 const Step5Treatment = () => {
-  const { control } = useFormContext();
+  const {
+    control,
+    formState: { errors },
+  } = useFormContext();
   const { t } = useTranslation();
+  const fieldError = get(errors, 'treatmentInfo.category') as
+    | FieldError
+    | undefined;
+  const hasError = !!fieldError;
 
   return (
     <div className="flex flex-col gap-4">
@@ -53,6 +63,11 @@ const Step5Treatment = () => {
               </div>
             )}
           />
+          {hasError && (
+            <FormHelperText className="flex w-full justify-start" error>
+              {fieldError?.message?.toString()}
+            </FormHelperText>
+          )}
         </div>
       </div>
     </div>

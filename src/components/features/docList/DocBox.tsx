@@ -1,46 +1,21 @@
 import Box from '@/components/common/box/Box';
 import { useTranslation } from 'react-i18next';
-import { useQuery, useQueryClient, useMutation } from '@tanstack/react-query';
-import { getDocList } from '@/apis/doc';
-import { DocListResponse, DocumentStatusResponse } from '@/types/doc';
-import { patchDocStatus } from '@/apis/doc';
+import { useGetDocList, usePatchDocStatus } from '@/apis/doc/doc';
 import { useNavigate } from 'react-router-dom';
 
 const DocBox = () => {
-  const queryClient = useQueryClient();
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const { data: docListData } = useQuery<DocListResponse>({
-    queryKey: ['docList'],
-    queryFn: getDocList,
-  });
+  const { data: docListData } = useGetDocList();
+  const mutation = usePatchDocStatus();
+
+  const handleClick = async (docPk: number) => {
+    mutation.mutate({ documentId: docPk });
+  };
 
   const handleNavigate = (docPk: number) => {
     navigate(`/docdetail/${docPk}`);
-  };
-
-  const mutation = useMutation({
-    mutationFn: patchDocStatus,
-    onSuccess: (data) => {
-      queryClient.setQueryData(['docStatus', data.documentId], {
-        data: { docWhether: data.docWhether },
-      });
-      queryClient.invalidateQueries({ queryKey: ['docList'] });
-    },
-  });
-
-  const checkDocWhether = (docPk: number) => {
-    const status = queryClient.getQueryData<DocumentStatusResponse>([
-      'docStatus',
-      docPk,
-    ]);
-    return status?.data?.docWhether ?? false;
-  };
-
-  const handleClick = async (docPk: number) => {
-    const docWhether = !checkDocWhether(docPk);
-    mutation.mutate({ documentId: docPk, docWhether });
   };
 
   return (

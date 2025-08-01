@@ -4,7 +4,7 @@ import MegaphoneIcon from '@assets/images/Home/Megaphone.svg?react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useQuery } from '@tanstack/react-query';
-import { getUserInfo } from '@/apis/doc';
+import { getUserInfo } from '@/apis/doc/doc';
 import { InfoDetailData, CounselProp, DeclarationProp } from '@/types/home';
 
 interface InformationProps {

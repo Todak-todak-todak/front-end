@@ -3,7 +3,7 @@ import InfoList from './InfoList';
 import SectionCard from './SectionCard';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { getDocDetail } from '@/apis/doc';
+import { getDocDetail } from '@/apis/doc/doc';
 import { useQuery } from '@tanstack/react-query';
 
 const DocDetail = () => {

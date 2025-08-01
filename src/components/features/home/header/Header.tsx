@@ -2,7 +2,7 @@ import Box from '@/components/common/box/Box';
 import LogoIcon from '@/assets/images/Home/Logo.svg?react';
 import PeopleIcon from '@assets/images/Home/People.svg?react';
 import { useQuery } from '@tanstack/react-query';
-import { getUserInfo } from '@/apis/doc';
+import { getUserInfo } from '@/apis/doc/doc';
 import { useTranslation } from 'react-i18next';
 
 const Information = () => {

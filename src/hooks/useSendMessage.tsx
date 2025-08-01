@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
-import { sendMessage } from '@/apis/chat';
+import { sendMessage } from '@/apis/chat/chat';
 import { getAccessToken } from '@/utils/auth/authUtils';
 
 export type Message = {

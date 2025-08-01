@@ -16,9 +16,7 @@ import StepNavigation from '../../components/features/docRegister/StepNavigation
 import Header from '@/components/common/header/Header';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-
-import { createDocRegister } from '@/apis/doc';
-import { useMutation } from '@tanstack/react-query';
+import { useCreateDocRegister } from '@/apis/doc/doc';
 
 const steps = [
   Step1Agreement,
@@ -34,15 +32,7 @@ const FormStepper = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
-  const { mutate: createDocument } = useMutation({
-    mutationFn: createDocRegister,
-    onSuccess: () => {
-      setStep(5);
-    },
-    onError: (error) => {
-      console.error('문서 생성 실패:', error);
-    },
-  });
+  const { mutate: createDocument } = useCreateDocRegister(setStep);
 
   const onSubmit = (data: CustomFormData) => {
     const payload = transPayload(data);

@@ -1,23 +1,16 @@
 import Header from '../../components/features/home/header/Header';
 import Information from '../../components/features/home/information/Information';
 import Statistics from '../../components/features/home/statistics/Statistics';
-import { useQuery } from '@tanstack/react-query';
-import { getInfomation, getCounsel, getDeclaration } from '@/apis/home';
+import {
+  useGetInfomation,
+  useGetCounsel,
+  useGetDeclaration,
+} from '@/apis/home';
 
 const Home = () => {
-  const { data: informationData } = useQuery({
-    queryKey: ['information'],
-    queryFn: getInfomation,
-  });
-  const { data: counselData } = useQuery({
-    queryKey: ['counsel'],
-    queryFn: getCounsel,
-  });
-  const { data: declarationData } = useQuery({
-    queryKey: ['declaration'],
-    queryFn: getDeclaration,
-  });
-  console.log(counselData);
+  const { data: informationData } = useGetInfomation();
+  const { data: counselData } = useGetCounsel();
+  const { data: declarationData } = useGetDeclaration();
   return (
     <div className="flex flex-col w-full">
       <div className="flex-[2] w-full">

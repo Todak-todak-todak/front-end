@@ -5,7 +5,7 @@ import SelectField from '../formControls/Select';
 import CircleCheckbox from '../formControls/CheckBox';
 import { useTranslation } from 'react-i18next';
 import { useQuery } from '@tanstack/react-query';
-import { getUserInfo } from '@/apis/doc';
+import { getUserInfo } from '@/apis/doc/doc';
 import get from 'lodash.get';
 import { FieldError } from 'react-hook-form';
 import { FormHelperText } from '@mui/material';

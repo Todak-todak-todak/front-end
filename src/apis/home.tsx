@@ -1,6 +1,7 @@
 import api from './api';
+import { useQuery } from '@tanstack/react-query';
 
-//정보 get
+//정보
 export const getInfomation = async () => {
   try {
     const response = await api.get('/home');
@@ -10,15 +11,33 @@ export const getInfomation = async () => {
     throw error;
   }
 };
+export const useGetInfomation = () => {
+  return useQuery({
+    queryKey: ['information'],
+    queryFn: getInfomation,
+  });
+};
 
 //상담
 export const getCounsel = async () => {
   const response = await api.get('/counselor/list');
   return response.data.data;
 };
+export const useGetCounsel = () => {
+  return useQuery({
+    queryKey: ['counsel'],
+    queryFn: getCounsel,
+  });
+};
 
 //신고
 export const getDeclaration = async () => {
   const response = await api.get('/declaration/list');
   return response.data.data;
+};
+export const useGetDeclaration = () => {
+  return useQuery({
+    queryKey: ['declaration'],
+    queryFn: getCounsel,
+  });
 };

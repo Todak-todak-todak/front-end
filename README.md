@@ -1,3 +1,6 @@
+
+
+
 <img width="976" alt="image" src="https://github.com/user-attachments/assets/c6217a56-ea6c-4d7d-814c-a5ae273e753f" />
 
 <br/>
@@ -18,6 +21,7 @@ $ npm run dev
 
 # 🔷 Todak - 외국인 노동자를 위한 산재 대응 통합 플랫폼
 
+### 제4회 고용노동 공공데이터 활용 공모전: 제품 및 서비스 개발 분야 우수상 수상
 산업재해를 겪은 외국인 노동자들이 **언어 장벽과 정보 부족으로부터 보호받을 수 있도록**  
 GPT 기반 AI 챗봇과 공공 데이터를 결합하여 **산재 전 과정을 통합 지원**하는 웹 플랫폼입니다.
 
@@ -75,31 +79,87 @@ GPT 기반 AI 챗봇과 공공 데이터를 결합하여 **산재 전 과정을 
 
 <table>
   <tr>
-    <td align="left" width="25%"><b>1. 회원가입 및 추가 정보 입력</b></td>
+      <tr>
+    <td colspan="2"><h3>1. 회원가입: 이나경</h3></td>
+  </tr>
+    <td align="left" width="25%">
+
+https://github.com/user-attachments/assets/3ad93a4f-330e-4e65-9d46-7dc46ab6210d
+
+</td>
     <td><img src="https://github.com/user-attachments/assets/52bb1190-c01a-4b14-a921-88fd60fe5a56" width="900"/></td>
   </tr>
   <tr>
-    <td align="left"><b>2. 다국어 구현 화면</b></td>
+      <tr>
+    <td colspan="2"><h3>2. 다국어: 이나경, 진채정</h3></td>
+  </tr>
+    <td align="left">
+
+https://github.com/user-attachments/assets/43ea9cdd-9cbf-431c-8c8d-757c9aaafd6c
+
+</td>
     <td><img src="https://github.com/user-attachments/assets/d3aca6ac-d764-4b12-b4b6-097564a021e5" width="900"/></td>
   </tr>
   <tr>
-    <td align="left"><b>3. 메인페이지</b></td>
+      <tr>
+    <td colspan="2"><h3>3. 메인페이지: 진채정</h3></td>
+  </tr>
+    <td align="left">
+
+https://github.com/user-attachments/assets/a9fa789e-657f-42b1-8cc1-39b1430ce53b
+
+</td>
     <td><img src="https://github.com/user-attachments/assets/844b110a-d4f5-4c42-9442-86b7b85a821a" width="900"/></td>
   </tr>
   <tr>
-    <td align="left"><b>4. AI 산재 챗봇</b></td>
+      <tr>
+    <td colspan="2"><h3>4. 산재챗봇: 진채정</h3></td>
+  </tr>
+    <td align="left">
+
+
+
+https://github.com/user-attachments/assets/4942d062-c0d5-46a7-9c17-7e033e373df6
+
+
+
+
+</td>
     <td><img src="https://github.com/user-attachments/assets/4a7ecf69-0469-471c-9dbb-75c95be70903" width="900"/></td>
   </tr>
   <tr>
-    <td align="left"><b>5. 분석 결과 페이지</b></td>
+      <tr>
+    <td colspan="2"><h3>5. 산재분석: 이나경</h3></td>
+  </tr>
+    <td align="left">
+
+
+
+https://github.com/user-attachments/assets/f580dff2-f593-4f4e-b337-a674cac8dfcd
+
+
+</td>
     <td><img src="https://github.com/user-attachments/assets/828e5836-906b-47e8-a6aa-bff2a19858fb" width="900"/></td>
   </tr>
   <tr>
-    <td align="left"><b>6. 산재 신청 페이지</b></td>
+      <tr>
+    <td colspan="2"><h3>6. 산재신청: 진채정</h3></td>
+  </tr>
+    <td align="left">
+
+https://github.com/user-attachments/assets/d0757f6f-f0d4-4ca0-bd8a-13c9f879f282
+ </td>
     <td><img src="https://github.com/user-attachments/assets/571c3d2f-2d49-49aa-add9-96025c955f64" width="900"/></td>
   </tr>
   <tr>
-    <td align="left"><b>7. 산재 결과 확인 페이지</b></td>
+      <tr>
+    <td colspan="2"><h3>7. 산재처리: 이나경</h3></td>
+  </tr>
+    <td align="left">
+
+https://github.com/user-attachments/assets/1b9d9038-68a9-41b8-971f-aa72c55cd017
+
+</td>
     <td><img src="https://github.com/user-attachments/assets/74f37db1-0f0c-4fb5-845d-b87e49965103" width="900"/></td>
   </tr>
 </table>
